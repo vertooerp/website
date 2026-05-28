@@ -1,75 +1,181 @@
 ---
+const categories = [
+  { id: 'all', label: 'Alle' },
+  { id: 'commerce', label: 'Commerce & Handel' },
+  { id: 'finance', label: 'Finanzen' },
+  { id: 'collab', label: 'Team & Zusammenarbeit' },
+  { id: 'analytics', label: 'CRM & Analytics' },
+  { id: 'platform', label: 'Plattform' },
+];
+
 const modules = [
+  // Commerce & Handel
   {
-    icon: '⏱',
-    title: 'Zeiterfassung',
-    description: 'Stempeluhr, Überstundenkonto, Abwesenheiten und Team-Übersicht – mobil und am Desktop.',
-    color: 'bg-blue-50 text-blue-600',
-  },
-  {
+    category: 'commerce',
     icon: '📦',
     title: 'Warenwirtschaft',
-    description: 'Produkte, Bestellungen, Lieferanten, Aufträge, Versand und Retouren in einem Workflow.',
+    description: 'Einheitlicher PDSIN-Produktkatalog mit Multi-Supplier, Bundles, Aufträgen und Versand-Tracking über 5 Carrier.',
+    tags: ['PDSIN-Katalog', 'Multi-Standort', 'Stücklisten', '10 KPI-Cards'],
     color: 'bg-amber-50 text-amber-600',
   },
   {
-    icon: '🧾',
-    title: 'Buchhaltung',
-    description: 'Rechnungen, Angebote, Ausschreibungen, Kunden und USt-Voranmeldung mit GoBD-Audit.',
-    color: 'bg-green-50 text-green-600',
+    category: 'commerce',
+    icon: '🏭',
+    title: 'Lagerverwaltung',
+    description: 'Lagerhäuser mit Zone-Baumstruktur (Zone → Gang → Regal → Fach), Umlagerungen, Inventur und vollem Bewegungs-Audit.',
+    tags: ['Zonen-Baum', 'Audit-Log', 'Ampel-Füllstand', 'Multi-Standort'],
+    color: 'bg-yellow-50 text-yellow-600',
   },
   {
-    icon: '✅',
-    title: 'Aufgaben & Projekte',
-    description: 'Kanban-Board, Prioritäten, Kommentare, Zuweisungen und Projektmanagement.',
-    color: 'bg-purple-50 text-purple-600',
-  },
-  {
-    icon: '💬',
-    title: 'Nachrichten',
-    description: 'Direktnachrichten, Gruppenchats und Kanäle mit Reaktionen, Antworten und Dateien.',
-    color: 'bg-pink-50 text-pink-600',
-  },
-  {
-    icon: '📚',
-    title: 'Wissensdatenbank',
-    description: 'Interne Knowledge Base mit Markdown, Kategorien und Veröffentlichungs-Workflow.',
-    color: 'bg-indigo-50 text-indigo-600',
-  },
-  {
-    icon: '🏷',
-    title: 'Paketizer',
-    description: 'Automatische Paketzusammenstellung nach UVP, Gewicht und Diversifikation.',
-    color: 'bg-orange-50 text-orange-600',
-  },
-  {
-    icon: '💰',
-    title: 'Kostenmanagement',
-    description: 'Fixkosten, Gehälter, Fuhrpark, Software-Abos und sonstige Kosten im Überblick.',
-    color: 'bg-emerald-50 text-emerald-600',
-  },
-  {
-    icon: '🛒',
-    title: 'E-Commerce',
-    description: 'Preischeck via EAN über idealo, Amazon & Co. mit Ampel-Logik und Bulk-Import.',
-    color: 'bg-cyan-50 text-cyan-600',
-  },
-  {
-    icon: '📋',
-    title: 'Betriebsmittel',
-    description: 'Anforderungen, Bürobedarf und IT-Inventar mit Bestandsverwaltung und Genehmigungen.',
-    color: 'bg-teal-50 text-teal-600',
-  },
-  {
+    category: 'commerce',
     icon: '🚚',
     title: 'Dropshipping',
-    description: 'Lieferanten-Management, CSV-Import via FTP und Shopware 6 Integration.',
+    description: 'Drei API-Typen in einer Oberfläche: BigBuy, DropXL und JTL-Wawi – plus Shopware 6 Integration.',
+    tags: ['3 API-Typen', 'Stock-Sync 15 Min', 'Shopware OAuth2', 'Order-Forward'],
     color: 'bg-rose-50 text-rose-600',
   },
   {
-    icon: '📄',
-    title: 'Dokumente & DSGVO',
-    description: 'Mitarbeiter-Dokumente, Lohnzettel und vollständige DSGVO-Datenauskunft.',
+    category: 'commerce',
+    icon: '🛒',
+    title: 'E-Commerce / Preischeck',
+    description: 'EAN-basierte Marktpreisabfrage über idealo, Amazon, eBay, billiger.de und Google Shopping mit Ampel-Logik.',
+    tags: ['Bulk-Import', '5 Marktplätze', 'Max-EK pro Plattform', 'Source-Fallback'],
+    color: 'bg-cyan-50 text-cyan-600',
+  },
+  {
+    category: 'commerce',
+    icon: '🌐',
+    title: 'Webshop',
+    description: 'Whitelabel-Kundenshop unter eigener Domain – nahtlos mit Bestand, Preisen und Bonuspunkten verbunden.',
+    tags: ['Stripe / PayPal / Mollie', 'Eigene Marke', 'Mehrsprachig', 'Next.js'],
+    color: 'bg-sky-50 text-sky-600',
+  },
+  {
+    category: 'commerce',
+    icon: '🎁',
+    title: 'Bonuspunkte',
+    description: 'Kundenbindungsprogramm mit Tier-System, Gutschein-Generator und automatischer Gutschrift bei Bestellungen.',
+    tags: ['Bronze/Silber/Gold', 'Auto-Credit', 'Shopware-Plugin', 'Punkte-Verfall'],
+    color: 'bg-fuchsia-50 text-fuchsia-600',
+  },
+  {
+    category: 'commerce',
+    icon: '🏷',
+    title: 'Paketizer',
+    description: 'Automatische Paketzusammenstellung aus Beständen nach UVP, Gewicht und Diversifikation mit OCR-Scan.',
+    tags: ['Excel-Import', 'OCR-Scan', 'MHD-Tracking', 'Bereinigung'],
+    color: 'bg-orange-50 text-orange-600',
+  },
+
+  // Finanzen
+  {
+    category: 'finance',
+    icon: '🧾',
+    title: 'Buchhaltung',
+    description: 'Vollwertige Buchhaltung: Belege, Offene Posten, Kassenbuch, GuV/BWA, SKR03 Kontenrahmen und 3-stufiges Mahnwesen.',
+    tags: ['DATEV-Export', 'XRechnung / ZUGFeRD', 'USt-Voranmeldung', 'Bankabgleich', 'GoBD'],
+    color: 'bg-green-50 text-green-600',
+  },
+  {
+    category: 'finance',
+    icon: '💰',
+    title: 'Kostenmanagement',
+    description: 'Fixkosten, Gehälter, Fuhrpark und SaaS-Abos mit Verträgen, Kündigungsfristen und Monatsübersicht.',
+    tags: ['Personal', 'Fuhrpark', 'Software-Abos', 'Arbeitsverträge'],
+    color: 'bg-emerald-50 text-emerald-600',
+  },
+
+  // Team & Zusammenarbeit
+  {
+    category: 'collab',
+    icon: '✅',
+    title: 'Aufgaben & Projekte',
+    description: 'Kanban-Board, Liste und Kalender mit Subtasks, Watchers, @Mentions und vollständigem Aktivitäts-Feed.',
+    tags: ['3 Ansichten', 'Subtasks', '@Mentions', 'Dateianhänge', 'Tastenkürzel'],
+    color: 'bg-purple-50 text-purple-600',
+  },
+  {
+    category: 'collab',
+    icon: '💬',
+    title: 'Nachrichten',
+    description: 'DMs, Gruppen und Kanäle mit Reactions, Replies, Lesebestätigungen und Typing-Indicator.',
+    tags: ['Quick-Reactions', 'Lesebestätigungen', 'Mentions', 'Mobile-optimiert'],
+    color: 'bg-pink-50 text-pink-600',
+  },
+  {
+    category: 'collab',
+    icon: '📚',
+    title: 'Wissensdatenbank',
+    description: 'Interne Knowledge Base mit Markdown-Artikeln, Kategorien, Tags und Veröffentlichungs-Workflow.',
+    tags: ['Markdown', 'Entwurf / Live', 'Tags', 'RAG-ready'],
+    color: 'bg-indigo-50 text-indigo-600',
+  },
+  {
+    category: 'collab',
+    icon: '📢',
+    title: 'Meldungen',
+    description: 'Einweg-Mitteilungen vom Unternehmen ans Team – an Standort, Team oder Einzelpersonen, mit Prioritäten.',
+    tags: ['Prio normal/wichtig/dringend', 'Standort-/Team-Targeting', 'Read-Only-Feed'],
+    color: 'bg-red-50 text-red-600',
+  },
+  {
+    category: 'collab',
+    icon: '⏱',
+    title: 'Zeiterfassung & Urlaub',
+    description: 'Stempeluhr, Urlaubsverwaltung, Krankmeldungen mit AU-Nachreichung und Überstundenabbau als Abwesenheit.',
+    tags: ['Überstundenkonto', 'Urlaubsübertrag', 'Team-Übersicht', 'Mobil'],
+    color: 'bg-blue-50 text-blue-600',
+  },
+  {
+    category: 'collab',
+    icon: '📋',
+    title: 'Betriebsmittel',
+    description: 'Bestellanforderungen mit Genehmigungs-Workflow, Bürobedarf mit Mindestbestand und IT-Inventar pro Mitarbeiter.',
+    tags: ['Genehmigungen', 'Inventur', 'IT-Zuordnung', 'Buchungshistorie'],
+    color: 'bg-teal-50 text-teal-600',
+  },
+
+  // CRM & Analytics
+  {
+    category: 'analytics',
+    icon: '👥',
+    title: 'CRM',
+    description: 'Kunden- und Kontakthistorie über alle Module hinweg – Buchhaltung, WaWi, Aufträge und Kommunikation auf einen Blick.',
+    tags: ['Modulübergreifend', 'Kontakthistorie', 'Zahlungsziel'],
+    color: 'bg-violet-50 text-violet-600',
+  },
+  {
+    category: 'analytics',
+    icon: '📊',
+    title: 'Reporting & Analytics',
+    description: 'Live-Dashboard mit WaWi-KPIs, Umsatz-Entwicklung, DS-Performance, Bestandswert und Low-Stock-Alerts.',
+    tags: ['Trends 7 Monate', 'Top-10 Kategorien', 'Aggregate-Queries', 'Drill-Down'],
+    color: 'bg-lime-50 text-lime-600',
+  },
+  {
+    category: 'analytics',
+    icon: '🤖',
+    title: 'KI-Assistent',
+    description: 'Lokales LLM via Ollama für Chat mit ERP-Kontext und SEO-optimierte Produktbeschreibungen – Daten bleiben im Haus.',
+    tags: ['Lokal (Ollama)', 'Chat mit ERP-Daten', 'Bulk-Texte', 'DSGVO-sicher'],
+    color: 'bg-amber-50 text-amber-700',
+  },
+
+  // Plattform
+  {
+    category: 'platform',
+    icon: '🔌',
+    title: 'Webhooks',
+    description: 'Event-System für externe Integrationen mit HMAC-SHA256-Signatur, Custom Headers und Test-Modus.',
+    tags: ['Order- / Product- / Invoice-Events', 'HMAC-Signatur', 'Logs', 'Test-Button'],
+    color: 'bg-slate-50 text-slate-600',
+  },
+  {
+    category: 'platform',
+    icon: '🔐',
+    title: 'Compliance & DSGVO',
+    description: 'Mitarbeiter-Dokumente, Lohnzettel und vollständige DSGVO-Datenauskunft mit unveränderbarem Audit-Trail.',
+    tags: ['Datenexport', 'Audit-Trail', 'Multi-Tenant-Isolation'],
     color: 'bg-gray-50 text-gray-600',
   },
 ];
@@ -77,24 +183,81 @@ const modules = [
 
 <section id="module" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center max-w-2xl mx-auto mb-16">
+    <div class="text-center max-w-2xl mx-auto mb-12">
       <span class="text-sm font-medium text-brand-600 uppercase tracking-wider">Module</span>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Alles, was Ihr Unternehmen braucht</h2>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">20+ Module – modular kombinierbar</h2>
       <p class="mt-4 text-lg text-gray-500">
-        Wählen Sie nur die Module, die Sie benötigen. Jedes Modul ist eigenständig nutzbar und nahtlos integriert.
+        Vom ersten Tag voll funktionsfähig. Aktivieren Sie nur, was Sie brauchen – und erweitern Sie jederzeit.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap justify-center gap-2 mb-10" id="module-filters" role="tablist" aria-label="Module nach Kategorie filtern">
+      {categories.map((cat, i) => (
+        <button
+          type="button"
+          data-filter={cat.id}
+          role="tab"
+          aria-selected={i === 0 ? 'true' : 'false'}
+          class={`module-filter-btn px-4 py-2 rounded-full text-sm font-medium border transition-colors ${i === 0 ? 'bg-brand-700 text-white border-brand-700' : 'bg-white text-gray-700 border-gray-200 hover:border-brand-300 hover:text-brand-700'}`}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="module-grid">
       {modules.map((mod) => (
-        <div class="group relative p-6 rounded-2xl border border-gray-100 bg-white card-hover">
+        <article
+          data-category={mod.category}
+          class="module-card group relative p-6 rounded-2xl border border-gray-100 bg-white card-hover flex flex-col"
+        >
           <div class={`w-12 h-12 rounded-xl ${mod.color} flex items-center justify-center text-2xl mb-4`}>
             {mod.icon}
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">{mod.title}</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">{mod.description}</p>
-        </div>
+          <p class="text-sm text-gray-500 leading-relaxed mb-4 flex-1">{mod.description}</p>
+          <div class="flex flex-wrap gap-1.5">
+            {mod.tags.map((tag) => (
+              <span class="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-gray-50 text-gray-600 border border-gray-100">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </article>
       ))}
     </div>
   </div>
 </section>
+
+<script>
+  const filterButtons = document.querySelectorAll<HTMLButtonElement>('.module-filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('#module-grid .module-card');
+
+  const activeClasses = ['bg-brand-700', 'text-white', 'border-brand-700'];
+  const inactiveClasses = ['bg-white', 'text-gray-700', 'border-gray-200'];
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      if (!filter) return;
+
+      filterButtons.forEach((b) => {
+        b.classList.remove(...activeClasses);
+        b.classList.add(...inactiveClasses);
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.remove(...inactiveClasses);
+      btn.classList.add(...activeClasses);
+      btn.setAttribute('aria-selected', 'true');
+
+      cards.forEach((card) => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
