@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Interne Generatoren (Verträge, Anlagen) — NIE committen
+Vertoo_*Generator*.html
+Vertoo_AnlageB_*.html
+Vertoo_Vertragsgenerator*.html

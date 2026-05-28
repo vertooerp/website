@@ -2,43 +2,52 @@
 const plans = [
   {
     name: 'Starter',
-    price: '2.400',
-    period: 'pro Jahr',
-    description: 'Für kleine Teams, die gezielt starten wollen.',
+    price: '350',
+    period: 'pro Monat',
+    modulRange: 'Bis zu 3 Module',
+    seats: '3 Seats inklusive',
+    extraSeat: '+18 € je weiterer Seat',
+    description: 'Für kleine Teams, die mit einzelnen Modulen gezielt starten.',
     features: [
-      '3 wählbare Module',
-      'Bis zu 10 Benutzer',
+      'Bis zu 3 wählbare Module',
+      '3 Seats inklusive (+18 € / weiterer Seat)',
       'Multi-Standort',
       'PWA (mobil installierbar)',
       'E-Mail-Support',
     ],
-    cta: 'Starter wählen',
+    cta: 'Starter anfragen',
     highlight: false,
   },
   {
     name: 'Business',
-    price: '6.000',
-    period: 'pro Jahr',
-    description: 'Für wachsende Unternehmen mit vollem Funktionsumfang.',
+    price: '800',
+    period: 'pro Monat',
+    modulRange: 'Bis zu 12 Module',
+    seats: '10 Seats inklusive',
+    extraSeat: '+22 € je weiterer Seat',
+    description: 'Für wachsende Unternehmen mit breitem Funktionsumfang.',
     features: [
-      'Alle 12+ Module',
-      'Bis zu 25 Benutzer',
+      'Bis zu 12 Module frei kombinierbar',
+      '10 Seats inklusive (+22 € / weiterer Seat)',
       'Multi-Standort',
       'PWA (mobil installierbar)',
       'Keycloak SSO',
       'Prioritäts-Support',
     ],
-    cta: 'Business wählen',
+    cta: 'Business anfragen',
     highlight: true,
   },
   {
     name: 'Enterprise',
-    price: '12.000',
-    period: 'pro Jahr',
-    description: 'Für große Organisationen mit individuellen Anforderungen.',
+    price: '1.400',
+    period: 'pro Monat',
+    modulRange: 'Alle 20+ Module',
+    seats: '20 Seats inklusive',
+    extraSeat: '+28 € je weiterer Seat',
+    description: 'Für große Organisationen, die das volle Spektrum nutzen.',
     features: [
-      'Alle 12+ Module',
-      'Unbegrenzte Benutzer',
+      'Alle 20+ Module',
+      '20 Seats inklusive (+28 € / weiterer Seat)',
       'Multi-Standort & Multi-Tenant',
       'PWA (mobil installierbar)',
       'Keycloak SSO',
@@ -58,7 +67,7 @@ const plans = [
       <span class="text-sm font-medium text-brand-600 uppercase tracking-wider">Preise</span>
       <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Transparent und fair</h2>
       <p class="mt-4 text-lg text-gray-500">
-        Keine versteckten Kosten. Keine Einrichtungsgebühr. 30 Tage kostenlos testen.
+        Die Stufe richtet sich nach der Anzahl der von Ihnen genutzten Module. Alle Preise zzgl. MwSt., Mindestlaufzeit 12 Monate.
       </p>
     </div>
 
@@ -71,12 +80,14 @@ const plans = [
             </div>
           )}
           <h3 class={`text-xl font-bold ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>{plan.name}</h3>
-          <p class={`mt-1 text-sm ${plan.highlight ? 'text-brand-200' : 'text-gray-500'}`}>{plan.description}</p>
+          <p class={`mt-1 text-sm font-medium ${plan.highlight ? 'text-brand-200' : 'text-brand-600'}`}>{plan.modulRange}</p>
+          <p class={`mt-1 text-sm ${plan.highlight ? 'text-brand-100' : 'text-gray-500'}`}>{plan.description}</p>
 
           <div class="mt-6 flex items-baseline gap-1">
             <span class={`text-4xl font-extrabold ${plan.highlight ? 'text-white' : 'text-gray-900'}`}>{plan.price} €</span>
             <span class={`text-sm ${plan.highlight ? 'text-brand-200' : 'text-gray-400'}`}>{plan.period}</span>
           </div>
+          <p class={`mt-1 text-xs ${plan.highlight ? 'text-brand-200' : 'text-gray-400'}`}>{plan.seats} · {plan.extraSeat}</p>
 
           <ul class="mt-8 space-y-3">
             {plan.features.map((feature) => (
@@ -102,5 +113,29 @@ const plans = [
         </div>
       ))}
     </div>
+
+    <!-- Sonderkondition: Ergänzend zu bestehendem System -->
+    <div class="mt-12 max-w-3xl mx-auto">
+      <div class="rounded-2xl border border-brand-100 bg-brand-50/40 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-5">
+        <div class="w-12 h-12 rounded-xl bg-white border border-brand-100 flex items-center justify-center text-2xl shrink-0">
+          🔗
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold text-gray-900">Ergänzend zu bestehendem System?</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+            Wenn Sie VertooERP <strong>ergänzend</strong> zu einem bereits führenden System (z.&nbsp;B. JTL-Wawi, SAP, DATEV) einsetzen wollen, gewähren wir einen <strong>deutlichen Abschlag</strong> auf die Grundgebühr. Wir kalkulieren individuell passend zu Ihrem Setup.
+          </p>
+          <a href="#kontakt" class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:text-brand-800 transition-colors">
+            Konditionen anfragen
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footnote: weitere Vertragsdetails -->
+    <p class="mt-8 text-center text-xs text-gray-400 max-w-3xl mx-auto leading-relaxed">
+      Mindestlaufzeit 12 Monate · Kündigungsfrist 3 Monate · Jährliche Preisanpassung 4 % ab dem zweiten Vertragsjahr · Hosting, Einrichtung, Wartung und Support nicht inklusive (separat buchbar)
+    </p>
   </div>
 </section>
