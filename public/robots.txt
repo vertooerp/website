@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Legal pages und Login werden zusätzlich per noindex-Meta-Tag ausgeschlossen.
+
+Sitemap: https://vertoo.de/sitemap-index.xml

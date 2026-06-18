@@ -9,9 +9,68 @@ import UseCases from '../components/UseCases.astro';
 import TechSecurity from '../components/TechSecurity.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+
+const softwareApplicationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'VertooERP',
+  applicationCategory: 'BusinessApplication',
+  applicationSubCategory: 'ERP',
+  operatingSystem: 'Web, iOS, Android (PWA)',
+  description:
+    'Modulare ERP-Plattform mit 20+ Modulen: Warenwirtschaft, Buchhaltung, Lagerverwaltung, Dropshipping, Aufgaben, Nachrichten, KI-Assistent und mehr. Multi-Mandant, Multi-Standort, Hosting in Deutschland.',
+  url: 'https://vertoo.de',
+  inLanguage: 'de-DE',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Starter',
+      priceCurrency: 'EUR',
+      price: '350',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: '350',
+        priceCurrency: 'EUR',
+        unitText: 'MONTH',
+      },
+      description: 'Bis zu 3 Module, 3 Seats inklusive (+18 € je weiterer Seat).',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Business',
+      priceCurrency: 'EUR',
+      price: '800',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: '800',
+        priceCurrency: 'EUR',
+        unitText: 'MONTH',
+      },
+      description: 'Bis zu 12 Module, 10 Seats inklusive (+22 € je weiterer Seat).',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Enterprise',
+      priceCurrency: 'EUR',
+      price: '1400',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: '1400',
+        priceCurrency: 'EUR',
+        unitText: 'MONTH',
+      },
+      description: 'Alle 20+ Module, 20 Seats inklusive (+28 € je weiterer Seat).',
+    },
+  ],
+  provider: {
+    '@type': 'Organization',
+    name: 'tap & type UG (haftungsbeschränkt)',
+    url: 'https://vertoo.de',
+  },
+};
 ---
 
-<Layout>
+<Layout jsonLd={softwareApplicationLd}>
   <Header />
   <main id="main-content">
     <Hero />
