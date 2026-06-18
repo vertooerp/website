@@ -50,7 +50,7 @@ export const branchen: Branche[] = [
     icon: '🛒',
     metaTitle: 'ERP für Handel & E-Commerce – VertooERP',
     metaDescription:
-      'Modulares ERP für Online- und stationären Handel: Warenwirtschaft, Lager, Dropshipping, Webshop, Bonuspunkte und Marktpreis-Check. Hosting in Deutschland.',
+      'Modulares ERP für Online- und stationären Handel: Warenwirtschaft, Lager, Dropshipping, Webshop, Bonuspunkte und Marktpreis-Check. Self-Hosting, DSGVO- und GoBD-konform.',
     hero: {
       eyebrow: 'Für Handel & E-Commerce',
       headline: 'ERP für den Handel — von Wareneingang bis Kundenbindung',
