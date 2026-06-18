@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Barrierefreiheit – VertooERP" noindex={true}>
+  <Header />
+  <main class="pt-28 pb-20">
+    <div class="max-w-3xl mx-auto px-6 legal-content">
+      <h1 class="text-3xl font-bold text-gray-900 mb-8">Erklärung zur Barrierefreiheit</h1>
+      <p class="text-sm text-gray-500 italic mb-6">Stand: 18. Juni 2026</p>
+
+      <p class="mb-4">
+        Die tap &amp; type UG bemüht sich, diese Website allen Menschen zugänglich zu machen — auch denjenigen, die assistive Technologien verwenden oder dauerhafte oder vorübergehende Beeinträchtigungen haben. Diese Erklärung dokumentiert offen, was bereits umgesetzt ist und wo wir derzeit Einschränkungen sehen.
+      </p>
+
+      <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Geltungsbereich</h2>
+      <p class="mb-4">
+        Diese Erklärung gilt für die Website unter der Domain <strong>vertoo.de</strong>. Sie umfasst nicht die Anwendung selbst (z.&nbsp;B. <code>app.vertoo.de</code>) oder andere Subdomains, für die ggf. separate Erklärungen gelten.
+      </p>
+
+      <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Stand der Vereinbarkeit mit den Anforderungen</h2>
+      <p class="mb-4">
+        Wir orientieren uns an den <a href="https://www.w3.org/TR/WCAG21/" rel="noopener" target="_blank" class="text-brand-700 hover:underline">Web Content Accessibility Guidelines 2.1</a> auf Konformitätsstufe <strong>AA</strong>. Ein externes Accessibility-Audit wurde bisher nicht durchgeführt — die Aussagen unten beruhen auf eigener Prüfung und gängigen Best Practices.
+      </p>
+
+      <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Was umgesetzt ist</h2>
+      <ul class="list-disc pl-6 space-y-2 mb-4">
+        <li><strong>Semantische HTML-Struktur</strong> mit konsistenter Überschriften-Hierarchie (h1 → h2 → h3)</li>
+        <li><strong>Vollständige Tastatur-Bedienbarkeit</strong> aller interaktiven Elemente (Links, Navigation, Filter-Tabs, Formulare)</li>
+        <li><strong>ARIA-Beschriftungen</strong> für die Modul-Filter (<code>role="tab"</code>, <code>aria-selected</code>) und die Sprachauszeichnung des Dokuments (<code>lang="de"</code>)</li>
+        <li><strong>Beschriftete Formularfelder</strong> mit zugeordneten <code>&lt;label&gt;</code>-Elementen</li>
+        <li><strong>Responsive Design</strong> — die Seite funktioniert auf Desktop, Tablet und Smartphone</li>
+        <li><strong>PWA-fähig</strong> — installierbar als App auf jedem Gerät</li>
+        <li><strong>Klartext-E-Mail-Adressen</strong> ohne JavaScript-Abhängigkeit, direkt für Screenreader zugänglich</li>
+        <li><strong>Externe Links</strong> mit <code>rel="noopener"</code> und Öffnung in neuem Tab</li>
+        <li><strong>Alternativtexte</strong> für inhaltsvermittelnde Bilder (Partner-Logos)</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Bekannte Einschränkungen</h2>
+      <p class="mb-4">Wir sind ehrlich: Es gibt Bereiche, die wir noch nicht systematisch geprüft haben oder die Verbesserungspotenzial haben:</p>
+      <ul class="list-disc pl-6 space-y-2 mb-4">
+        <li>Es wurde <strong>kein externes Accessibility-Audit</strong> durch eine spezialisierte Stelle durchgeführt.</li>
+        <li>Die <strong>Farbkontraste</strong> sind nicht durchgängig gegen die WCAG-AA-Schwellen geprüft. Einzelne dezente Hinweistexte (z.&nbsp;B. Footnotes unter der Pricing-Sektion) erreichen das Idealmaß möglicherweise nicht.</li>
+        <li>Die Website ist <strong>ausschließlich auf Deutsch</strong> verfügbar.</li>
+        <li>Einzelne <strong>Emoji-Icons</strong> in den Modul-Kacheln vermitteln Bedeutung — für Screenreader sind sie aktuell rein dekorativ und werden je nach Plattform unterschiedlich wiedergegeben.</li>
+        <li>Ein <strong>Skip-Link</strong> zum Sprung direkt zum Hauptinhalt ist aktuell noch nicht implementiert.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Freiwillige Erklärung</h2>
+      <p class="mb-4">
+        Die <strong>tap &amp; type UG (haftungsbeschränkt)</strong> ist als <strong>Kleinstunternehmen</strong> im Sinne des § 3 Abs. 3 BFSG nicht zur barrierefreien Gestaltung dieser Website verpflichtet. Diese Erklärung erfolgt <strong>freiwillig</strong> — wir halten Barrierefreiheit für eine Grundlage guter Webgestaltung, unabhängig von einer gesetzlichen Pflicht.
+      </p>
+
+      <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Feedback &amp; Hinweise auf Barrieren</h2>
+      <p class="mb-4">Sollten Ihnen Barrieren auf dieser Website auffallen, melden Sie uns das bitte. Wir versuchen, Hinweise zeitnah zu prüfen und umzusetzen.</p>
+      <p>
+        <strong>Kontakt:</strong><br />
+        tap &amp; type UG (haftungsbeschränkt)<br />
+        Pestalozzistr. 14, 14943 Luckenwalde<br />
+        E-Mail: <a href="mailto:kontakt@tapandtype.de" class="text-brand-700 hover:underline">kontakt@tapandtype.de</a><br />
+        Telefon: +49&nbsp;(0)&nbsp;15678 61 87 81
+      </p>
+    </div>
+  </main>
+  <Footer />
+</Layout>
