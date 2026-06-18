@@ -3,17 +3,31 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection, render } from 'astro:content';
+import { readingTimeMinutes } from '../../utils/reading-time';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: { post },
+    props: { post, allPosts: posts },
   }));
 }
 
-const { post } = Astro.props;
+const { post, allPosts } = Astro.props;
 const { Content } = await render(post);
+
+const minutes = readingTimeMinutes(post.body ?? '');
+
+// Verwandte Artikel: andere Beiträge mit den meisten gemeinsamen Tags
+const related = allPosts
+  .filter((p) => p.id !== post.id)
+  .map((p) => ({
+    post: p,
+    shared: p.data.tags.filter((t) => post.data.tags.includes(t)).length,
+  }))
+  .sort((a, b) => b.shared - a.shared || b.post.data.pubDate.getTime() - a.post.data.pubDate.getTime())
+  .slice(0, 2)
+  .map((x) => x.post);
 
 const siteUrl = 'https://vertoo.de';
 const url = `${siteUrl}/blog/${post.id}`;
@@ -73,6 +87,8 @@ const breadcrumbLd = {
         </h1>
         <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <time datetime={post.data.pubDate.toISOString()}>{dateFmt(post.data.pubDate)}</time>
+          <span class="mx-1.5" aria-hidden="true">·</span>
+          {minutes} Min. Lesezeit
           {post.data.updatedDate && (
             <span> · aktualisiert {dateFmt(post.data.updatedDate)}</span>
           )}
@@ -93,6 +109,25 @@ const breadcrumbLd = {
             Demo anfragen
           </a>
         </div>
+
+        {related.length > 0 && (
+          <aside class="mt-14 border-t border-gray-100 dark:border-gray-800 pt-10">
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-5">Verwandte Artikel</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {related.map((r) => (
+                <a
+                  href={`/blog/${r.id}`}
+                  class="group block p-5 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 card-hover hover:border-brand-200 dark:hover:border-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500"
+                >
+                  <h3 class="font-semibold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-400 transition-colors">
+                    {r.data.title}
+                  </h3>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-2">{r.data.description}</p>
+                </a>
+              ))}
+            </div>
+          </aside>
+        )}
       </div>
     </article>
   </main>
