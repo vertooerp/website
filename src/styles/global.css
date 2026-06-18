@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark-Mode klassenbasiert (Toggle setzt .dark auf <html>) statt media-query */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-brand-50: #ecfdf5;
   --color-brand-100: #d1fae5;
@@ -106,4 +109,48 @@ body {
 .legal-content strong {
   color: #111827;
   font-weight: 600;
+}
+
+.dark .hero-gradient {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.18), transparent);
+}
+.dark .card-hover:hover {
+  box-shadow: 0 12px 40px -8px rgba(16, 185, 129, 0.18);
+}
+.dark .legal-content {
+  color: #d1d5db;
+}
+.dark .legal-content a {
+  color: var(--color-brand-400);
+}
+.dark .legal-content a:hover {
+  color: var(--color-brand-300);
+}
+.dark .legal-content strong {
+  color: #f9fafb;
+}
+/* Überschriften in Legal-Pages tragen inline text-gray-900 — hier überschreiben
+   (höhere Spezifität als die Tailwind-Utility) */
+.dark .legal-content :is(h1, h2, h3) {
+  color: #f9fafb;
+}
+.dark .legal-content :is(code, kbd) {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+.dark .gradient-text {
+  background: linear-gradient(135deg, #34d399 0%, #6ee7b7 50%, #a7f3d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sanfter Theme-Übergang (außer für Nutzer mit reduced-motion) */
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  header,
+  section,
+  footer {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
 }

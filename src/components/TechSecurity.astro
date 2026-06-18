@@ -36,20 +36,20 @@ const features = [
 <section class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-sm font-medium text-brand-700 uppercase tracking-wider">Technologie & Sicherheit</span>
+      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">Technologie & Sicherheit</span>
       <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Gebaut für Vertrauen</h2>
-      <p class="mt-4 text-lg text-gray-500">
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
         Moderne Architektur, höchste Sicherheitsstandards und volle DSGVO-Konformität.
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {features.map((f) => (
-        <div class="flex items-start gap-4 p-6 rounded-2xl border border-gray-100 bg-white">
-          <span class="text-2xl shrink-0">{f.icon}</span>
+        <div class="flex items-start gap-4 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+          <span aria-hidden="true" class="text-2xl shrink-0">{f.icon}</span>
           <div>
-            <h3 class="font-semibold text-gray-900">{f.title}</h3>
-            <p class="mt-1 text-sm text-gray-500">{f.description}</p>
+            <h3 class="font-semibold text-gray-900 dark:text-white">{f.title}</h3>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{f.description}</p>
           </div>
         </div>
       ))}

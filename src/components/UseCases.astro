@@ -33,12 +33,12 @@ const cases = [
 ];
 ---
 
-<section id="branchen" class="py-24 lg:py-32 bg-gray-50">
+<section id="branchen" class="py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-sm font-medium text-brand-700 uppercase tracking-wider">Branchen</span>
+      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">Branchen</span>
       <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Für jede Branche die richtige Lösung</h2>
-      <p class="mt-4 text-lg text-gray-500">
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
         Vertoo passt sich Ihrem Geschäft an – nicht umgekehrt.
       </p>
     </div>
@@ -48,17 +48,17 @@ const cases = [
         const inner = (
           <>
             <span aria-hidden="true" class="text-4xl">{c.icon}</span>
-            <h3 class="mt-4 text-xl font-semibold text-gray-900 flex items-center gap-2">
+            <h3 class="mt-4 text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
               {c.title}
               {c.slug && (
-                <svg aria-hidden="true" class="w-4 h-4 text-brand-700 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <svg aria-hidden="true" class="w-4 h-4 text-brand-700 dark:text-brand-400 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               )}
             </h3>
-            <p class="mt-2 text-gray-500 leading-relaxed">{c.description}</p>
+            <p class="mt-2 text-gray-500 dark:text-gray-400 leading-relaxed">{c.description}</p>
             {c.slug && (
-              <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">
+              <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 dark:text-brand-400">
                 Mehr erfahren
                 <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -68,11 +68,11 @@ const cases = [
           </>
         );
         return c.slug ? (
-          <a href={`/branchen/${c.slug}`} class="group block p-8 rounded-2xl bg-white border border-gray-100 card-hover hover:border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-500">
+          <a href={`/branchen/${c.slug}`} class="group block p-8 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 card-hover hover:border-brand-200 dark:hover:border-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
             {inner}
           </a>
         ) : (
-          <div class="group p-8 rounded-2xl bg-white border border-gray-100 card-hover">
+          <div class="group p-8 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 card-hover">
             {inner}
           </div>
         );

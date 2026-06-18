@@ -184,9 +184,9 @@ const modules = [
 <section id="module" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto mb-12">
-      <span class="text-sm font-medium text-brand-700 uppercase tracking-wider">Module</span>
+      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">Module</span>
       <h2 class="mt-3 text-3xl sm:text-4xl font-bold">20+ Module – modular kombinierbar</h2>
-      <p class="mt-4 text-lg text-gray-500">
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
         Vom ersten Tag voll funktionsfähig. Aktivieren Sie nur, was Sie brauchen – und erweitern Sie jederzeit.
       </p>
     </div>
@@ -199,7 +199,7 @@ const modules = [
           data-filter={cat.id}
           role="tab"
           aria-selected={i === 0 ? 'true' : 'false'}
-          class={`module-filter-btn px-4 py-2 rounded-full text-sm font-medium border transition-colors ${i === 0 ? 'bg-brand-700 text-white border-brand-700' : 'bg-white text-gray-700 border-gray-200 hover:border-brand-300 hover:text-brand-700'}`}
+          class="module-filter-btn px-4 py-2 rounded-full text-sm font-medium border transition-colors bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:border-brand-300 hover:text-brand-700 dark:hover:text-brand-400 aria-selected:bg-brand-700 aria-selected:text-white aria-selected:border-brand-700 dark:aria-selected:bg-brand-600 dark:aria-selected:border-brand-600"
         >
           {cat.label}
         </button>
@@ -210,16 +210,16 @@ const modules = [
       {modules.map((mod) => (
         <article
           data-category={mod.category}
-          class="module-card group relative p-6 rounded-2xl border border-gray-100 bg-white card-hover flex flex-col"
+          class="module-card group relative p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 card-hover flex flex-col"
         >
-          <div aria-hidden="true" class={`w-12 h-12 rounded-xl ${mod.color} flex items-center justify-center text-2xl mb-4`}>
+          <div aria-hidden="true" class={`w-12 h-12 rounded-xl ${mod.color} dark:bg-gray-800 dark:!text-brand-400 flex items-center justify-center text-2xl mb-4`}>
             {mod.icon}
           </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">{mod.title}</h3>
-          <p class="text-sm text-gray-500 leading-relaxed mb-4 flex-1">{mod.description}</p>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{mod.title}</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4 flex-1">{mod.description}</p>
           <div class="flex flex-wrap gap-1.5">
             {mod.tags.map((tag) => (
-              <span class="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-gray-50 text-gray-600 border border-gray-100">
+              <span class="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-100 dark:border-gray-700">
                 {tag}
               </span>
             ))}
@@ -234,21 +234,12 @@ const modules = [
   const filterButtons = document.querySelectorAll<HTMLButtonElement>('.module-filter-btn');
   const cards = document.querySelectorAll<HTMLElement>('#module-grid .module-card');
 
-  const activeClasses = ['bg-brand-700', 'text-white', 'border-brand-700'];
-  const inactiveClasses = ['bg-white', 'text-gray-700', 'border-gray-200'];
-
   filterButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
       const filter = btn.dataset.filter;
       if (!filter) return;
 
-      filterButtons.forEach((b) => {
-        b.classList.remove(...activeClasses);
-        b.classList.add(...inactiveClasses);
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.remove(...inactiveClasses);
-      btn.classList.add(...activeClasses);
+      filterButtons.forEach((b) => b.setAttribute('aria-selected', 'false'));
       btn.setAttribute('aria-selected', 'true');
 
       cards.forEach((card) => {
