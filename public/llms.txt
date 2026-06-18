@@ -1,0 +1,23 @@
+# VertooERP
+
+> VertooERP ist eine modulare ERP-Plattform für kleine und mittlere Unternehmen mit über 20 Modulen (u.a. Warenwirtschaft, Lagerverwaltung, Buchhaltung, Zeiterfassung, Aufgaben, CRM, KI-Assistent). Die Software wird als Lizenz vertrieben und vom Kunden selbst gehostet (Self-Hosting / On-Premises) – volle Datenhoheit, DSGVO- und GoBD-konform. Entwickelt von der tap & type UG in Luckenwalde, Brandenburg.
+
+## Eckdaten
+
+- Betriebsmodell: Self-Hosting / On-Premises (keine Cloud-Pflicht; Daten bleiben beim Kunden)
+- Preise (pro Monat, zzgl. MwSt.): Starter ab 350 € (bis 3 Module, 3 Seats), Business ab 800 € (bis 12 Module, 10 Seats), Enterprise ab 1.400 € (alle 20+ Module, 20 Seats)
+- Mindestlaufzeit: 12 Monate; Hosting, Einrichtung, Wartung und Support separat buchbar
+- Compliance: DSGVO-konform, GoBD-konforme Audit-Trails, DATEV-Export, XRechnung/ZUGFeRD
+- Zielgruppe: KMU ab ca. 3–5 Mitarbeitenden
+- Anbieter: tap & type UG (haftungsbeschränkt), Pestalozzistr. 14, 14943 Luckenwalde
+
+## Seiten
+
+- [Startseite](https://vertoo.de/): Überblick über Plattform, Module, Preise und Technologie
+- [Handel & E-Commerce](https://vertoo.de/branchen/handel): ERP für Online- und stationären Handel (Warenwirtschaft, Lager, Dropshipping, Webshop, Bonuspunkte)
+- [Dienstleister & Agenturen](https://vertoo.de/branchen/dienstleister): ERP für Agenturen und Dienstleister (Zeiterfassung, Projekte, Buchhaltung, CRM)
+- [Produktion & Logistik](https://vertoo.de/branchen/produktion): ERP für produzierende und logistische Betriebe (Warenwirtschaft, Lager, Wareneingang, Versand, Inventur)
+- [Handwerk & Bau](https://vertoo.de/branchen/handwerk): ERP für Handwerk und Bau (mobile Zeiterfassung, Betriebsmittel, Fuhrpark, Kostenkontrolle)
+- [Impressum](https://vertoo.de/impressum)
+- [Datenschutzerklärung](https://vertoo.de/datenschutz)
+- [Barrierefreiheit](https://vertoo.de/barrierefreiheit)

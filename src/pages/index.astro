@@ -7,8 +7,10 @@ import HowItWorks from '../components/HowItWorks.astro';
 import Pricing from '../components/Pricing.astro';
 import UseCases from '../components/UseCases.astro';
 import TechSecurity from '../components/TechSecurity.astro';
+import FAQ from '../components/FAQ.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+import { faq } from '../data/faq';
 
 const softwareApplicationLd = {
   '@context': 'https://schema.org',
@@ -68,9 +70,19 @@ const softwareApplicationLd = {
     url: 'https://vertoo.de',
   },
 };
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
 ---
 
-<Layout jsonLd={softwareApplicationLd}>
+<Layout jsonLd={[softwareApplicationLd, faqLd]}>
   <Header />
   <main id="main-content">
     <Hero />
@@ -79,6 +91,7 @@ const softwareApplicationLd = {
     <Pricing />
     <UseCases />
     <TechSecurity />
+    <FAQ />
     <Contact />
   </main>
   <Footer />
