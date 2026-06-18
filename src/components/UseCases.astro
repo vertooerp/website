@@ -36,7 +36,7 @@ const cases = [
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
       {cases.map((c) => (
         <div class="p-8 rounded-2xl bg-white border border-gray-100 card-hover">
-          <span class="text-4xl">{c.icon}</span>
+          <span aria-hidden="true" class="text-4xl">{c.icon}</span>
           <h3 class="mt-4 text-xl font-semibold text-gray-900">{c.title}</h3>
           <p class="mt-2 text-gray-500 leading-relaxed">{c.description}</p>
         </div>

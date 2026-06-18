@@ -34,7 +34,7 @@ const steps = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
       {steps.map((step) => (
         <div class="relative text-center">
-          <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white border border-gray-200 shadow-sm text-3xl mb-6">
+          <div aria-hidden="true" class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white border border-gray-200 shadow-sm text-3xl mb-6">
             {step.icon}
           </div>
           <div class="absolute -top-2 -right-2 md:right-auto md:-left-2 w-8 h-8 rounded-full bg-brand-700 text-white text-xs font-bold flex items-center justify-center">

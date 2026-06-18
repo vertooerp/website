@@ -212,7 +212,7 @@ const modules = [
           data-category={mod.category}
           class="module-card group relative p-6 rounded-2xl border border-gray-100 bg-white card-hover flex flex-col"
         >
-          <div class={`w-12 h-12 rounded-xl ${mod.color} flex items-center justify-center text-2xl mb-4`}>
+          <div aria-hidden="true" class={`w-12 h-12 rounded-xl ${mod.color} flex items-center justify-center text-2xl mb-4`}>
             {mod.icon}
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">{mod.title}</h3>

@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 
 <Layout title="Barrierefreiheit – VertooERP" noindex={true}>
   <Header />
-  <main class="pt-28 pb-20">
+  <main id="main-content" class="pt-28 pb-20">
     <div class="max-w-3xl mx-auto px-6 legal-content">
       <h1 class="text-3xl font-bold text-gray-900 mb-8">Erklärung zur Barrierefreiheit</h1>
       <p class="text-sm text-gray-500 italic mb-6">Stand: 18. Juni 2026</p>
@@ -27,9 +27,11 @@ import Footer from '../components/Footer.astro';
 
       <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Was umgesetzt ist</h2>
       <ul class="list-disc pl-6 space-y-2 mb-4">
-        <li><strong>Semantische HTML-Struktur</strong> mit konsistenter Überschriften-Hierarchie (h1 → h2 → h3)</li>
+        <li><strong>Semantische HTML-Struktur</strong> mit konsistenter Überschriften-Hierarchie (h1 → h2 → h3) und genau einem <code>&lt;main&gt;</code>-Bereich pro Seite</li>
+        <li><strong>Skip-Link</strong> zum Sprung direkt zum Hauptinhalt (sichtbar beim ersten Druck auf <kbd>Tab</kbd>)</li>
         <li><strong>Vollständige Tastatur-Bedienbarkeit</strong> aller interaktiven Elemente (Links, Navigation, Filter-Tabs, Formulare)</li>
         <li><strong>ARIA-Beschriftungen</strong> für die Modul-Filter (<code>role="tab"</code>, <code>aria-selected</code>) und die Sprachauszeichnung des Dokuments (<code>lang="de"</code>)</li>
+        <li><strong>Dekorative Icons sind als solche markiert</strong> (<code>aria-hidden="true"</code> auf Emoji-Containern) — Screenreader überspringen sie, sodass nur die textuellen Bezeichnungen vorgelesen werden</li>
         <li><strong>Beschriftete Formularfelder</strong> mit zugeordneten <code>&lt;label&gt;</code>-Elementen</li>
         <li><strong>Responsive Design</strong> — die Seite funktioniert auf Desktop, Tablet und Smartphone</li>
         <li><strong>PWA-fähig</strong> — installierbar als App auf jedem Gerät</li>
@@ -44,8 +46,6 @@ import Footer from '../components/Footer.astro';
         <li>Es wurde <strong>kein externes Accessibility-Audit</strong> durch eine spezialisierte Stelle durchgeführt.</li>
         <li>Die <strong>Farbkontraste</strong> sind nicht durchgängig gegen die WCAG-AA-Schwellen geprüft. Einzelne dezente Hinweistexte (z.&nbsp;B. Footnotes unter der Pricing-Sektion) erreichen das Idealmaß möglicherweise nicht.</li>
         <li>Die Website ist <strong>ausschließlich auf Deutsch</strong> verfügbar.</li>
-        <li>Einzelne <strong>Emoji-Icons</strong> in den Modul-Kacheln vermitteln Bedeutung — für Screenreader sind sie aktuell rein dekorativ und werden je nach Plattform unterschiedlich wiedergegeben.</li>
-        <li>Ein <strong>Skip-Link</strong> zum Sprung direkt zum Hauptinhalt ist aktuell noch nicht implementiert.</li>
       </ul>
 
       <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Freiwillige Erklärung</h2>
