@@ -54,7 +54,17 @@ const organizationLd = {
   },
 };
 
-const ldScripts = [organizationLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [])];
+// WebSite-Schema, sitewide
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'VertooERP',
+  url: siteUrl.toString(),
+  inLanguage: 'de-DE',
+  publisher: { '@type': 'Organization', name: 'tap & type UG (haftungsbeschränkt)' },
+};
+
+const ldScripts = [organizationLd, websiteLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [])];
 ---
 
 <!doctype html>
