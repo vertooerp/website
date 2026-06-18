@@ -14,6 +14,8 @@ export default defineConfig({
         !page.includes('/datenschutz') &&
         !page.includes('/barrierefreiheit') &&
         !page.includes('/konto'),
+      // lastmod auf den Build-Zeitpunkt setzen (Seite wird als Ganzes deployed)
+      serialize: (item) => ({ ...item, lastmod: new Date().toISOString() }),
     }),
   ],
   vite: {

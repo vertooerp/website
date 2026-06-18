@@ -1,0 +1,16 @@
+{
+  "name": "VertooERP",
+  "short_name": "VertooERP",
+  "description": "Modulare ERP-Plattform für kleine und mittlere Unternehmen – self-gehostet, DSGVO- und GoBD-konform.",
+  "start_url": "/",
+  "display": "standalone",
+  "lang": "de",
+  "background_color": "#ffffff",
+  "theme_color": "#047857",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}

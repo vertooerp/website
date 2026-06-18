@@ -22,6 +22,12 @@ const siteUrl = Astro.site ?? new URL('https://vertoo.de');
 const canonicalURL = new URL(Astro.url.pathname, siteUrl).toString();
 const imageURL = new URL(image, siteUrl).toString();
 
+// Cloudflare Web Analytics (cookielos). Token als Env-Var in CF Pages setzen:
+//   PUBLIC_CF_ANALYTICS_TOKEN=<token aus dem CF-Dashboard>
+// Alternativ kann Web Analytics im CF-Pages-Dashboard per Toggle auto-injiziert
+// werden – dann ist diese Variable nicht nötig (der CSP erlaubt beides).
+const cfAnalyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
+
 // Default Organization schema, always present
 const organizationLd = {
   '@context': 'https://schema.org',
@@ -73,6 +79,10 @@ const ldScripts = [organizationLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ?
     {noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#047857" />
     <link rel="alternate" type="application/rss+xml" title="VertooERP Blog" href="/rss.xml" />
 
     <!-- OpenGraph -->
@@ -98,6 +108,15 @@ const ldScripts = [organizationLd, ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ?
     {ldScripts.map((schema) => (
       <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     ))}
+
+    {cfAnalyticsToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={JSON.stringify({ token: cfAnalyticsToken })}
+      />
+    )}
   </head>
   <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
     <a
