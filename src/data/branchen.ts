@@ -47,7 +47,7 @@ export const branchen: Branche[] = [
   {
     slug: 'handel',
     name: 'Handel & E-Commerce',
-    icon: '🛒',
+    icon: 'shopping-cart',
     metaTitle: 'ERP für Handel & E-Commerce – VertooERP',
     metaDescription:
       'Modulares ERP für Online- und stationären Handel: Warenwirtschaft, Lager, Dropshipping, Webshop, Bonuspunkte und Marktpreis-Check. Self-Hosting, DSGVO- und GoBD-konform.',
@@ -63,25 +63,25 @@ export const branchen: Branche[] = [
       intro: 'Klingt vertraut?',
       items: [
         {
-          icon: '📊',
+          icon: 'package-x',
           title: 'Bestände driften auseinander',
           description:
             'Shopware sagt 12 Stück, das Lager hat noch 7, eBay verkauft schon den 13. Verkanal-Synchronisation kostet täglich Nerven.',
         },
         {
-          icon: '💸',
+          icon: 'tag',
           title: 'Preise manuell pflegen',
           description:
             'Idealo, Amazon, eBay, billiger.de — jede Plattform eigene Pflege. Margen rutschen weg, ohne dass jemand es bemerkt.',
         },
         {
-          icon: '🔄',
+          icon: 'refresh-cw',
           title: 'Dropshipping-Anbieter wechseln',
           description:
             'BigBuy heute, DropXL morgen, ein neuer Lieferant nächsten Monat. Jede Integration ist ein eigener Datei-Mapping-Workshop.',
         },
         {
-          icon: '🧾',
+          icon: 'package-search',
           title: 'Bestell-Status für Kunden',
           description:
             '"Wo bleibt meine Bestellung?" — drei Tools öffnen, manuell zusammenklicken. Kundenkommunikation wird zur Sucharbeit.',
@@ -92,49 +92,49 @@ export const branchen: Branche[] = [
       intro: 'Diese Module decken den klassischen Handelsbetrieb komplett ab — einzeln oder kombiniert.',
       items: [
         {
-          icon: '📦',
+          icon: 'package',
           name: 'Warenwirtschaft',
           description:
             'PDSIN-Katalog (ein Produkt pro EAN, beliebig viele Lieferanten dahinter). Auftragsabwicklung, Versand-Tracking über 5 Carrier, Bundles / Stücklisten.',
         },
         {
-          icon: '🏭',
+          icon: 'warehouse',
           name: 'Lagerverwaltung',
           description:
             'Mehrere Lager, Zone-/Gang-/Regal-/Fach-Hierarchie, Umlagerungen, vollständiges Bewegungs-Audit, Inventur mit Soll-/Ist-Vergleich.',
         },
         {
-          icon: '🚚',
+          icon: 'truck',
           name: 'Dropshipping',
           description:
             'BigBuy, DropXL, JTL-Wawi und Shopware 6 in einer Oberfläche. Stock-Sync alle 15 Minuten, automatische Order-Weiterleitung.',
         },
         {
-          icon: '🛒',
+          icon: 'search-check',
           name: 'Marktpreis-Check',
           description:
             'EAN-Bulk-Check über idealo, Amazon, eBay, billiger.de und Google Shopping. Max-EK pro Plattform, Ampel-Logik, automatischer Quellen-Fallback.',
         },
         {
-          icon: '🌐',
+          icon: 'store',
           name: 'Webshop',
           description:
             'Whitelabel-Kundenshop unter eigener Domain. Bestand, Preise und Bonuspunkte automatisch synchron. Stripe, PayPal und Mollie integriert.',
         },
         {
-          icon: '🎁',
+          icon: 'gift',
           name: 'Bonuspunkte',
           description:
             'Tier-System (Bronze/Silber/Gold), automatische Gutschrift bei Bestellung, Gutschein-Generator und Shopware-Plugin für die Punkte-Anzeige im Checkout.',
         },
         {
-          icon: '🧾',
+          icon: 'receipt-text',
           name: 'Buchhaltung',
           description:
             'DATEV-Export, XRechnung/ZUGFeRD, SKR03-Kontenrahmen, 3-stufiges Mahnwesen, Bankabgleich. Steuerberater-tauglich aus der Box.',
         },
         {
-          icon: '📊',
+          icon: 'chart-column',
           name: 'Reporting',
           description:
             'Live-Dashboard mit Umsatz-Trend, Bestandswert, Top-10-Kategorien, DS-Performance und Low-Stock-Alerts. Aggregierte Queries, kein Excel-Export nötig.',

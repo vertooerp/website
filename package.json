@@ -14,8 +14,10 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "@fontsource-variable/inter": "^5.2.8",
+    "@iconify-json/lucide": "^1.2.113",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.0.2",
+    "astro-icon": "^1.1.5",
     "tailwindcss": "^4.2.1"
   }
 }

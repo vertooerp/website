@@ -1,22 +1,24 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const steps = [
   {
     number: '01',
     title: 'Module wählen',
     description: 'Wählen Sie aus 20+ Modulen genau die Funktionen, die Ihr Unternehmen braucht. Starten Sie klein und erweitern Sie jederzeit.',
-    icon: '🎯',
+    icon: 'target',
   },
   {
     number: '02',
     title: 'Team einladen',
     description: 'Legen Sie Mitarbeiter an, weisen Sie Rollen und Berechtigungen zu. Jeder sieht nur, was er braucht.',
-    icon: '👥',
+    icon: 'users',
   },
   {
     number: '03',
     title: 'Sofort loslegen',
     description: 'Kein Setup, keine Installation. Vertoo läuft im Browser und als installierbare Web-App auf jedem Gerät.',
-    icon: '🚀',
+    icon: 'rocket',
   },
 ];
 ---
@@ -34,8 +36,8 @@ const steps = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
       {steps.map((step) => (
         <div class="relative text-center">
-          <div aria-hidden="true" class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm text-3xl mb-6">
-            {step.icon}
+          <div aria-hidden="true" class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm text-brand-600 dark:text-brand-400 mb-6">
+            <Icon name={`lucide:${step.icon}`} class="w-7 h-7" />
           </div>
           <div aria-hidden="true" class="absolute -top-2 -right-2 md:right-auto md:-left-2 w-8 h-8 rounded-full bg-brand-700 text-white text-xs font-bold flex items-center justify-center">
             {step.number}

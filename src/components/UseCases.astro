@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { branchen } from '../data/branchen';
 
 // Slug-Mapping: welche UseCase-Kacheln verlinken auf welche /branchen/-Seite?
@@ -9,25 +10,25 @@ const cases = [
   {
     title: 'E-Commerce & Handel',
     description: 'Warenwirtschaft, Paketierung, Preischeck und Dropshipping – alles für den Online- und Offline-Handel.',
-    icon: '🛍',
+    icon: 'shopping-bag',
     slug: slugBySlug.handel,
   },
   {
     title: 'Dienstleister & Agenturen',
     description: 'Zeiterfassung, Projektmanagement, Buchhaltung und Teamkommunikation für serviceorientierte Unternehmen.',
-    icon: '💼',
+    icon: 'briefcase',
     slug: undefined,
   },
   {
     title: 'Produktion & Logistik',
     description: 'Bestandsführung, Wareneingang, Versand-Tracking und Qualitätsprüfung für produzierende Betriebe.',
-    icon: '🏭',
+    icon: 'factory',
     slug: undefined,
   },
   {
     title: 'Handwerk & Bau',
     description: 'Betriebsmittel-Verwaltung, Fuhrpark, Kostenübersicht und mobile Zeiterfassung für Teams vor Ort.',
-    icon: '🔧',
+    icon: 'wrench',
     slug: undefined,
   },
 ];
@@ -47,7 +48,7 @@ const cases = [
       {cases.map((c) => {
         const inner = (
           <>
-            <span aria-hidden="true" class="text-4xl">{c.icon}</span>
+            <span aria-hidden="true" class="inline-flex text-brand-600 dark:text-brand-400"><Icon name={`lucide:${c.icon}`} class="w-9 h-9" /></span>
             <h3 class="mt-4 text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
               {c.title}
               {c.slug && (
