@@ -95,7 +95,7 @@ export const branchen: Branche[] = [
           icon: 'package',
           name: 'Warenwirtschaft',
           description:
-            'PDSIN-Katalog (ein Produkt pro EAN, beliebig viele Lieferanten dahinter). Auftragsabwicklung, Versand-Tracking über 5 Carrier, Bundles / Stücklisten.',
+            'Einheitlicher Produktkatalog (ein Produkt pro EAN, beliebig viele Lieferanten dahinter). Auftragsabwicklung, Versand-Tracking über 5 Carrier, Bundles / Stücklisten.',
         },
         {
           icon: 'warehouse',
@@ -439,7 +439,7 @@ export const branchen: Branche[] = [
           icon: 'package',
           name: 'Warenwirtschaft',
           description:
-            'Einheitlicher PDSIN-Produktkatalog, Stammdaten, Bestandsführung mit Audit-Trail, Barcode-Scanner, Bundles und Stücklisten (BOM).',
+            'Einheitlicher Produktkatalog (ein Eintrag pro EAN), Stammdaten, Bestandsführung mit Audit-Trail, Barcode-Scanner, Bundles und Stücklisten (BOM).',
         },
         {
           icon: 'warehouse',

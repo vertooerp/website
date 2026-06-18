@@ -31,7 +31,7 @@ Konkret bedeutet das:
 
 Wird ein Teil des Sortiments per Dropshipping abgewickelt, kommt eine weitere Bestandsquelle hinzu: die Lieferanten. Auch deren Verfügbarkeiten müssen regelmäßig abgeglichen werden, damit kein nicht-lieferbarer Artikel verkauft wird.
 
-[VertooERP](/branchen/handel) bildet beides in einem System ab: Die Warenwirtschaft nutzt einen einheitlichen PDSIN-Katalog (ein Produkt pro EAN, beliebig viele Lieferanten dahinter), und das Dropshipping-Modul synchronisiert Bestände von BigBuy, DropXL und JTL-Wawi alle 15 Minuten. Die Shopware-6-Integration hält den eigenen Shop automatisch auf Stand.
+[VertooERP](/branchen/handel) bildet beides in einem System ab: Die Warenwirtschaft nutzt einen einheitlichen Produktkatalog (ein Produkt pro EAN, beliebig viele Lieferanten dahinter), und das Dropshipping-Modul synchronisiert Bestände von BigBuy, DropXL und JTL-Wawi alle 15 Minuten. Die Shopware-6-Integration hält den eigenen Shop automatisch auf Stand.
 
 ## Worauf Sie achten sollten
 
