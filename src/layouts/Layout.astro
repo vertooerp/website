@@ -4,9 +4,10 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
-const { title = 'VertooERP – Die modulare Business-Plattform', description = 'VertooERP ersetzt Excel-Chaos durch eine modulare Webanwendung. Zeiterfassung, Warenwirtschaft, Buchhaltung, Chat und mehr – alles in einer Plattform.' } = Astro.props;
+const { title = 'VertooERP – Die modulare Business-Plattform', description = 'VertooERP ersetzt Excel-Chaos durch eine modulare Webanwendung. Zeiterfassung, Warenwirtschaft, Buchhaltung, Chat und mehr – alles in einer Plattform.', noindex = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,6 +16,7 @@ const { title = 'VertooERP – Die modulare Business-Plattform', description = '
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
