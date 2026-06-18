@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Anchor-Ziele nicht unter den fixed Header (h-16 = 4rem) springen lassen */
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -68,7 +70,30 @@ body {
 }
 
 .hero-gradient {
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(4, 120, 87, 0.12), transparent);
+  background:
+    radial-gradient(ellipse 60% 45% at 15% 0%, rgba(16, 185, 129, 0.10), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 10%, rgba(52, 211, 153, 0.08), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(4, 120, 87, 0.12), transparent);
+  background-size: 200% 200%;
+  animation: mesh-drift 24s ease-in-out infinite alternate;
+}
+
+@keyframes mesh-drift {
+  0% { background-position: 0% 0%, 100% 0%, 50% 0%; }
+  100% { background-position: 20% 10%, 80% 15%, 50% 0%; }
+}
+
+/* Scroll-Reveal: Elemente faden beim Eintreten in den Viewport ein.
+   Nur aktiv wenn JS läuft (.js auf <html>) — sonst bleibt Content sichtbar. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  will-change: opacity, transform;
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card-hover {
@@ -112,7 +137,12 @@ body {
 }
 
 .dark .hero-gradient {
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.18), transparent);
+  background:
+    radial-gradient(ellipse 60% 45% at 15% 0%, rgba(16, 185, 129, 0.16), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 10%, rgba(52, 211, 153, 0.12), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.18), transparent);
+  background-size: 200% 200%;
+  animation: mesh-drift 24s ease-in-out infinite alternate;
 }
 .dark .card-hover:hover {
   box-shadow: 0 12px 40px -8px rgba(16, 185, 129, 0.18);
@@ -152,5 +182,29 @@ body {
   section,
   footer {
     transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+}
+
+/* Reduced-Motion: alle nicht-essenziellen Animationen abschalten,
+   Reveal-Elemente sofort sichtbar machen, smooth-scroll deaktivieren */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .hero-gradient,
+  .dark .hero-gradient {
+    animation: none;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
