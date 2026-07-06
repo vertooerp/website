@@ -19,6 +19,8 @@ const plans = [
     ],
     cta: 'Starter anfragen',
     highlight: false,
+    slug: 'starter',
+    selfService: true,
   },
   {
     name: 'Business',
@@ -38,6 +40,8 @@ const plans = [
     ],
     cta: 'Business anfragen',
     highlight: true,
+    slug: 'business',
+    selfService: true,
   },
   {
     name: 'Enterprise',
@@ -59,6 +63,8 @@ const plans = [
     ],
     cta: 'Kontakt aufnehmen',
     highlight: false,
+    slug: 'enterprise',
+    selfService: false, // Custom-Pricing/unbegrenzt → Sales-Kontakt statt Self-Checkout
   },
 ];
 
@@ -118,7 +124,7 @@ const tiers = ['Starter', 'Business', 'Enterprise'];
           </ul>
 
           <a
-            href="#kontakt"
+            href={plan.selfService ? `/signup?plan=${plan.slug}` : '#kontakt'}
             class={`mt-8 block w-full py-3 rounded-xl text-center font-semibold text-sm transition-colors ${
               plan.highlight
                 ? 'bg-white text-brand-700 hover:bg-brand-50'
