@@ -17,7 +17,14 @@
   --color-brand-900: #064e3b;
   --color-brand-950: #022c22;
 
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;
+}
+
+/* Distinktive Display-Font nur für große Überschriften; Body bleibt Inter */
+h1, h2 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }
 
 html {
