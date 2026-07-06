@@ -56,4 +56,16 @@ export const faq: FaqItem[] = [
     q: 'Kann VertooERP ergänzend zu einem bestehenden System genutzt werden?',
     a: 'Ja. VertooERP kann ergänzend zu einem bereits führenden System wie JTL-Wawi, SAP oder DATEV eingesetzt werden – zum Beispiel mit nur einzelnen Modulen. Für diese ergänzende Nutzung gewährt die tap & type UG reduzierte Konditionen.',
   },
+  {
+    q: 'Wie aufwändig ist der Umstieg auf VertooERP?',
+    a: 'Die Lizenz ist sofort aktiv. Bestehende Daten wie Produkte, Kunden und Lieferanten werden in der Regel per CSV- oder Excel-Import übernommen. Eine produktive Einführung mit Stammdaten, Schnittstellen und Schulung dauert je nach Umfang typischerweise zwei bis acht Wochen. Der modulare Aufbau erlaubt einen schrittweisen Start mit den wichtigsten Modulen, statt alles auf einmal umzustellen.',
+  },
+  {
+    q: 'Was passiert, wenn unser Unternehmen wächst?',
+    a: 'VertooERP wächst modular mit: Sie aktivieren weitere Module und Seats nach Bedarf, ohne Systemwechsel. Multi-Standort und Multi-Mandant sind in allen Tarifen enthalten, sodass sich auch mehrere Standorte oder Tochtergesellschaften abbilden lassen.',
+  },
+  {
+    q: 'Können wir VertooERP vor der Entscheidung ansehen?',
+    a: 'Ja. In einer persönlichen Demo zeigen wir die Plattform an Ihrem konkreten Anwendungsfall – von der Warenwirtschaft bis zur Buchhaltung. Für einen tieferen Eindruck lässt sich ein Pilotbetrieb mit einem Teilbereich oder Standort vereinbaren.',
+  },
 ];
