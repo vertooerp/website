@@ -32,7 +32,7 @@ const planLabels: Record<string, string> = {
           <div>
             <label for="subdomain" class="block text-sm font-medium text-gray-700">Wunsch-Adresse</label>
             <div class="mt-1 flex items-center rounded-lg border border-gray-300 focus-within:border-brand-600 focus-within:ring-1 focus-within:ring-brand-600">
-              <input id="subdomain" name="subdomain" type="text" required pattern="[a-z][a-z0-9-]{2,29}" placeholder="meinefirma"
+              <input id="subdomain" name="subdomain" type="text" required pattern="[a-z][a-z0-9-]{1,28}[a-z0-9]" placeholder="meinefirma"
                 class="w-full rounded-l-lg border-0 px-3 py-2 text-sm focus:ring-0" />
               <span class="px-3 py-2 text-sm text-gray-400 select-none">.vertoo.de</span>
             </div>
