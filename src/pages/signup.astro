@@ -5,8 +5,8 @@ import Layout from '../layouts/Layout.astro';
 const checkoutEndpoint = import.meta.env.PUBLIC_CHECKOUT_ENDPOINT || 'https://console.vertoo.de/api/checkout';
 
 const planLabels: Record<string, string> = {
-  starter: 'Starter — 2.400 € / Jahr',
-  business: 'Business — 6.000 € / Jahr',
+  starter: 'Starter — 350 € / Monat',
+  business: 'Business — 800 € / Monat',
 };
 ---
 
@@ -38,14 +38,6 @@ const planLabels: Record<string, string> = {
             </div>
             <p class="mt-1 text-xs text-gray-400">Kleinbuchstaben, Ziffern, Bindestriche. Beginnt mit einem Buchstaben.</p>
           </div>
-          <div>
-            <span class="block text-sm font-medium text-gray-700">Abrechnung</span>
-            <div class="mt-1 flex gap-4 text-sm">
-              <label class="inline-flex items-center gap-2"><input type="radio" name="billingCycle" value="monthly" checked /> Monatlich</label>
-              <label class="inline-flex items-center gap-2"><input type="radio" name="billingCycle" value="yearly" /> Jährlich</label>
-            </div>
-          </div>
-
           <p id="error" class="hidden text-sm text-red-600" role="alert"></p>
 
           <button id="submit" type="submit"
@@ -85,7 +77,7 @@ const planLabels: Record<string, string> = {
 
       const payload = {
         plan,
-        billingCycle: form.billingCycle.value,
+        billingCycle: 'monthly',
         company: form.company.value.trim(),
         email: form.email.value.trim(),
         subdomain: form.subdomain.value.trim().toLowerCase(),
