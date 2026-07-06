@@ -6,6 +6,15 @@ import icon from 'astro-icon';
 
 export default defineConfig({
   site: 'https://vertoo.de',
+  // Mehrsprachigkeit: Deutsch (default, ohne Präfix) + Englisch unter /en/.
+  // Weitere Sprachen (fr, it …) später einfach hier ergänzen.
+  i18n: {
+    locales: ['de', 'en'],
+    defaultLocale: 'de',
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   integrations: [
     icon(),
     sitemap({
