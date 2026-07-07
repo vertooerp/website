@@ -27,6 +27,7 @@ const SEG_EN: Record<string, string> = {
   branchen: 'industries',
   module: 'modules',
   glossar: 'glossary',
+  alternativen: 'alternatives',
 };
 const SEG_DE: Record<string, string> = Object.fromEntries(Object.entries(SEG_EN).map(([d, e]) => [e, d]));
 
@@ -150,6 +151,7 @@ export function isTranslated(pathname: string): boolean {
   return [
     /^\/branchen(\/[^/]+)?$/,
     /^\/module(\/[^/]+)?$/,
+    /^\/alternativen(\/[^/]+)?$/,
     /^\/glossar$/,
     /^\/blog(\/.+)?$/,
     /^\/(impressum|datenschutz|barrierefreiheit)$/,

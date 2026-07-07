@@ -50,6 +50,13 @@
 - [Bonusprogramme für kleine Shops](https://vertoo.de/blog/bonusprogramme-kleine-shops): Kundenbindung lohnend umsetzen
 - [ERP-Einführung in 4–8 Wochen](https://vertoo.de/blog/erp-einfuehrung-projektplan): realistischer Projektplan
 
+## Vergleiche / Alternativen
+
+- [Alternative zu JTL-Wawi](https://vertoo.de/alternativen/jtl-wawi): integriertes, modulares ERP statt reiner Warenwirtschaft
+- [Alternative zu Xentral](https://vertoo.de/alternativen/xentral): selbst gehostet, volle Datenhoheit, modulare Abrechnung
+- [Alternative zu weclapp](https://vertoo.de/alternativen/weclapp): Self-Hosting/On-Premises statt reiner Cloud
+- [Alternative zu Odoo](https://vertoo.de/alternativen/odoo): auf den deutschen Mittelstand fokussiert (DSGVO, GoBD, DATEV, XRechnung)
+
 ## Weitere Seiten
 
 - [ERP-Glossar](https://vertoo.de/glossar): Definitionen zu ERP, GoBD, DSGVO, Self-Hosting, XRechnung u.a.

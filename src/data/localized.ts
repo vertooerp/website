@@ -12,6 +12,8 @@ import { glossar, type GlossarTerm } from './glossar';
 import { glossarEn } from './glossar.en';
 import { faq, type FaqItem } from './faq';
 import { faqEn } from './faq.en';
+import { alternatives, type Alternative } from './alternatives';
+import { alternativesEn } from './alternatives.en';
 
 export const getBranchen = (lang: Lang): Branche[] => (lang === 'en' ? branchenEn : branchen);
 export const getBrancheBySlug = (lang: Lang, slug: string): Branche | undefined =>
@@ -24,3 +26,7 @@ export const getModulBySlug = (lang: Lang, slug: string): Modul | undefined =>
 export const getGlossar = (lang: Lang): GlossarTerm[] => (lang === 'en' ? glossarEn : glossar);
 
 export const getFaq = (lang: Lang): FaqItem[] => (lang === 'en' ? faqEn : faq);
+
+export const getAlternatives = (lang: Lang): Alternative[] => (lang === 'en' ? alternativesEn : alternatives);
+export const getAlternativeBySlug = (lang: Lang, slug: string): Alternative | undefined =>
+  getAlternatives(lang).find((a) => a.slug === slug);

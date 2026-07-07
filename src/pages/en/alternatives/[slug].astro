@@ -1,0 +1,12 @@
+---
+import AlternativePage from '../../../components/AlternativePage.astro';
+import { alternativesEn } from '../../../data/alternatives.en';
+
+export function getStaticPaths() {
+  return alternativesEn.map((a) => ({ params: { slug: a.slug }, props: { alt: a } }));
+}
+
+const { alt } = Astro.props;
+---
+
+<AlternativePage alt={alt} lang="en" />

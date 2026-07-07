@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { getLangFromUrl, localizePath } from '../i18n/utils';
+import { getAlternatives } from '../data/localized';
+
+const lang = getLangFromUrl(Astro.url);
+const p = (path: string) => localizePath(path, lang);
+const alternatives = getAlternatives(lang);
+
+const s = {
+  de: {
+    title: 'ERP-Alternativen im Vergleich – VertooERP',
+    description: 'VertooERP als Alternative zu JTL-Wawi, Xentral, weclapp und Odoo – modulares, self-gehostetes ERP aus Deutschland mit voller Datenhoheit.',
+    eyebrow: 'Alternativen', headline: 'VertooERP im Vergleich',
+    intro: 'Sie prüfen mehrere ERP-Systeme? Diese Vergleiche zeigen sachlich, wie sich VertooERP positioniert – und für wen welches System passt.',
+  },
+  en: {
+    title: 'ERP alternatives compared – VertooERP',
+    description: 'VertooERP as an alternative to JTL-Wawi, Xentral, weclapp and Odoo – a modular, self-hosted ERP from Germany with full data sovereignty.',
+    eyebrow: 'Alternatives', headline: 'VertooERP compared',
+    intro: 'Evaluating several ERP systems? These comparisons show factually how VertooERP is positioned – and which system fits whom.',
+  },
+}[lang];
+---
+
+<Layout title={s.title} description={s.description} hasTranslation>
+  <Header />
+  <main id="main-content">
+    <section class="relative pt-32 pb-12 lg:pt-40 hero-gradient overflow-hidden">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{s.eyebrow}</span>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">{s.headline}</h1>
+        <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{s.intro}</p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {alternatives.map((a) => (
+            <a href={p(`/alternativen/${a.slug}`)} class="group block p-8 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 card-hover hover:border-brand-200 dark:hover:border-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
+              <h2 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-400 transition-colors flex items-center gap-2">
+                {lang === 'en' ? 'vs.' : 'vs.'} {a.competitor}
+                <svg aria-hidden="true" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+              </h2>
+              <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">{a.hero.subhead}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
