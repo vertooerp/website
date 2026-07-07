@@ -6,6 +6,7 @@ import { Icon } from 'astro-icon/components';
 import type { Branche } from '../data/branchen';
 import type { Lang } from '../i18n/ui';
 import { localizePath } from '../i18n/utils';
+import { getModule } from '../data/localized';
 
 interface Props {
   branche: Branche;
@@ -14,6 +15,9 @@ interface Props {
 
 const { branche, lang } = Astro.props;
 const p = (path: string) => localizePath(path, lang);
+
+// Interne Verlinkung: auf die echten Modul-Detailseiten
+const moduleLinks = getModule(lang);
 
 const s = {
   de: {
@@ -24,6 +28,7 @@ const s = {
     pricingHeadA: 'Ab', pricingHeadPrice: '350 €/Monat', pricingHeadB: 'starten',
     pricingText: 'Nur die Module zahlen, die Sie wirklich nutzen. Skalieren Sie nach Bedarf — Mindestlaufzeit 12 Monate, kein Setup-Fee.',
     pricingLink: 'Alle Tarife im Detail', country: 'Deutschland',
+    detailHeading: 'Module im Detail ansehen',
   },
   en: {
     start: 'Home', industries: 'Industries', problems: 'Challenges', modules: 'Modules',
@@ -33,6 +38,7 @@ const s = {
     pricingHeadA: 'From', pricingHeadPrice: '€350/month', pricingHeadB: '',
     pricingText: 'Only pay for the modules you actually use. Scale as needed — 12-month minimum term, no setup fee.',
     pricingLink: 'See all plans in detail', country: 'Germany',
+    detailHeading: 'Explore the modules in detail',
   },
 }[lang];
 
@@ -116,6 +122,17 @@ const breadcrumbLd = {
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{m.name}</h3>
               <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{m.description}</p>
             </article>
+          ))}
+        </div>
+
+        <!-- Interne Verlinkung: echte Modul-Detailseiten -->
+        <h3 class="mt-12 text-center text-lg font-semibold text-gray-900 dark:text-white">{s.detailHeading}</h3>
+        <div class="mt-5 flex flex-wrap justify-center gap-2.5">
+          {moduleLinks.map((m) => (
+            <a href={p(`/module/${m.slug}`)} class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 hover:border-brand-300 hover:text-brand-700 dark:hover:text-brand-400 transition-colors">
+              <Icon name={`lucide:${m.icon}`} class="w-4 h-4" />
+              {m.name}
+            </a>
           ))}
         </div>
       </div>

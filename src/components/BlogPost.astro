@@ -36,6 +36,7 @@ const s = {
     ctaHeading: 'VertooERP kennenlernen',
     ctaText: 'Modulares ERP, self-gehostet, DSGVO- und GoBD-konform. Vereinbaren Sie eine unverbindliche Demo.',
     ctaBtn: 'Demo anfragen', related: 'Verwandte Artikel',
+    discover: 'Mehr entdecken', modules: 'Alle Module', industries: 'Branchen', glossary: 'ERP-Glossar',
   },
   en: {
     start: 'Home', blog: 'Blog', locale: 'en-GB',
@@ -44,8 +45,15 @@ const s = {
     ctaHeading: 'Discover VertooERP',
     ctaText: 'Modular ERP, self-hosted, GDPR- and GoBD-compliant. Book a no-obligation demo.',
     ctaBtn: 'Request a demo', related: 'Related articles',
+    discover: 'Discover more', modules: 'All modules', industries: 'Industries', glossary: 'ERP glossary',
   },
 }[lang];
+
+const hubs = [
+  { href: p('/module'), label: s.modules },
+  { href: p('/branchen'), label: s.industries },
+  { href: p('/glossar'), label: s.glossary },
+];
 
 const dateFmt = (d: Date) => d.toLocaleDateString(s.locale, { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -107,6 +115,14 @@ const breadcrumbLd = {
           <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">{s.ctaText}</p>
           <a href={p('/#kontakt')} class="mt-5 inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-700 text-white font-semibold text-sm hover:bg-brand-800 transition-colors">{s.ctaBtn}</a>
         </div>
+
+        <!-- Interne Verlinkung: Hub-Seiten -->
+        <nav aria-label={s.discover} class="mt-8 flex flex-wrap items-center gap-2.5">
+          <span class="text-sm font-medium text-gray-500 dark:text-gray-400">{s.discover}:</span>
+          {hubs.map((h) => (
+            <a href={h.href} class="inline-flex items-center px-3.5 py-1.5 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 hover:border-brand-300 hover:text-brand-700 dark:hover:text-brand-400 transition-colors">{h.label}</a>
+          ))}
+        </nav>
 
         {related.length > 0 && (
           <aside class="mt-14 border-t border-gray-100 dark:border-gray-800 pt-10">
