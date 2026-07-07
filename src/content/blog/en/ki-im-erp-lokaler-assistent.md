@@ -1,6 +1,6 @@
 ---
 title: "AI in ERP: What a Local Assistant Can Really Do"
-description: "AI features appear in every software demo. But what does an AI assistant in an ERP system actually deliver in practice — and why is a locally operated model often the better choice for data-sensitive companies?"
+description: "AI features appear in every software demo. But what does an AI assistant in an ERP system actually deliver in practice — and why is a locally operated model…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["AI","Ollama","ERP","Data Protection"]

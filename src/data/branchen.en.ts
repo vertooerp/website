@@ -7,7 +7,7 @@ export const branchenEn: Branche[] = [
     "name": "Retail & E-Commerce",
     "icon": "shopping-cart",
     "metaTitle": "ERP for Retail & E-Commerce – VertooERP",
-    "metaDescription": "Modular ERP for online and brick-and-mortar retail: inventory management, warehousing, dropshipping, web shop, loyalty points and market-price check. Self-hosting, GDPR- and GoBD-compliant.",
+    "metaDescription": "Modular ERP for online and brick-and-mortar retail: inventory, warehousing, dropshipping, web shop and market-price check – self-hosted, GDPR-compliant.",
     "hero": {
       "eyebrow": "For Retail & E-Commerce",
       "headline": "ERP for retail — from goods receipt to customer loyalty",
@@ -325,7 +325,7 @@ export const branchenEn: Branche[] = [
     "name": "Manufacturing & Logistics",
     "icon": "factory",
     "metaTitle": "ERP for Manufacturing & Logistics – VertooERP",
-    "metaDescription": "Modular ERP for manufacturing and logistics operations: inventory management, warehouse management with zones, goods receipt, shipping and stocktaking. Self-hosting, GDPR- and GoBD-compliant.",
+    "metaDescription": "Modular ERP for manufacturing and logistics: inventory, warehousing with zones, goods receipt, shipping and stocktaking – self-hosted, GDPR-compliant.",
     "hero": {
       "eyebrow": "For Manufacturing & Logistics",
       "headline": "Materials, warehouse and shipping – fully traceable, end to end",
@@ -484,7 +484,7 @@ export const branchenEn: Branche[] = [
     "name": "Trades & Construction",
     "icon": "wrench",
     "metaTitle": "ERP for Trades & Construction – VertooERP",
-    "metaDescription": "Modular ERP for trades and construction: mobile time tracking, equipment and tool management, fleet, per-job cost control and accounting. Self-hosting, GDPR- and GoBD-compliant.",
+    "metaDescription": "Modular ERP for trades and construction: mobile time tracking, equipment, fleet, per-job cost control and accounting – self-hosted, GDPR-compliant.",
     "hero": {
       "eyebrow": "For Trades & Construction",
       "headline": "Stay on top of your business – even from the building site",

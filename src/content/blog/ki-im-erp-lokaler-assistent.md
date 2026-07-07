@@ -1,6 +1,6 @@
 ---
 title: "KI im ERP: Was ein lokaler Assistent wirklich kann"
-description: "KI-Funktionen sind in jeder Software-Demo. Aber was bringt ein KI-Assistent im ERP konkret – und warum ist ein lokal betriebenes Modell für datensensible Unternehmen oft die bessere Wahl?"
+description: "KI-Funktionen sind in jeder Software-Demo. Aber was bringt ein KI-Assistent im ERP konkret – und warum ist ein lokal betriebenes Modell für datensensible…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["KI", "Ollama", "ERP", "Datenschutz"]

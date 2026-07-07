@@ -1,6 +1,6 @@
 ---
 title: "ERP-Einführung in 4–8 Wochen: ein realistischer Projektplan"
-description: "ERP-Projekte gelten als langwierig und riskant. Bei einem modularen System und gutem Vorgehen geht es schneller. Ein praxisnaher Phasenplan für die Einführung in kleinen und mittleren Unternehmen."
+description: "ERP-Projekte gelten als langwierig und riskant. Bei einem modularen System und gutem Vorgehen geht es schneller."
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["ERP-Einführung", "Projektplan", "KMU", "Migration"]

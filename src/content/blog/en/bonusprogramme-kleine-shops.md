@@ -1,6 +1,6 @@
 ---
 title: "Loyalty Programs for Small Shops: Are They Worth It?"
-description: "Customer retention through a points system isn't just for large chains. When a loyalty program pays off for small and medium-sized online shops, and what matters when implementing one."
+description: "Customer retention through a points system isn't just for large chains. When a loyalty program pays off for small and medium-sized online shops, and what…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["Loyalty Points","Customer Retention","E-Commerce","Retail"]

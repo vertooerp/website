@@ -37,7 +37,7 @@ export const module: Modul[] = [
     "name": "Warenwirtschaft",
     "icon": "package",
     "metaTitle": "Warenwirtschaft Software für den Handel – VertooERP",
-    "metaDescription": "Warenwirtschaft Software von VertooERP: ein Produkt pro EAN, Multi-Supplier, Bestandsführung mit Audit-Trail, Wareneingang, Aufträge, Versand-Tracking und Retouren.",
+    "metaDescription": "Warenwirtschaft-Software von VertooERP: ein Produkt pro EAN, Multi-Supplier, Bestandsführung mit Audit-Trail, Wareneingang, Aufträge und Versand-Tracking.",
     "hero": {
       "eyebrow": "Modul: Warenwirtschaft",
       "headline": "Warenwirtschaft Software mit einem Produktkatalog für alle Lieferanten",
@@ -150,7 +150,7 @@ export const module: Modul[] = [
     "name": "Buchhaltung",
     "icon": "receipt-text",
     "metaTitle": "Buchhaltungssoftware für KMU – VertooERP",
-    "metaDescription": "Buchhaltungssoftware für KMU: Belege, offene Posten, Kassenbuch, GuV/BWA, DATEV-Export, USt-Voranmeldung und Mahnwesen – GoBD-konform im Buchhaltungsmodul von VertooERP.",
+    "metaDescription": "Buchhaltungssoftware für KMU: Belege, offene Posten, GuV/BWA, DATEV-Export, USt-Voranmeldung und Mahnwesen – GoBD-konform in VertooERP.",
     "hero": {
       "eyebrow": "Modul: Buchhaltung",
       "headline": "Buchhaltungssoftware für KMU – integriert in Ihr ERP",
@@ -691,7 +691,7 @@ export const module: Modul[] = [
     "name": "Aufgaben & Projekte",
     "icon": "list-checks",
     "metaTitle": "Projektmanagement Software KMU – VertooERP",
-    "metaDescription": "Projektmanagement Software für KMU: Aufgaben mit Kanban, Liste und Kalender, Prioritäten, Subtasks, Checklisten, Kommentare und Projekte – integriert in VertooERP.",
+    "metaDescription": "Projektmanagement-Software für KMU: Aufgaben und Projekte mit Kanban, Liste und Kalender, Subtasks, Checklisten und Kommentaren – integriert in VertooERP.",
     "hero": {
       "eyebrow": "Modul: Aufgaben & Projekte",
       "headline": "Projektmanagement Software für KMU – Aufgaben und Projekte in einem System",

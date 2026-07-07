@@ -1,6 +1,6 @@
 ---
 title: "GoBD-konforme Buchhaltung: Was KMU 2026 wissen müssen"
-description: "Was bedeutet GoBD konkret für kleine und mittlere Unternehmen? Ein verständlicher Überblick über Pflichten, Unveränderbarkeit, Aufbewahrung und worauf Sie bei Ihrer Buchhaltungssoftware achten sollten."
+description: "Was bedeutet GoBD konkret für kleine und mittlere Unternehmen? Ein verständlicher Überblick über Pflichten, Unveränderbarkeit, Aufbewahrung und worauf Sie…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["GoBD", "Buchhaltung", "Compliance", "KMU"]

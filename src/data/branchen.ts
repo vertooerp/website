@@ -50,7 +50,7 @@ export const branchen: Branche[] = [
     icon: 'shopping-cart',
     metaTitle: 'ERP für Handel & E-Commerce – VertooERP',
     metaDescription:
-      'Modulares ERP für Online- und stationären Handel: Warenwirtschaft, Lager, Dropshipping, Webshop, Bonuspunkte und Marktpreis-Check. Self-Hosting, DSGVO- und GoBD-konform.',
+      'Modulares ERP für Online- und stationären Handel: Warenwirtschaft, Lager, Dropshipping, Webshop und Marktpreis-Check – self-gehostet, DSGVO-konform.',
     hero: {
       eyebrow: 'Für Handel & E-Commerce',
       headline: 'ERP für den Handel — von Wareneingang bis Kundenbindung',
@@ -222,7 +222,7 @@ export const branchen: Branche[] = [
     icon: 'briefcase',
     metaTitle: 'ERP für Dienstleister & Agenturen – VertooERP',
     metaDescription:
-      'Modulares ERP für Agenturen und Dienstleister: Zeiterfassung, Projekt- und Aufgabenmanagement, Buchhaltung, CRM und Team-Chat. Self-Hosting, DSGVO- und GoBD-konform.',
+      'Modulares ERP für Agenturen und Dienstleister: Zeiterfassung, Projekte, Aufgaben, Buchhaltung, CRM und Team-Chat – self-gehostet, DSGVO-konform.',
     hero: {
       eyebrow: 'Für Dienstleister & Agenturen',
       headline: 'Von der erfassten Stunde zur bezahlten Rechnung',
@@ -394,7 +394,7 @@ export const branchen: Branche[] = [
     icon: 'factory',
     metaTitle: 'ERP für Produktion & Logistik – VertooERP',
     metaDescription:
-      'Modulares ERP für produzierende und logistische Betriebe: Warenwirtschaft, Lagerverwaltung mit Zonen, Wareneingang, Versand und Inventur. Self-Hosting, DSGVO- und GoBD-konform.',
+      'Modulares ERP für Produktion und Logistik: Warenwirtschaft, Lagerverwaltung mit Zonen, Wareneingang, Versand und Inventur – self-gehostet, DSGVO-konform.',
     hero: {
       eyebrow: 'Für Produktion & Logistik',
       headline: 'Material, Lager und Versand – lückenlos nachvollziehbar',
@@ -566,7 +566,7 @@ export const branchen: Branche[] = [
     icon: 'wrench',
     metaTitle: 'ERP für Handwerk & Bau – VertooERP',
     metaDescription:
-      'Modulares ERP für Handwerk und Bau: mobile Zeiterfassung, Betriebsmittel- und Werkzeugverwaltung, Fuhrpark, Kostenkontrolle pro Auftrag und Buchhaltung. Self-Hosting, DSGVO- und GoBD-konform.',
+      'Modulares ERP für Handwerk und Bau: mobile Zeiterfassung, Betriebsmittel, Fuhrpark, Kostenkontrolle pro Auftrag und Buchhaltung – self-gehostet, DSGVO-konform.',
     hero: {
       eyebrow: 'Für Handwerk & Bau',
       headline: 'Den Betrieb im Griff – auch von der Baustelle aus',

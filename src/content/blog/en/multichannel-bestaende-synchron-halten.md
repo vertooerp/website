@@ -1,6 +1,6 @@
 ---
 title: "Keeping Multichannel Inventory in Sync: Shopware, Amazon & eBay"
-description: "Avoiding overselling and inventory chaos in multichannel commerce: why a central inventory management system is the key, and how automatic stock synchronization works."
+description: "Avoiding overselling and inventory chaos in multichannel commerce: why a central inventory management system is the key, and how automatic stock…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["Inventory Management","Multichannel","Dropshipping","E-Commerce"]

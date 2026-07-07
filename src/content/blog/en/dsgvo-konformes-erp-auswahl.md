@@ -1,6 +1,6 @@
 ---
 title: "GDPR-Compliant ERP: What SMEs Need to Consider When Choosing"
-description: "An ERP processes customer, employee, and financial data — plenty of personal data. Which data protection criteria really matter when selecting software, and what role self-hosting plays."
+description: "An ERP processes customer, employee, and financial data — plenty of personal data. Which data protection criteria really matter when selecting software, and…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["GDPR","Data Protection","ERP Selection","Self-Hosting"]

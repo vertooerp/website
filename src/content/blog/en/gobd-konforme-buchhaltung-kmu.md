@@ -1,6 +1,6 @@
 ---
 title: "GoBD-Compliant Accounting: What SMEs Need to Know in 2026"
-description: "What does GoBD actually mean for small and medium-sized enterprises? A clear overview of the obligations, immutability, retention, and what to look for in your accounting software."
+description: "What does GoBD actually mean for small and medium-sized enterprises? A clear overview of the obligations, immutability, retention, and what to look for in…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["GoBD","Accounting","Compliance","SME"]

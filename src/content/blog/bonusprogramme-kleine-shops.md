@@ -1,6 +1,6 @@
 ---
 title: "Bonusprogramme für kleine Shops: Lohnt sich das?"
-description: "Kundenbindung per Punktesystem ist nicht nur etwas für große Ketten. Wann sich ein Bonusprogramm für kleine und mittlere Online-Shops rechnet und worauf es bei der Umsetzung ankommt."
+description: "Kundenbindung per Punktesystem ist nicht nur etwas für große Ketten. Wann sich ein Bonusprogramm für kleine und mittlere Online-Shops rechnet und worauf es…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["Bonuspunkte", "Kundenbindung", "E-Commerce", "Handel"]

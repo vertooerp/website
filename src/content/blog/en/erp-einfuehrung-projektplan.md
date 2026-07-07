@@ -1,6 +1,6 @@
 ---
 title: "ERP Implementation in 4–8 Weeks: A Realistic Project Plan"
-description: "ERP projects have a reputation for being lengthy and risky. With a modular system and a sound approach, it can be faster. A practical phased plan for implementation in small and medium-sized enterprises."
+description: "ERP projects have a reputation for being lengthy and risky. With a modular system and a sound approach, it can be faster."
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["ERP Implementation","Project Plan","SME","Migration"]

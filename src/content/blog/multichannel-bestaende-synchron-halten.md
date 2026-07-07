@@ -1,6 +1,6 @@
 ---
 title: "Multichannel-Bestände synchron halten: Shopware, Amazon & eBay"
-description: "Überverkäufe und Bestandschaos im Multichannel-Handel vermeiden: Warum eine zentrale Warenwirtschaft der Schlüssel ist und wie automatische Bestandssynchronisation funktioniert."
+description: "Überverkäufe und Bestandschaos im Multichannel-Handel vermeiden: Warum eine zentrale Warenwirtschaft der Schlüssel ist und wie automatische…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["Warenwirtschaft", "Multichannel", "Dropshipping", "E-Commerce"]

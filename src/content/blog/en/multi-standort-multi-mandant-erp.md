@@ -1,6 +1,6 @@
 ---
 title: "Managing Multiple Locations & Legal Entities in a Single ERP"
-description: "Branches, subsidiaries or affiliated companies under one roof: what distinguishes multi-location from multi-entity in an ERP, and what corporate groups should look out for."
+description: "Branches, subsidiaries or affiliated companies under one roof: what distinguishes multi-location from multi-entity in an ERP, and what corporate groups…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["Multi-Location","Multi-Entity","ERP","Corporate Group"]

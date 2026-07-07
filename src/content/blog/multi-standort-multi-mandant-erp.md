@@ -1,6 +1,6 @@
 ---
 title: "Mehrere Standorte & Mandanten in einem ERP verwalten"
-description: "Filialen, Niederlassungen oder Tochtergesellschaften unter einem Dach: Was Multi-Standort und Multi-Mandant im ERP unterscheidet und worauf Unternehmensgruppen achten sollten."
+description: "Filialen, Niederlassungen oder Tochtergesellschaften unter einem Dach: Was Multi-Standort und Multi-Mandant im ERP unterscheidet und worauf…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["Multi-Standort", "Multi-Mandant", "ERP", "Unternehmensgruppe"]

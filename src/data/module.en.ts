@@ -7,7 +7,7 @@ export const moduleEn: Modul[] = [
     "name": "Inventory Management",
     "icon": "package",
     "metaTitle": "Inventory Management Software for Retail – VertooERP",
-    "metaDescription": "Inventory management software from VertooERP: one product per EAN, multi-supplier, stock control with audit trail, goods receipt, orders, shipment tracking and returns.",
+    "metaDescription": "Inventory management software from VertooERP: one product per EAN, multi-supplier, stock control with audit trail, goods receipt, orders and shipment tracking.",
     "hero": {
       "eyebrow": "Module: Inventory Management",
       "headline": "Inventory management software with a single product catalogue for all suppliers",
@@ -120,7 +120,7 @@ export const moduleEn: Modul[] = [
     "name": "Accounting",
     "icon": "receipt-text",
     "metaTitle": "Accounting Software for SMEs – VertooERP",
-    "metaDescription": "Accounting software for SMEs: receipts, open items, cash book, P&L/BWA, DATEV export, advance VAT return and dunning – GoBD-compliant in the VertooERP accounting module.",
+    "metaDescription": "Accounting software for SMEs: receipts, open items, P&L/BWA, DATEV export, advance VAT return and dunning – GoBD-compliant in VertooERP.",
     "hero": {
       "eyebrow": "Module: Accounting",
       "headline": "Accounting software for SMEs – integrated into your ERP",
@@ -567,7 +567,7 @@ export const moduleEn: Modul[] = [
     "name": "CRM",
     "icon": "users",
     "metaTitle": "CRM Software for SMEs: Module within the ERP – VertooERP",
-    "metaDescription": "Integrated CRM within the ERP: customer and contact management with a history spanning accounting, inventory management, orders and messages. CRM software for small and medium-sized businesses.",
+    "metaDescription": "Integrated CRM within your ERP: customer and contact management with a history spanning accounting, inventory, orders and messages – CRM software for SMEs.",
     "hero": {
       "eyebrow": "Module: CRM",
       "headline": "CRM Software for SMEs — customer data and history in one place",
@@ -774,7 +774,7 @@ export const moduleEn: Modul[] = [
     "name": "Cost Management",
     "icon": "wallet",
     "metaTitle": "Cost Management Software for SMEs – VertooERP",
-    "metaDescription": "Cost management software for SMEs: record fixed costs, salaries, vehicle fleet and SaaS subscriptions in one central place – with a monthly and annual overview in the VertooERP cost module.",
+    "metaDescription": "Cost management software for SMEs: track fixed costs, salaries, fleet and SaaS subscriptions in one place – with a monthly and annual overview in VertooERP.",
     "hero": {
       "eyebrow": "Module: Cost Management",
       "headline": "Cost management software – all fixed costs in a single overview",

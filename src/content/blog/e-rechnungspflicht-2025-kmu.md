@@ -1,6 +1,6 @@
 ---
 title: "E-Rechnungspflicht 2025–2028: Der Fahrplan für KMU"
-description: "Seit 2025 müssen Unternehmen E-Rechnungen empfangen können, ab 2027/2028 auch ausstellen. Was XRechnung und ZUGFeRD bedeuten und wie sich KMU rechtzeitig vorbereiten."
+description: "Seit 2025 müssen Unternehmen E-Rechnungen empfangen können, ab 2027/2028 auch ausstellen. Was XRechnung und ZUGFeRD bedeuten und wie sich KMU rechtzeitig…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["E-Rechnung", "XRechnung", "ZUGFeRD", "Buchhaltung"]

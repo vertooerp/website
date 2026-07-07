@@ -1,6 +1,6 @@
 ---
 title: "Mandatory E-Invoicing 2025–2028: The Roadmap for SMEs"
-description: "Since 2025, companies must be able to receive e-invoices; from 2027/2028 they must also issue them. What XRechnung and ZUGFeRD mean and how SMEs can prepare in good time."
+description: "Since 2025, companies must be able to receive e-invoices; from 2027/2028 they must also issue them. What XRechnung and ZUGFeRD mean and how SMEs can prepare…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["E-Invoicing","XRechnung","ZUGFeRD","Accounting"]

@@ -1,6 +1,6 @@
 ---
 title: "Vom Excel-Chaos zum ERP: Wann sich der Umstieg lohnt"
-description: "Excel ist flexibel – bis es das nicht mehr ist. Die typischen Warnsignale, dass ein KMU aus Tabellen herausgewachsen ist, und worauf es beim Umstieg auf ein ERP ankommt."
+description: "Excel ist flexibel – bis es das nicht mehr ist. Die typischen Warnsignale, dass ein KMU aus Tabellen herausgewachsen ist, und worauf es beim Umstieg auf ein…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["ERP-Einführung", "Excel", "Digitalisierung", "KMU"]

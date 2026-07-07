@@ -1,6 +1,6 @@
 ---
 title: "Self-Hosting vs. Cloud-ERP: Was ist für KMU besser?"
-description: "Cloud-ERP oder selbst gehostet? Ein nüchterner Vergleich von Datenhoheit, Kosten, Wartung und Compliance – und wann sich welches Modell für kleine und mittlere Unternehmen lohnt."
+description: "Cloud-ERP oder selbst gehostet? Ein nüchterner Vergleich von Datenhoheit, Kosten, Wartung und Compliance – und wann sich welches Modell für kleine und…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["Self-Hosting", "Cloud-ERP", "Datenhoheit", "KMU"]

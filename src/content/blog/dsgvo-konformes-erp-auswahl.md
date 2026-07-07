@@ -1,6 +1,6 @@
 ---
 title: "DSGVO-konformes ERP: Worauf KMU bei der Auswahl achten müssen"
-description: "Ein ERP verarbeitet Kunden-, Mitarbeiter- und Finanzdaten – also reichlich Personenbezug. Welche Datenschutz-Kriterien bei der Software-Auswahl wirklich zählen und welche Rolle Self-Hosting spielt."
+description: "Ein ERP verarbeitet Kunden-, Mitarbeiter- und Finanzdaten – also reichlich Personenbezug. Welche Datenschutz-Kriterien bei der Software-Auswahl wirklich…"
 pubDate: 2026-06-18
 author: "VertooERP"
 tags: ["DSGVO", "Datenschutz", "ERP-Auswahl", "Self-Hosting"]
