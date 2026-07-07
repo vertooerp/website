@@ -18,6 +18,11 @@ export default defineConfig({
   integrations: [
     icon(),
     sitemap({
+      // hreflang-Alternates im Sitemap für Seiten, die in beiden Sprachen existieren.
+      i18n: {
+        defaultLocale: 'de',
+        locales: { de: 'de-DE', en: 'en-GB' },
+      },
       filter: (page) =>
         !page.includes('/impressum') &&
         !page.includes('/datenschutz') &&

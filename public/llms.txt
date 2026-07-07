@@ -1,6 +1,6 @@
 # VertooERP
 
-> VertooERP ist eine modulare ERP-Plattform für kleine und mittlere Unternehmen mit über 20 Modulen (u.a. Warenwirtschaft, Lagerverwaltung, Buchhaltung, Zeiterfassung, Aufgaben, CRM, KI-Assistent). Die Software wird als Lizenz vertrieben und vom Kunden selbst gehostet (Self-Hosting / On-Premises) – volle Datenhoheit, DSGVO- und GoBD-konform. Entwickelt von der tap & type UG in Luckenwalde, Brandenburg.
+> VertooERP ist eine modulare ERP-Plattform für kleine und mittlere Unternehmen mit über 20 Modulen (u.a. Warenwirtschaft, Lagerverwaltung, Buchhaltung, Zeiterfassung, Aufgaben, CRM, KI-Assistent). Die Software wird als Lizenz vertrieben und vom Kunden selbst gehostet (Self-Hosting / On-Premises) – volle Datenhoheit, DSGVO- und GoBD-konform. Entwickelt von der tap & type UG in Luckenwalde, Brandenburg. Deutsch unter vertoo.de, Englisch unter vertoo.de/en.
 
 ## Eckdaten
 
@@ -8,16 +8,56 @@
 - Preise (pro Monat, zzgl. MwSt.): Starter ab 350 € (bis 3 Module, 3 Seats), Business ab 800 € (bis 12 Module, 10 Seats), Enterprise ab 1.400 € (alle 20+ Module, 20 Seats)
 - Mindestlaufzeit: 12 Monate; Hosting, Einrichtung, Wartung und Support separat buchbar
 - Compliance: DSGVO-konform, GoBD-konforme Audit-Trails, DATEV-Export, XRechnung/ZUGFeRD
+- Technik: Multi-Mandant, Multi-Standort, Session-Auth, Keycloak-SSO, PWA, lokaler KI-Assistent (Ollama)
 - Zielgruppe: KMU ab ca. 3–5 Mitarbeitenden
 - Anbieter: tap & type UG (haftungsbeschränkt), Pestalozzistr. 14, 14943 Luckenwalde
 
-## Seiten
+## Module (Detailseiten)
 
-- [Startseite](https://vertoo.de/): Überblick über Plattform, Module, Preise und Technologie
-- [Handel & E-Commerce](https://vertoo.de/branchen/handel): ERP für Online- und stationären Handel (Warenwirtschaft, Lager, Dropshipping, Webshop, Bonuspunkte)
-- [Dienstleister & Agenturen](https://vertoo.de/branchen/dienstleister): ERP für Agenturen und Dienstleister (Zeiterfassung, Projekte, Buchhaltung, CRM)
-- [Produktion & Logistik](https://vertoo.de/branchen/produktion): ERP für produzierende und logistische Betriebe (Warenwirtschaft, Lager, Wareneingang, Versand, Inventur)
-- [Handwerk & Bau](https://vertoo.de/branchen/handwerk): ERP für Handwerk und Bau (mobile Zeiterfassung, Betriebsmittel, Fuhrpark, Kostenkontrolle)
+- [Warenwirtschaft](https://vertoo.de/module/warenwirtschaft): Produktkatalog (ein Eintrag pro EAN), Multi-Supplier, Aufträge, Versand-Tracking
+- [Buchhaltung](https://vertoo.de/module/buchhaltung): Belege, GuV/BWA, SKR03, DATEV-Export, XRechnung/ZUGFeRD, Mahnwesen
+- [Lagerverwaltung](https://vertoo.de/module/lagerverwaltung): Zonen-Baumstruktur, Umlagerungen, Inventur, Bewegungs-Audit
+- [Dropshipping](https://vertoo.de/module/dropshipping): BigBuy, DropXL, JTL-Wawi, Shopware-6-Integration, Stock-Sync
+- [Zeiterfassung](https://vertoo.de/module/zeiterfassung): Stempeluhr, Urlaub, Krankmeldungen, Überstundenkonto
+- [CRM](https://vertoo.de/module/crm): Kunden- und Kontakthistorie modulübergreifend
+- [Aufgaben & Projekte](https://vertoo.de/module/aufgaben-projekte): Kanban, Liste, Kalender, Subtasks, @Mentions
+- [Kostenmanagement](https://vertoo.de/module/kostenmanagement): Fixkosten, Gehälter, Fuhrpark, SaaS-Abos mit Verträgen
+- [Alle Module im Überblick](https://vertoo.de/module)
+
+## Branchen
+
+- [Handel & E-Commerce](https://vertoo.de/branchen/handel): Warenwirtschaft, Lager, Dropshipping, Webshop, Bonuspunkte
+- [Dienstleister & Agenturen](https://vertoo.de/branchen/dienstleister): Zeiterfassung, Projekte, Buchhaltung, CRM
+- [Produktion & Logistik](https://vertoo.de/branchen/produktion): Warenwirtschaft, Lager, Wareneingang, Versand, Inventur
+- [Handwerk & Bau](https://vertoo.de/branchen/handwerk): mobile Zeiterfassung, Betriebsmittel, Fuhrpark, Kostenkontrolle
+
+## Ratgeber (Blog)
+
+- [Self-Hosting vs. Cloud-ERP](https://vertoo.de/blog/self-hosting-vs-cloud-erp): Datenhoheit, Kosten, Wartung, Compliance im Vergleich
+- [GoBD-konforme Buchhaltung](https://vertoo.de/blog/gobd-konforme-buchhaltung-kmu): Pflichten, Unveränderbarkeit, Aufbewahrung für KMU
+- [E-Rechnungspflicht 2025–2028](https://vertoo.de/blog/e-rechnungspflicht-2025-kmu): Fahrplan und Fristen für KMU
+- [DSGVO-konformes ERP](https://vertoo.de/blog/dsgvo-konformes-erp-auswahl): Auswahlkriterien für datenschutzkonforme Software
+- [Vom Excel-Chaos zum ERP](https://vertoo.de/blog/vom-excel-chaos-zum-erp): Wann sich der Umstieg lohnt
+- [Multichannel-Bestände synchron halten](https://vertoo.de/blog/multichannel-bestaende-synchron-halten): Shopware, Amazon, eBay
+- [Multi-Standort & Multi-Mandant](https://vertoo.de/blog/multi-standort-multi-mandant-erp): mehrere Standorte in einem ERP
+- [KI im ERP](https://vertoo.de/blog/ki-im-erp-lokaler-assistent): Was ein lokaler Assistent wirklich kann
+- [Bonusprogramme für kleine Shops](https://vertoo.de/blog/bonusprogramme-kleine-shops): Kundenbindung lohnend umsetzen
+- [ERP-Einführung in 4–8 Wochen](https://vertoo.de/blog/erp-einfuehrung-projektplan): realistischer Projektplan
+
+## Weitere Seiten
+
+- [ERP-Glossar](https://vertoo.de/glossar): Definitionen zu ERP, GoBD, DSGVO, Self-Hosting, XRechnung u.a.
+- [Preise](https://vertoo.de/#preise): Tarife Starter / Business / Enterprise
 - [Impressum](https://vertoo.de/impressum)
 - [Datenschutzerklärung](https://vertoo.de/datenschutz)
 - [Barrierefreiheit](https://vertoo.de/barrierefreiheit)
+
+## English version
+
+> VertooERP is a modular, self-hosted ERP platform for small and medium-sized enterprises with 20+ modules (inventory management, warehousing, accounting, time tracking, tasks, CRM, AI assistant). Licensed and self-hosted for full data sovereignty; GDPR- and GoBD-compliant. Built by tap & type UG in Germany.
+
+- [Home (EN)](https://vertoo.de/en/): platform, modules, pricing and technology overview
+- [Modules (EN)](https://vertoo.de/en/module): all modules in detail
+- [Industries (EN)](https://vertoo.de/en/branchen): retail, service providers, manufacturing, trades
+- [Blog (EN)](https://vertoo.de/en/blog): expert articles on ERP, self-hosting, accounting, compliance
+- [Glossary (EN)](https://vertoo.de/en/glossar): key ERP terms explained
