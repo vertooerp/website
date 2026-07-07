@@ -1,48 +1,48 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { getLangFromUrl } from '../i18n/utils';
 
-const features = [
-  {
-    title: 'Self-Hosting / On-Premises',
-    description: 'Sie betreiben VertooERP auf eigener oder gemieteter Infrastruktur – volle Datenhoheit, kein Cloud-Zwang.',
-    icon: 'server',
+const lang = getLangFromUrl(Astro.url);
+
+const c = {
+  de: {
+    eyebrow: 'Technologie & Sicherheit',
+    heading: 'Gebaut für Vertrauen',
+    intro: 'Moderne Architektur, höchste Sicherheitsstandards und volle DSGVO-Konformität.',
+    features: [
+      { title: 'Self-Hosting / On-Premises', description: 'Sie betreiben VertooERP auf eigener oder gemieteter Infrastruktur – volle Datenhoheit, kein Cloud-Zwang.' },
+      { title: 'Session-basierte Auth', description: 'Sichere httpOnly Cookies statt Tokens. Kein localStorage-Risiko.' },
+      { title: 'SSO mit Keycloak', description: 'Enterprise Single Sign-On für nahtlose Integration in Ihre IT-Landschaft.' },
+      { title: 'PWA-fähig', description: 'Installierbar auf jedem Gerät. Kein App Store, kein Update-Zwang.' },
+      { title: 'Multi-Tenant', description: 'Jeder Kunde bekommt eine eigene, isolierte Instanz mit eigenem Branding.' },
+      { title: 'GoBD-konform', description: 'Unveränderbare Audit-Trails für Rechnungen und Finanzdaten.' },
+    ],
   },
-  {
-    title: 'Session-basierte Auth',
-    description: 'Sichere httpOnly Cookies statt Tokens. Kein localStorage-Risiko.',
-    icon: 'lock',
+  en: {
+    eyebrow: 'Technology & security',
+    heading: 'Built for trust',
+    intro: 'Modern architecture, the highest security standards and full GDPR compliance.',
+    features: [
+      { title: 'Self-hosting / on-premises', description: 'Run VertooERP on your own or rented infrastructure – full data sovereignty, no cloud lock-in.' },
+      { title: 'Session-based auth', description: 'Secure httpOnly cookies instead of tokens. No localStorage risk.' },
+      { title: 'SSO with Keycloak', description: 'Enterprise single sign-on for seamless integration into your IT landscape.' },
+      { title: 'PWA-ready', description: 'Installable on any device. No app store, no forced updates.' },
+      { title: 'Multi-tenant', description: 'Every customer gets their own isolated instance with custom branding.' },
+      { title: 'GoBD-compliant', description: 'Immutable audit trails for invoices and financial data.' },
+    ],
   },
-  {
-    title: 'SSO mit Keycloak',
-    description: 'Enterprise Single Sign-On für nahtlose Integration in Ihre IT-Landschaft.',
-    icon: 'key-round',
-  },
-  {
-    title: 'PWA-fähig',
-    description: 'Installierbar auf jedem Gerät. Kein App Store, kein Update-Zwang.',
-    icon: 'smartphone',
-  },
-  {
-    title: 'Multi-Tenant',
-    description: 'Jeder Kunde bekommt eine eigene, isolierte Instanz mit eigenem Branding.',
-    icon: 'building-2',
-  },
-  {
-    title: 'GoBD-konform',
-    description: 'Unveränderbare Audit-Trails für Rechnungen und Finanzdaten.',
-    icon: 'clipboard-check',
-  },
-];
+}[lang];
+
+const icons = ['server', 'lock', 'key-round', 'smartphone', 'building-2', 'clipboard-check'];
+const features = c.features.map((f, i) => ({ ...f, icon: icons[i] }));
 ---
 
 <section class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6">
     <div class="reveal text-center max-w-2xl mx-auto mb-16">
-      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">Technologie & Sicherheit</span>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Gebaut für Vertrauen</h2>
-      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-        Moderne Architektur, höchste Sicherheitsstandards und volle DSGVO-Konformität.
-      </p>
+      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{c.eyebrow}</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{c.heading}</h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{c.intro}</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

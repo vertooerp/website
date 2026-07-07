@@ -37,3 +37,21 @@ export function stripLangFromPath(pathname: string): string {
   }
   return pathname;
 }
+
+/**
+ * true, wenn die Seite in beiden Sprachen existiert. Wird vom Sprachumschalter
+ * genutzt, damit er auf reinen DE-Seiten (Konto, Signup, 404) nicht auf eine
+ * nicht existierende /en-Route zeigt. Muster beziehen sich auf den Pfad OHNE
+ * Sprach-Präfix.
+ */
+export function isTranslated(pathname: string): boolean {
+  const base = stripLangFromPath(pathname).replace(/\/+$/, '') || '/';
+  if (base === '/') return true;
+  return [
+    /^\/module(\/[^/]+)?$/,
+    /^\/branchen(\/[^/]+)?$/,
+    /^\/glossar$/,
+    /^\/blog(\/.+)?$/,
+    /^\/(impressum|datenschutz|barrierefreiheit)$/,
+  ].some((re) => re.test(base));
+}

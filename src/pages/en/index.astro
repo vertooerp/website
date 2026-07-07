@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Modules from '../../components/Modules.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import PricingTeaser from '../../components/PricingTeaser.astro';
+import UseCases from '../../components/UseCases.astro';
+import TechSecurity from '../../components/TechSecurity.astro';
+import SocialProof from '../../components/SocialProof.astro';
+import FAQ from '../../components/FAQ.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import { faqEn } from '../../data/faq.en';
+
+const softwareApplicationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'VertooERP',
+  applicationCategory: 'BusinessApplication',
+  applicationSubCategory: 'ERP',
+  operatingSystem: 'Web, iOS, Android (PWA)',
+  description:
+    'Modular ERP platform with 20+ modules: inventory management, accounting, warehousing, dropshipping, tasks, messaging, AI assistant and more. Multi-tenant, self-hosting, GDPR- and GoBD-compliant.',
+  url: 'https://vertoo.de/en',
+  inLanguage: 'en-GB',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Starter',
+      priceCurrency: 'EUR',
+      price: '350',
+      priceSpecification: { '@type': 'UnitPriceSpecification', price: '350', priceCurrency: 'EUR', unitText: 'MONTH' },
+      description: 'Up to 3 modules, 3 seats included (+€18 per extra seat).',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Business',
+      priceCurrency: 'EUR',
+      price: '800',
+      priceSpecification: { '@type': 'UnitPriceSpecification', price: '800', priceCurrency: 'EUR', unitText: 'MONTH' },
+      description: 'Up to 12 modules, 10 seats included (+€22 per extra seat).',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Enterprise',
+      priceCurrency: 'EUR',
+      price: '1400',
+      priceSpecification: { '@type': 'UnitPriceSpecification', price: '1400', priceCurrency: 'EUR', unitText: 'MONTH' },
+      description: 'All 20+ modules, 20 seats included (+€28 per extra seat).',
+    },
+  ],
+  provider: { '@type': 'Organization', name: 'tap & type UG (haftungsbeschränkt)', url: 'https://vertoo.de' },
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqEn.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+};
+---
+
+<Layout jsonLd={[softwareApplicationLd, faqLd]} hasTranslation>
+  <Header />
+  <main id="main-content">
+    <Hero />
+    <Modules />
+    <HowItWorks />
+    <SocialProof />
+    <PricingTeaser />
+    <UseCases />
+    <TechSecurity />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

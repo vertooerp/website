@@ -1,180 +1,137 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, localizePath } from '../i18n/utils';
 
-const categories = [
-  { id: 'all', label: 'Alle' },
-  { id: 'commerce', label: 'Commerce & Handel' },
-  { id: 'finance', label: 'Finanzen' },
-  { id: 'collab', label: 'Team & Zusammenarbeit' },
-  { id: 'analytics', label: 'CRM & Analytics' },
-  { id: 'platform', label: 'Plattform' },
-];
+const lang = getLangFromUrl(Astro.url);
+const p = (path: string) => localizePath(path, lang);
+
+const categoryLabels = {
+  de: { all: 'Alle', commerce: 'Commerce & Handel', finance: 'Finanzen', collab: 'Team & Zusammenarbeit', analytics: 'CRM & Analytics', platform: 'Plattform' },
+  en: { all: 'All', commerce: 'Commerce & retail', finance: 'Finance', collab: 'Team & collaboration', analytics: 'CRM & analytics', platform: 'Platform' },
+}[lang];
+
+const categories = (['all', 'commerce', 'finance', 'collab', 'analytics', 'platform'] as const).map((id) => ({ id, label: categoryLabels[id] }));
+
+const chrome = {
+  de: {
+    eyebrow: 'Module',
+    heading: '20+ Module – modular kombinierbar',
+    intro: 'Vom ersten Tag voll funktionsfähig. Aktivieren Sie nur, was Sie brauchen – und erweitern Sie jederzeit.',
+    filterAria: 'Module nach Kategorie filtern',
+    allLink: 'Alle Module im Detail ansehen',
+  },
+  en: {
+    eyebrow: 'Modules',
+    heading: '20+ modules – combine them modularly',
+    intro: 'Fully functional from day one. Activate only what you need – and expand at any time.',
+    filterAria: 'Filter modules by category',
+    allLink: 'See all modules in detail',
+  },
+}[lang];
 
 const modules = [
   // Commerce & Handel
-  {
-    category: 'commerce',
-    icon: 'package',
-    title: 'Warenwirtschaft',
-    description: 'Einheitlicher Produktkatalog (ein Eintrag pro EAN) mit Multi-Supplier, Bundles, Aufträgen und Versand-Tracking über 5 Carrier.',
-    tags: ['1 Produkt / EAN', 'Multi-Standort', 'Stücklisten', '10 KPI-Cards'],
-  },
-  {
-    category: 'commerce',
-    icon: 'warehouse',
-    title: 'Lagerverwaltung',
-    description: 'Lagerhäuser mit Zone-Baumstruktur (Zone → Gang → Regal → Fach), Umlagerungen, Inventur und vollem Bewegungs-Audit.',
-    tags: ['Zonen-Baum', 'Audit-Log', 'Ampel-Füllstand', 'Multi-Standort'],
-  },
-  {
-    category: 'commerce',
-    icon: 'truck',
-    title: 'Dropshipping',
-    description: 'Drei API-Typen in einer Oberfläche: BigBuy, DropXL und JTL-Wawi – plus Shopware 6 Integration.',
-    tags: ['3 API-Typen', 'Stock-Sync 15 Min', 'Shopware OAuth2', 'Order-Forward'],
-  },
-  {
-    category: 'commerce',
-    icon: 'shopping-cart',
-    title: 'E-Commerce / Preischeck',
-    description: 'EAN-basierte Marktpreisabfrage über idealo, Amazon, eBay, billiger.de und Google Shopping mit Ampel-Logik.',
-    tags: ['Bulk-Import', '5 Marktplätze', 'Max-EK pro Plattform', 'Source-Fallback'],
-  },
-  {
-    category: 'commerce',
-    icon: 'store',
-    title: 'Webshop',
-    description: 'Whitelabel-Kundenshop unter eigener Domain – nahtlos mit Bestand, Preisen und Bonuspunkten verbunden.',
-    tags: ['Stripe / PayPal / Mollie', 'Eigene Marke', 'Mehrsprachig', 'Next.js'],
-  },
-  {
-    category: 'commerce',
-    icon: 'gift',
-    title: 'Bonuspunkte',
-    description: 'Kundenbindungsprogramm mit Tier-System, Gutschein-Generator und automatischer Gutschrift bei Bestellungen.',
-    tags: ['Bronze/Silber/Gold', 'Auto-Credit', 'Shopware-Plugin', 'Punkte-Verfall'],
-  },
-  {
-    category: 'commerce',
-    icon: 'boxes',
-    title: 'Paketizer',
-    description: 'Automatische Paketzusammenstellung aus Beständen nach UVP, Gewicht und Diversifikation mit OCR-Scan.',
-    tags: ['Excel-Import', 'OCR-Scan', 'MHD-Tracking', 'Bereinigung'],
-  },
+  { category: 'commerce', icon: 'package', t: {
+    de: { title: 'Warenwirtschaft', description: 'Einheitlicher Produktkatalog (ein Eintrag pro EAN) mit Multi-Supplier, Bundles, Aufträgen und Versand-Tracking über 5 Carrier.', tags: ['1 Produkt / EAN', 'Multi-Standort', 'Stücklisten', '10 KPI-Cards'] },
+    en: { title: 'Inventory management', description: 'Unified product catalogue (one entry per EAN) with multi-supplier, bundles, orders and shipment tracking across 5 carriers.', tags: ['1 product / EAN', 'Multi-location', 'Bills of materials', '10 KPI cards'] },
+  } },
+  { category: 'commerce', icon: 'warehouse', t: {
+    de: { title: 'Lagerverwaltung', description: 'Lagerhäuser mit Zone-Baumstruktur (Zone → Gang → Regal → Fach), Umlagerungen, Inventur und vollem Bewegungs-Audit.', tags: ['Zonen-Baum', 'Audit-Log', 'Ampel-Füllstand', 'Multi-Standort'] },
+    en: { title: 'Warehouse management', description: 'Warehouses with a zone tree structure (zone → aisle → rack → bin), transfers, stocktaking and a full movement audit.', tags: ['Zone tree', 'Audit log', 'Traffic-light fill level', 'Multi-location'] },
+  } },
+  { category: 'commerce', icon: 'truck', t: {
+    de: { title: 'Dropshipping', description: 'Drei API-Typen in einer Oberfläche: BigBuy, DropXL und JTL-Wawi – plus Shopware 6 Integration.', tags: ['3 API-Typen', 'Stock-Sync 15 Min', 'Shopware OAuth2', 'Order-Forward'] },
+    en: { title: 'Dropshipping', description: 'Three API types in one interface: BigBuy, DropXL and JTL-Wawi – plus Shopware 6 integration.', tags: ['3 API types', 'Stock sync 15 min', 'Shopware OAuth2', 'Order forwarding'] },
+  } },
+  { category: 'commerce', icon: 'shopping-cart', t: {
+    de: { title: 'E-Commerce / Preischeck', description: 'EAN-basierte Marktpreisabfrage über idealo, Amazon, eBay, billiger.de und Google Shopping mit Ampel-Logik.', tags: ['Bulk-Import', '5 Marktplätze', 'Max-EK pro Plattform', 'Source-Fallback'] },
+    en: { title: 'E-commerce / price check', description: 'EAN-based market price lookups across idealo, Amazon, eBay, billiger.de and Google Shopping with traffic-light logic.', tags: ['Bulk import', '5 marketplaces', 'Max cost per platform', 'Source fallback'] },
+  } },
+  { category: 'commerce', icon: 'store', t: {
+    de: { title: 'Webshop', description: 'Whitelabel-Kundenshop unter eigener Domain – nahtlos mit Bestand, Preisen und Bonuspunkten verbunden.', tags: ['Stripe / PayPal / Mollie', 'Eigene Marke', 'Mehrsprachig', 'Next.js'] },
+    en: { title: 'Web shop', description: 'White-label customer shop on your own domain – seamlessly connected to stock, prices and loyalty points.', tags: ['Stripe / PayPal / Mollie', 'Your own brand', 'Multilingual', 'Next.js'] },
+  } },
+  { category: 'commerce', icon: 'gift', t: {
+    de: { title: 'Bonuspunkte', description: 'Kundenbindungsprogramm mit Tier-System, Gutschein-Generator und automatischer Gutschrift bei Bestellungen.', tags: ['Bronze/Silber/Gold', 'Auto-Credit', 'Shopware-Plugin', 'Punkte-Verfall'] },
+    en: { title: 'Loyalty points', description: 'Customer loyalty programme with a tier system, voucher generator and automatic credit on orders.', tags: ['Bronze/Silver/Gold', 'Auto-credit', 'Shopware plugin', 'Point expiry'] },
+  } },
+  { category: 'commerce', icon: 'boxes', t: {
+    de: { title: 'Paketizer', description: 'Automatische Paketzusammenstellung aus Beständen nach UVP, Gewicht und Diversifikation mit OCR-Scan.', tags: ['Excel-Import', 'OCR-Scan', 'MHD-Tracking', 'Bereinigung'] },
+    en: { title: 'Packetizer', description: 'Automatic bundle assembly from stock by RRP, weight and diversification with OCR scanning.', tags: ['Excel import', 'OCR scan', 'Best-before tracking', 'Clean-up'] },
+  } },
 
   // Finanzen
-  {
-    category: 'finance',
-    icon: 'receipt-text',
-    title: 'Buchhaltung',
-    description: 'Vollwertige Buchhaltung: Belege, Offene Posten, Kassenbuch, GuV/BWA, SKR03 Kontenrahmen und 3-stufiges Mahnwesen.',
-    tags: ['DATEV-Export', 'XRechnung / ZUGFeRD', 'USt-Voranmeldung', 'Bankabgleich', 'GoBD'],
-  },
-  {
-    category: 'finance',
-    icon: 'wallet',
-    title: 'Kostenmanagement',
-    description: 'Fixkosten, Gehälter, Fuhrpark und SaaS-Abos mit Verträgen, Kündigungsfristen und Monatsübersicht.',
-    tags: ['Personal', 'Fuhrpark', 'Software-Abos', 'Arbeitsverträge'],
-  },
+  { category: 'finance', icon: 'receipt-text', t: {
+    de: { title: 'Buchhaltung', description: 'Vollwertige Buchhaltung: Belege, Offene Posten, Kassenbuch, GuV/BWA, SKR03 Kontenrahmen und 3-stufiges Mahnwesen.', tags: ['DATEV-Export', 'XRechnung / ZUGFeRD', 'USt-Voranmeldung', 'Bankabgleich', 'GoBD'] },
+    en: { title: 'Accounting', description: 'Full-featured accounting: receipts, open items, cash book, P&L/BWA, SKR03 chart of accounts and a 3-stage dunning process.', tags: ['DATEV export', 'XRechnung / ZUGFeRD', 'VAT return', 'Bank reconciliation', 'GoBD'] },
+  } },
+  { category: 'finance', icon: 'wallet', t: {
+    de: { title: 'Kostenmanagement', description: 'Fixkosten, Gehälter, Fuhrpark und SaaS-Abos mit Verträgen, Kündigungsfristen und Monatsübersicht.', tags: ['Personal', 'Fuhrpark', 'Software-Abos', 'Arbeitsverträge'] },
+    en: { title: 'Cost management', description: 'Fixed costs, salaries, fleet and SaaS subscriptions with contracts, notice periods and a monthly overview.', tags: ['Payroll', 'Fleet', 'Software subscriptions', 'Employment contracts'] },
+  } },
 
   // Team & Zusammenarbeit
-  {
-    category: 'collab',
-    icon: 'list-checks',
-    title: 'Aufgaben & Projekte',
-    description: 'Kanban-Board, Liste und Kalender mit Subtasks, Watchers, @Mentions und vollständigem Aktivitäts-Feed.',
-    tags: ['3 Ansichten', 'Subtasks', '@Mentions', 'Dateianhänge', 'Tastenkürzel'],
-  },
-  {
-    category: 'collab',
-    icon: 'message-square',
-    title: 'Nachrichten',
-    description: 'DMs, Gruppen und Kanäle mit Reactions, Replies, Lesebestätigungen und Typing-Indicator.',
-    tags: ['Quick-Reactions', 'Lesebestätigungen', 'Mentions', 'Mobile-optimiert'],
-  },
-  {
-    category: 'collab',
-    icon: 'book-open',
-    title: 'Wissensdatenbank',
-    description: 'Interne Knowledge Base mit Markdown-Artikeln, Kategorien, Tags und Veröffentlichungs-Workflow.',
-    tags: ['Markdown', 'Entwurf / Live', 'Tags', 'RAG-ready'],
-  },
-  {
-    category: 'collab',
-    icon: 'megaphone',
-    title: 'Meldungen',
-    description: 'Einweg-Mitteilungen vom Unternehmen ans Team – an Standort, Team oder Einzelpersonen, mit Prioritäten.',
-    tags: ['Prio normal/wichtig/dringend', 'Standort-/Team-Targeting', 'Read-Only-Feed'],
-  },
-  {
-    category: 'collab',
-    icon: 'clock',
-    title: 'Zeiterfassung & Urlaub',
-    description: 'Stempeluhr, Urlaubsverwaltung, Krankmeldungen mit AU-Nachreichung und Überstundenabbau als Abwesenheit.',
-    tags: ['Überstundenkonto', 'Urlaubsübertrag', 'Team-Übersicht', 'Mobil'],
-  },
-  {
-    category: 'collab',
-    icon: 'clipboard-list',
-    title: 'Betriebsmittel',
-    description: 'Bestellanforderungen mit Genehmigungs-Workflow, Bürobedarf mit Mindestbestand und IT-Inventar pro Mitarbeiter.',
-    tags: ['Genehmigungen', 'Inventur', 'IT-Zuordnung', 'Buchungshistorie'],
-  },
+  { category: 'collab', icon: 'list-checks', t: {
+    de: { title: 'Aufgaben & Projekte', description: 'Kanban-Board, Liste und Kalender mit Subtasks, Watchers, @Mentions und vollständigem Aktivitäts-Feed.', tags: ['3 Ansichten', 'Subtasks', '@Mentions', 'Dateianhänge', 'Tastenkürzel'] },
+    en: { title: 'Tasks & projects', description: 'Kanban board, list and calendar with subtasks, watchers, @mentions and a full activity feed.', tags: ['3 views', 'Subtasks', '@mentions', 'Attachments', 'Keyboard shortcuts'] },
+  } },
+  { category: 'collab', icon: 'message-square', t: {
+    de: { title: 'Nachrichten', description: 'DMs, Gruppen und Kanäle mit Reactions, Replies, Lesebestätigungen und Typing-Indicator.', tags: ['Quick-Reactions', 'Lesebestätigungen', 'Mentions', 'Mobile-optimiert'] },
+    en: { title: 'Messages', description: 'DMs, groups and channels with reactions, replies, read receipts and a typing indicator.', tags: ['Quick reactions', 'Read receipts', 'Mentions', 'Mobile-optimised'] },
+  } },
+  { category: 'collab', icon: 'book-open', t: {
+    de: { title: 'Wissensdatenbank', description: 'Interne Knowledge Base mit Markdown-Artikeln, Kategorien, Tags und Veröffentlichungs-Workflow.', tags: ['Markdown', 'Entwurf / Live', 'Tags', 'RAG-ready'] },
+    en: { title: 'Knowledge base', description: 'Internal knowledge base with Markdown articles, categories, tags and a publishing workflow.', tags: ['Markdown', 'Draft / live', 'Tags', 'RAG-ready'] },
+  } },
+  { category: 'collab', icon: 'megaphone', t: {
+    de: { title: 'Meldungen', description: 'Einweg-Mitteilungen vom Unternehmen ans Team – an Standort, Team oder Einzelpersonen, mit Prioritäten.', tags: ['Prio normal/wichtig/dringend', 'Standort-/Team-Targeting', 'Read-Only-Feed'] },
+    en: { title: 'Announcements', description: 'One-way announcements from the company to the team – to a location, team or individuals, with priorities.', tags: ['Priority normal/important/urgent', 'Location/team targeting', 'Read-only feed'] },
+  } },
+  { category: 'collab', icon: 'clock', t: {
+    de: { title: 'Zeiterfassung & Urlaub', description: 'Stempeluhr, Urlaubsverwaltung, Krankmeldungen mit AU-Nachreichung und Überstundenabbau als Abwesenheit.', tags: ['Überstundenkonto', 'Urlaubsübertrag', 'Team-Übersicht', 'Mobil'] },
+    en: { title: 'Time tracking & leave', description: 'Time clock, leave management, sick notices with follow-up certificates and overtime reduction as absence.', tags: ['Overtime account', 'Leave carry-over', 'Team overview', 'Mobile'] },
+  } },
+  { category: 'collab', icon: 'clipboard-list', t: {
+    de: { title: 'Betriebsmittel', description: 'Bestellanforderungen mit Genehmigungs-Workflow, Bürobedarf mit Mindestbestand und IT-Inventar pro Mitarbeiter.', tags: ['Genehmigungen', 'Inventur', 'IT-Zuordnung', 'Buchungshistorie'] },
+    en: { title: 'Operating resources', description: 'Purchase requests with an approval workflow, office supplies with minimum stock levels and IT inventory per employee.', tags: ['Approvals', 'Stocktaking', 'IT assignment', 'Booking history'] },
+  } },
 
   // CRM & Analytics
-  {
-    category: 'analytics',
-    icon: 'users',
-    title: 'CRM',
-    description: 'Kunden- und Kontakthistorie über alle Module hinweg – Buchhaltung, WaWi, Aufträge und Kommunikation auf einen Blick.',
-    tags: ['Modulübergreifend', 'Kontakthistorie', 'Zahlungsziel'],
-  },
-  {
-    category: 'analytics',
-    icon: 'chart-column',
-    title: 'Reporting & Analytics',
-    description: 'Live-Dashboard mit WaWi-KPIs, Umsatz-Entwicklung, DS-Performance, Bestandswert und Low-Stock-Alerts.',
-    tags: ['Trends 7 Monate', 'Top-10 Kategorien', 'Aggregate-Queries', 'Drill-Down'],
-  },
-  {
-    category: 'analytics',
-    icon: 'bot',
-    title: 'KI-Assistent',
-    description: 'Lokales LLM via Ollama für Chat mit ERP-Kontext und SEO-optimierte Produktbeschreibungen – Daten bleiben im Haus.',
-    tags: ['Lokal (Ollama)', 'Chat mit ERP-Daten', 'Bulk-Texte', 'DSGVO-sicher'],
-  },
+  { category: 'analytics', icon: 'users', t: {
+    de: { title: 'CRM', description: 'Kunden- und Kontakthistorie über alle Module hinweg – Buchhaltung, WaWi, Aufträge und Kommunikation auf einen Blick.', tags: ['Modulübergreifend', 'Kontakthistorie', 'Zahlungsziel'] },
+    en: { title: 'CRM', description: 'Customer and contact history across all modules – accounting, inventory, orders and communication at a glance.', tags: ['Cross-module', 'Contact history', 'Payment terms'] },
+  } },
+  { category: 'analytics', icon: 'chart-column', t: {
+    de: { title: 'Reporting & Analytics', description: 'Live-Dashboard mit WaWi-KPIs, Umsatz-Entwicklung, DS-Performance, Bestandswert und Low-Stock-Alerts.', tags: ['Trends 7 Monate', 'Top-10 Kategorien', 'Aggregate-Queries', 'Drill-Down'] },
+    en: { title: 'Reporting & analytics', description: 'Live dashboard with inventory KPIs, revenue trends, dropshipping performance, stock value and low-stock alerts.', tags: ['7-month trends', 'Top 10 categories', 'Aggregate queries', 'Drill-down'] },
+  } },
+  { category: 'analytics', icon: 'bot', t: {
+    de: { title: 'KI-Assistent', description: 'Lokales LLM via Ollama für Chat mit ERP-Kontext und SEO-optimierte Produktbeschreibungen – Daten bleiben im Haus.', tags: ['Lokal (Ollama)', 'Chat mit ERP-Daten', 'Bulk-Texte', 'DSGVO-sicher'] },
+    en: { title: 'AI assistant', description: 'Local LLM via Ollama for chat with ERP context and SEO-optimised product descriptions – your data stays in-house.', tags: ['Local (Ollama)', 'Chat with ERP data', 'Bulk copy', 'GDPR-safe'] },
+  } },
 
   // Plattform
-  {
-    category: 'platform',
-    icon: 'webhook',
-    title: 'Webhooks',
-    description: 'Event-System für externe Integrationen mit HMAC-SHA256-Signatur, Custom Headers und Test-Modus.',
-    tags: ['Order- / Product- / Invoice-Events', 'HMAC-Signatur', 'Logs', 'Test-Button'],
-  },
-  {
-    category: 'platform',
-    icon: 'shield-check',
-    title: 'Compliance & DSGVO',
-    description: 'Mitarbeiter-Dokumente, Lohnzettel und vollständige DSGVO-Datenauskunft mit unveränderbarem Audit-Trail.',
-    tags: ['Datenexport', 'Audit-Trail', 'Multi-Tenant-Isolation'],
-  },
-];
+  { category: 'platform', icon: 'webhook', t: {
+    de: { title: 'Webhooks', description: 'Event-System für externe Integrationen mit HMAC-SHA256-Signatur, Custom Headers und Test-Modus.', tags: ['Order- / Product- / Invoice-Events', 'HMAC-Signatur', 'Logs', 'Test-Button'] },
+    en: { title: 'Webhooks', description: 'Event system for external integrations with HMAC-SHA256 signing, custom headers and a test mode.', tags: ['Order / product / invoice events', 'HMAC signature', 'Logs', 'Test button'] },
+  } },
+  { category: 'platform', icon: 'shield-check', t: {
+    de: { title: 'Compliance & DSGVO', description: 'Mitarbeiter-Dokumente, Lohnzettel und vollständige DSGVO-Datenauskunft mit unveränderbarem Audit-Trail.', tags: ['Datenexport', 'Audit-Trail', 'Multi-Tenant-Isolation'] },
+    en: { title: 'Compliance & GDPR', description: 'Employee documents, payslips and full GDPR data disclosure with an immutable audit trail.', tags: ['Data export', 'Audit trail', 'Multi-tenant isolation'] },
+  } },
+].map((m) => ({ category: m.category, icon: m.icon, ...m.t[lang] }));
 ---
 
 <section id="module" class="py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6">
     <div class="reveal text-center max-w-2xl mx-auto mb-12">
-      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">Module</span>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">20+ Module – modular kombinierbar</h2>
-      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-        Vom ersten Tag voll funktionsfähig. Aktivieren Sie nur, was Sie brauchen – und erweitern Sie jederzeit.
-      </p>
+      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{chrome.eyebrow}</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{chrome.heading}</h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{chrome.intro}</p>
     </div>
 
     <!-- Filter Tabs -->
-    <div class="flex flex-wrap justify-center gap-2 mb-10" id="module-filters" role="tablist" aria-label="Module nach Kategorie filtern">
+    <div class="flex flex-wrap justify-center gap-2 mb-10" id="module-filters" role="tablist" aria-label={chrome.filterAria}>
       {categories.map((cat, i) => (
         <button
           type="button"
@@ -211,8 +168,8 @@ const modules = [
     </div>
 
     <div class="mt-10 text-center">
-      <a href="/module" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
-        Alle Module im Detail ansehen
+      <a href={p('/module')} class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+        {chrome.allLink}
         <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
       </a>
     </div>

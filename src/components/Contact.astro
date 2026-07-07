@@ -1,53 +1,93 @@
 ---
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+const c = {
+  de: {
+    heading: 'Bereit, Ihre Prozesse zu digitalisieren?',
+    subhead: 'Vereinbaren Sie eine unverbindliche Demo. Wir zeigen Ihnen, welche Module zu Ihrem Setup passen.',
+    honeypot: 'Website (bitte leer lassen)',
+    firstName: 'Vorname', lastName: 'Nachname', email: 'E-Mail', company: 'Unternehmen', message: 'Nachricht (optional)',
+    phFirst: 'Max', phLast: 'Mustermann', phEmail: 'max@firma.de', phCompany: 'Firma GmbH', phMessage: 'Welche Module interessieren Sie?',
+    submit: 'Anfrage senden',
+    disclaimer: 'Wir melden uns innerhalb von 24 Stunden. Unverbindlich.',
+    sending: 'Wird gesendet…',
+    success: 'Vielen Dank! Wir melden uns innerhalb von 24 Stunden.',
+    errorGeneric: 'Es ist ein Fehler aufgetreten. Bitte später erneut versuchen.',
+    errorNetwork: 'Netzwerkfehler. Bitte Verbindung prüfen und erneut versuchen.',
+  },
+  en: {
+    heading: 'Ready to digitalise your processes?',
+    subhead: 'Book a no-obligation demo. We’ll show you which modules fit your setup.',
+    honeypot: 'Website (please leave blank)',
+    firstName: 'First name', lastName: 'Last name', email: 'Email', company: 'Company', message: 'Message (optional)',
+    phFirst: 'Alex', phLast: 'Smith', phEmail: 'alex@company.com', phCompany: 'Company Ltd', phMessage: 'Which modules are you interested in?',
+    submit: 'Send request',
+    disclaimer: 'We’ll get back to you within 24 hours. No obligation.',
+    sending: 'Sending…',
+    success: 'Thank you! We’ll get back to you within 24 hours.',
+    errorGeneric: 'Something went wrong. Please try again later.',
+    errorNetwork: 'Network error. Please check your connection and try again.',
+  },
+}[lang];
 ---
 
 <section id="kontakt" class="py-24 lg:py-32 bg-brand-700">
   <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-3xl sm:text-4xl font-bold text-white">Bereit, Ihre Prozesse zu digitalisieren?</h2>
-    <p class="mt-4 text-lg text-white/90">
-      Vereinbaren Sie eine unverbindliche Demo. Wir zeigen Ihnen, welche Module zu Ihrem Setup passen.
-    </p>
+    <h2 class="text-3xl sm:text-4xl font-bold text-white">{c.heading}</h2>
+    <p class="mt-4 text-lg text-white/90">{c.subhead}</p>
 
     <div class="mt-10 bg-white rounded-2xl p-8 text-left shadow-xl shadow-brand-900/20">
-      <form id="contact-form" class="space-y-4" action="/api/contact" method="POST" novalidate>
+      <form
+        id="contact-form"
+        class="space-y-4"
+        action="/api/contact"
+        method="POST"
+        novalidate
+        data-msg-sending={c.sending}
+        data-msg-success={c.success}
+        data-msg-error={c.errorGeneric}
+        data-msg-network={c.errorNetwork}
+      >
         <!-- Honeypot: vor Bots versteckt, vor Menschen aria-versteckt -->
         <div class="absolute -left-[9999px]" aria-hidden="true">
           <label>
-            Website (bitte leer lassen)
+            {c.honeypot}
             <input type="text" name="website" tabindex="-1" autocomplete="off" />
           </label>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-vorname">Vorname *</label>
-            <input id="contact-vorname" type="text" name="vorname" required autocomplete="given-name" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder="Max" />
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-vorname">{c.firstName} *</label>
+            <input id="contact-vorname" type="text" name="vorname" required autocomplete="given-name" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder={c.phFirst} />
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-nachname">Nachname</label>
-            <input id="contact-nachname" type="text" name="nachname" autocomplete="family-name" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder="Mustermann" />
+            <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-nachname">{c.lastName}</label>
+            <input id="contact-nachname" type="text" name="nachname" autocomplete="family-name" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder={c.phLast} />
           </div>
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-email">E-Mail *</label>
-          <input id="contact-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder="max@firma.de" />
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-email">{c.email} *</label>
+          <input id="contact-email" type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder={c.phEmail} />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-firma">Unternehmen</label>
-          <input id="contact-firma" type="text" name="firma" autocomplete="organization" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder="Firma GmbH" />
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-firma">{c.company}</label>
+          <input id="contact-firma" type="text" name="firma" autocomplete="organization" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder={c.phCompany} />
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-nachricht">Nachricht (optional)</label>
-          <textarea id="contact-nachricht" name="nachricht" rows="3" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none" placeholder="Welche Module interessieren Sie?"></textarea>
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="contact-nachricht">{c.message}</label>
+          <textarea id="contact-nachricht" name="nachricht" rows="3" class="w-full px-4 py-3 rounded-xl bg-white border border-gray-300 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none" placeholder={c.phMessage}></textarea>
         </div>
 
         <!-- Status-/Fehler-Anzeige (aria-live damit Screenreader es ansagen) -->
         <div id="contact-status" role="status" aria-live="polite" class="hidden text-sm px-4 py-3 rounded-xl"></div>
 
         <button id="contact-submit" type="submit" class="w-full py-3.5 rounded-xl bg-brand-700 text-white font-semibold text-sm hover:bg-brand-800 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors">
-          Anfrage senden
+          {c.submit}
         </button>
-        <p class="text-xs text-gray-500 text-center">Wir melden uns innerhalb von 24 Stunden. Unverbindlich.</p>
+        <p class="text-xs text-gray-500 text-center">{c.disclaimer}</p>
       </form>
     </div>
   </div>
@@ -59,6 +99,13 @@
   const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement | null;
 
   if (form && statusEl && submitBtn) {
+    const msg = {
+      sending: form.dataset.msgSending || 'Sending…',
+      success: form.dataset.msgSuccess || 'Thank you!',
+      error: form.dataset.msgError || 'Something went wrong. Please try again later.',
+      network: form.dataset.msgNetwork || 'Network error. Please check your connection and try again.',
+    };
+
     const setStatus = (kind: 'success' | 'error' | 'hidden', message = '') => {
       statusEl.classList.remove(
         'hidden',
@@ -84,7 +131,7 @@
 
       submitBtn.disabled = true;
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Wird gesendet…';
+      submitBtn.textContent = msg.sending;
 
       try {
         const formData = new FormData(form);
@@ -95,13 +142,13 @@
         const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
 
         if (res.ok && data.ok) {
-          setStatus('success', 'Vielen Dank! Wir melden uns innerhalb von 24 Stunden.');
+          setStatus('success', msg.success);
           form.reset();
         } else {
-          setStatus('error', data.error || 'Es ist ein Fehler aufgetreten. Bitte später erneut versuchen.');
+          setStatus('error', data.error || msg.error);
         }
       } catch {
-        setStatus('error', 'Netzwerkfehler. Bitte Verbindung prüfen und erneut versuchen.');
+        setStatus('error', msg.network);
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;

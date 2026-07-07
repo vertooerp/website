@@ -1,4 +1,10 @@
 ---
+import { getLangFromUrl, useTranslations, localizePath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const p = (path: string) => localizePath(path, lang);
+const year = new Date().getFullYear();
 ---
 
 <footer class="bg-gray-950 text-gray-400 py-16 dark:border-t dark:border-gray-800">
@@ -12,59 +18,59 @@
           </div>
           <span class="text-lg font-bold text-white">VertooERP</span>
         </div>
-        <p class="text-sm leading-relaxed">Die modulare ERP-Plattform für moderne Unternehmen.</p>
+        <p class="text-sm leading-relaxed">{t('footer.tagline')}</p>
         <a href="mailto:kontakt@tapandtype.de" class="mt-4 inline-block text-sm text-gray-400 hover:text-white transition-colors">kontakt@tapandtype.de</a>
         <p class="mt-1 text-sm text-gray-500">Luckenwalde, Brandenburg</p>
       </div>
 
       <!-- Produkt -->
       <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Produkt</h3>
+        <h3 class="text-sm font-semibold text-white mb-4">{t('footer.product')}</h3>
         <ul class="space-y-2.5">
-          <li><a href="/#module" class="text-sm hover:text-white transition-colors">Module</a></li>
-          <li><a href="/module" class="text-sm hover:text-white transition-colors">Modul-Übersicht</a></li>
-          <li><a href="/#preise" class="text-sm hover:text-white transition-colors">Preise</a></li>
-          <li><a href="/#branchen" class="text-sm hover:text-white transition-colors">Branchen</a></li>
-          <li><a href="/blog" class="text-sm hover:text-white transition-colors">Blog</a></li>
-          <li><a href="/glossar" class="text-sm hover:text-white transition-colors">Glossar</a></li>
-          <li><a href="/#ablauf" class="text-sm hover:text-white transition-colors">So funktioniert's</a></li>
+          <li><a href={p('/#module')} class="text-sm hover:text-white transition-colors">{t('nav.module')}</a></li>
+          <li><a href={p('/module')} class="text-sm hover:text-white transition-colors">{t('footer.moduleOverview')}</a></li>
+          <li><a href={p('/#preise')} class="text-sm hover:text-white transition-colors">{t('nav.pricing')}</a></li>
+          <li><a href={p('/#branchen')} class="text-sm hover:text-white transition-colors">{t('nav.industries')}</a></li>
+          <li><a href={p('/blog')} class="text-sm hover:text-white transition-colors">{t('nav.blog')}</a></li>
+          <li><a href={p('/glossar')} class="text-sm hover:text-white transition-colors">{t('footer.glossary')}</a></li>
+          <li><a href={p('/#ablauf')} class="text-sm hover:text-white transition-colors">{t('nav.how')}</a></li>
         </ul>
       </div>
 
       <!--Unternehmen -->
       <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Unternehmen</h3>
+        <h3 class="text-sm font-semibold text-white mb-4">{t('footer.company')}</h3>
         <ul class="space-y-2.5">
-          <li><a href="/#kontakt" class="text-sm hover:text-white transition-colors">Kontakt</a></li>
-          <li><a href="/impressum" class="text-sm hover:text-white transition-colors">Impressum</a></li>
-          <li><a href="/barrierefreiheit" class="text-sm hover:text-white transition-colors">Barrierefreiheit</a></li>
-          <li><a href="/datenschutz" class="text-sm hover:text-white transition-colors">Datenschutz</a></li>
+          <li><a href={p('/#kontakt')} class="text-sm hover:text-white transition-colors">{t('nav.contact')}</a></li>
+          <li><a href={p('/impressum')} class="text-sm hover:text-white transition-colors">{t('footer.imprint')}</a></li>
+          <li><a href={p('/barrierefreiheit')} class="text-sm hover:text-white transition-colors">{t('footer.accessibility')}</a></li>
+          <li><a href={p('/datenschutz')} class="text-sm hover:text-white transition-colors">{t('footer.privacy')}</a></li>
         </ul>
       </div>
 
       <!-- Vertrauen / Trust -->
       <div>
-        <h3 class="text-sm font-semibold text-white mb-4">Sicherheit &amp; Compliance</h3>
+        <h3 class="text-sm font-semibold text-white mb-4">{t('footer.security')}</h3>
         <ul class="space-y-2.5">
           <li class="flex items-center gap-2.5">
             <svg aria-hidden="true" class="w-4 h-4 text-brand-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="7" rx="1.5" /><rect x="3" y="13" width="18" height="7" rx="1.5" /><path stroke-linecap="round" d="M7 7.5h.01M7 16.5h.01" /></svg>
-            <span class="text-sm text-gray-300">Self-Hosting / On-Premises</span>
+            <span class="text-sm text-gray-300">{t('footer.trust.selfhosting')}</span>
           </li>
           <li class="flex items-center gap-2.5">
             <svg aria-hidden="true" class="w-4 h-4 text-brand-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2" /><path stroke-linecap="round" d="M8 11V7a4 4 0 1 1 8 0v4" /></svg>
-            <span class="text-sm text-gray-300">DSGVO-konform</span>
+            <span class="text-sm text-gray-300">{t('footer.trust.dsgvo')}</span>
           </li>
           <li class="flex items-center gap-2.5">
             <svg aria-hidden="true" class="w-4 h-4 text-brand-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.5 3h9l3.5 3.5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" /></svg>
-            <span class="text-sm text-gray-300">GoBD-konform</span>
+            <span class="text-sm text-gray-300">{t('footer.trust.gobd')}</span>
           </li>
         </ul>
       </div>
     </div>
 
     <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-xs">&copy; {new Date().getFullYear()} tap & type UG (haftungsbeschränkt). Alle Rechte vorbehalten.</p>
-      <p class="text-xs">Entwickelt für <span aria-hidden="true">🇪🇺</span> in Brandenburg <span aria-hidden="true">🇩🇪</span></p>
+      <p class="text-xs">&copy; {year} tap & type UG (haftungsbeschränkt). {t('footer.rights')}</p>
+      <p class="text-xs">{t('footer.developed')} <span aria-hidden="true">🇪🇺</span> {t('footer.developed.in')} <span aria-hidden="true">🇩🇪</span></p>
     </div>
   </div>
 </footer>

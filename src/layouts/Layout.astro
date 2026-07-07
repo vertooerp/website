@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/space-grotesk';
+import { getLangFromUrl, stripLangFromPath, localizePath } from '../i18n/utils';
+import { defaultLang } from '../i18n/ui';
 
 interface Props {
   title?: string;
@@ -9,19 +11,45 @@ interface Props {
   noindex?: boolean;
   image?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** true, wenn diese Seite in beiden Sprachen existiert → hreflang + Sprachumschalter */
+  hasTranslation?: boolean;
 }
 
+const lang = getLangFromUrl(Astro.url);
+
+const defaultMeta = {
+  de: {
+    title: 'VertooERP – Das modulare ERP für den Mittelstand',
+    description: 'Modulares ERP für KMU mit 20+ Modulen: Buchhaltung, Warenwirtschaft, Lager, Aufgaben, KI und mehr – alles in einer Plattform aus Deutschland.',
+  },
+  en: {
+    title: 'VertooERP – The modular ERP for mid-sized companies',
+    description: 'Modular ERP for SMEs with 20+ modules: accounting, inventory management, warehousing, tasks, AI and more – all in one self-hosted platform from Germany.',
+  },
+} as const;
+
 const {
-  title = 'VertooERP – Das modulare ERP für den Mittelstand',
-  description = 'Modulares ERP für KMU mit 20+ Modulen: Buchhaltung, Warenwirtschaft, Lager, Aufgaben, KI und mehr – alles in einer Plattform aus Deutschland.',
+  title = defaultMeta[lang].title,
+  description = defaultMeta[lang].description,
   noindex = false,
   image = '/og-image.png',
   jsonLd,
+  hasTranslation = false,
 } = Astro.props;
 
 const siteUrl = Astro.site ?? new URL('https://vertoo.de');
 const canonicalURL = new URL(Astro.url.pathname, siteUrl).toString();
 const imageURL = new URL(image, siteUrl).toString();
+
+// hreflang-Alternates nur, wenn die Seite wirklich in beiden Sprachen existiert.
+const basePath = stripLangFromPath(Astro.url.pathname);
+const alternates = hasTranslation
+  ? [
+      { hreflang: 'de', href: new URL(localizePath(basePath, 'de'), siteUrl).toString() },
+      { hreflang: 'en', href: new URL(localizePath(basePath, 'en'), siteUrl).toString() },
+      { hreflang: 'x-default', href: new URL(localizePath(basePath, defaultLang), siteUrl).toString() },
+    ]
+  : [];
 
 // Cloudflare Web Analytics (cookielos). Token als Env-Var in CF Pages setzen:
 //   PUBLIC_CF_ANALYTICS_TOKEN=<token aus dem CF-Dashboard>
@@ -69,7 +97,7 @@ const ldScripts = [organizationLd, websiteLd, ...(Array.isArray(jsonLd) ? jsonLd
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <!-- Theme + js-Klasse früh setzen, bevor der Body rendert (kein FOUC) -->
@@ -89,6 +117,9 @@ const ldScripts = [organizationLd, websiteLd, ...(Array.isArray(jsonLd) ? jsonLd
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="canonical" href={canonicalURL} />
+    {alternates.map((alt) => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -99,7 +130,7 @@ const ldScripts = [organizationLd, websiteLd, ...(Array.isArray(jsonLd) ? jsonLd
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="VertooERP" />
-    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale" content={lang === 'en' ? 'en_GB' : 'de_DE'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />

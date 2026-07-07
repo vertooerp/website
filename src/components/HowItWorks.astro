@@ -1,36 +1,46 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { getLangFromUrl } from '../i18n/utils';
 
-const steps = [
-  {
-    number: '01',
-    title: 'Module wählen',
-    description: 'Wählen Sie aus 20+ Modulen genau die Funktionen, die Ihr Unternehmen braucht. Starten Sie klein und erweitern Sie jederzeit.',
-    icon: 'target',
+const lang = getLangFromUrl(Astro.url);
+
+const c = {
+  de: {
+    eyebrow: "So funktioniert's",
+    heading: 'In 3 Schritten startklar',
+    intro: 'Kein kompliziertes Onboarding. Kein Berater nötig.',
+    steps: [
+      { title: 'Module wählen', description: 'Wählen Sie aus 20+ Modulen genau die Funktionen, die Ihr Unternehmen braucht. Starten Sie klein und erweitern Sie jederzeit.' },
+      { title: 'Team einladen', description: 'Legen Sie Mitarbeiter an, weisen Sie Rollen und Berechtigungen zu. Jeder sieht nur, was er braucht.' },
+      { title: 'Sofort loslegen', description: 'Kein Setup, keine Installation. Vertoo läuft im Browser und als installierbare Web-App auf jedem Gerät.' },
+    ],
   },
-  {
-    number: '02',
-    title: 'Team einladen',
-    description: 'Legen Sie Mitarbeiter an, weisen Sie Rollen und Berechtigungen zu. Jeder sieht nur, was er braucht.',
-    icon: 'users',
+  en: {
+    eyebrow: 'How it works',
+    heading: 'Ready in 3 steps',
+    intro: 'No complex onboarding. No consultant required.',
+    steps: [
+      { title: 'Choose modules', description: 'Pick exactly the features your company needs from 20+ modules. Start small and expand at any time.' },
+      { title: 'Invite your team', description: 'Add employees and assign roles and permissions. Everyone sees only what they need.' },
+      { title: 'Get started right away', description: 'No setup, no installation. Vertoo runs in the browser and as an installable web app on any device.' },
+    ],
   },
-  {
-    number: '03',
-    title: 'Sofort loslegen',
-    description: 'Kein Setup, keine Installation. Vertoo läuft im Browser und als installierbare Web-App auf jedem Gerät.',
-    icon: 'rocket',
-  },
+}[lang];
+
+const meta = [
+  { number: '01', icon: 'target' },
+  { number: '02', icon: 'users' },
+  { number: '03', icon: 'rocket' },
 ];
+const steps = meta.map((m, i) => ({ ...m, ...c.steps[i] }));
 ---
 
 <section id="ablauf" class="py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
   <div class="max-w-7xl mx-auto px-6">
     <div class="reveal text-center max-w-2xl mx-auto mb-16">
-      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">So funktioniert's</span>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">In 3 Schritten startklar</h2>
-      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-        Kein kompliziertes Onboarding. Kein Berater nötig.
-      </p>
+      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{c.eyebrow}</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{c.heading}</h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{c.intro}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">

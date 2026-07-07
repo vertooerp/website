@@ -10,6 +10,7 @@ const blog = defineCollection({
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('VertooERP'),
     tags: z.array(z.string()).default([]),
+    lang: z.enum(['de', 'en']).default('de'),
   }),
 });
 

@@ -1,0 +1,137 @@
+---
+import { Icon } from 'astro-icon/components';
+
+// English pricing section for the EN homepage. The German homepage uses the full
+// Pricing.astro. Pricing will later be driven dynamically from the Vertoo console,
+// so this stays intentionally lightweight (no detailed comparison table).
+const plans = [
+  {
+    name: 'Starter',
+    price: '350',
+    period: 'per month',
+    modulRange: 'Up to 3 modules',
+    description: 'For small teams starting out with individual modules.',
+    features: [
+      'Up to 3 selectable modules',
+      '3 seats included (+€18 / extra seat)',
+      'Multi-location & multi-tenant',
+      'PWA (installable on mobile)',
+      'Email support',
+    ],
+    cta: 'Request Starter',
+    highlight: false,
+  },
+  {
+    name: 'Business',
+    price: '800',
+    period: 'per month',
+    modulRange: 'Up to 12 modules',
+    description: 'For growing companies with a broad feature scope.',
+    features: [
+      'Up to 12 freely combinable modules',
+      '10 seats included (+€22 / extra seat)',
+      'Multi-location & multi-tenant',
+      'PWA (installable on mobile)',
+      'Keycloak SSO',
+      'Priority support',
+    ],
+    cta: 'Request Business',
+    highlight: true,
+  },
+  {
+    name: 'Enterprise',
+    price: '1,400',
+    period: 'per month',
+    modulRange: 'All 20+ modules',
+    description: 'For large organisations using the full spectrum.',
+    features: [
+      'All 20+ modules',
+      '20 seats included (+€28 / extra seat)',
+      'Multi-location & multi-tenant',
+      'PWA (installable on mobile)',
+      'Keycloak SSO',
+      'Custom branding',
+      'Dedicated contact',
+      'SLA & onboarding',
+    ],
+    cta: 'Get in touch',
+    highlight: false,
+  },
+];
+---
+
+<section id="preise" class="py-24 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="reveal text-center max-w-2xl mx-auto mb-16">
+      <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">Pricing</span>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold">Transparent and fair</h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+        Your tier depends on the number of modules you use. All prices plus VAT, 12-month minimum term.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {plans.map((plan) => (
+        <div class={`relative rounded-2xl p-8 ${plan.highlight ? 'bg-brand-700 text-white ring-2 ring-brand-700 scale-105' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800'}`}>
+          {plan.highlight && (
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-amber-400 text-amber-900 text-xs font-semibold shadow-md">
+              Most popular
+            </div>
+          )}
+          <h3 class={`text-xl font-bold ${plan.highlight ? 'text-white' : 'text-gray-900 dark:text-white'}`}>{plan.name}</h3>
+          <p class={`mt-1 text-sm font-medium ${plan.highlight ? 'text-brand-100' : 'text-brand-700 dark:text-brand-400'}`}>{plan.modulRange}</p>
+          <p class={`mt-1 text-sm ${plan.highlight ? 'text-brand-100' : 'text-gray-500 dark:text-gray-400'}`}>{plan.description}</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class={`text-4xl font-extrabold ${plan.highlight ? 'text-white' : 'text-gray-900 dark:text-white'}`}>€{plan.price}</span>
+            <span class={`text-sm ${plan.highlight ? 'text-brand-100' : 'text-gray-500 dark:text-gray-400'}`}>{plan.period}</span>
+          </div>
+
+          <ul class="mt-8 space-y-3">
+            {plan.features.map((feature) => (
+              <li class="flex items-start gap-3">
+                <svg aria-hidden="true" class={`w-5 h-5 shrink-0 mt-0.5 ${plan.highlight ? 'text-brand-100' : 'text-brand-700 dark:text-brand-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class={`text-sm ${plan.highlight ? 'text-brand-100' : 'text-gray-600 dark:text-gray-300'}`}>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="#kontakt"
+            class={`mt-8 block w-full py-3 rounded-xl text-center font-semibold text-sm transition-colors ${
+              plan.highlight ? 'bg-white text-brand-700 hover:bg-brand-50' : 'bg-brand-700 text-white hover:bg-brand-800'
+            }`}
+          >
+            {plan.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Complementary to an existing system -->
+    <div class="mt-12 max-w-3xl mx-auto">
+      <div class="rounded-2xl border border-brand-100 dark:border-brand-900/50 bg-brand-50/40 dark:bg-brand-950/30 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-5">
+        <div aria-hidden="true" class="w-12 h-12 rounded-xl bg-white dark:bg-gray-800 border border-brand-100 dark:border-gray-700 flex items-center justify-center text-brand-600 dark:text-brand-400 shrink-0">
+          <Icon name="lucide:link" class="w-6 h-6" />
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Complementary to an existing system?</h3>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+            If you want to run VertooERP <strong>alongside</strong> a system that already handles your core operations (e.g. JTL-Wawi, SAP, DATEV), we grant a <strong>significant discount</strong> on the base fee. We calculate individually to fit your setup.
+          </p>
+          <a href="#kontakt" class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 dark:text-brand-400 hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+            Request terms
+            <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footnote -->
+    <p class="mt-8 text-center text-xs text-gray-500 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+      12-month minimum term · 3-month notice period · Hosting, setup, maintenance and support not included (available separately)
+    </p>
+  </div>
+</section>

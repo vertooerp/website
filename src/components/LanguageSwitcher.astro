@@ -1,28 +1,32 @@
 ---
 import { languages, type Lang } from '../i18n/ui';
-import { getLangFromUrl, stripLangFromPath, localizePath, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, stripLangFromPath, localizePath, useTranslations, isTranslated } from '../i18n/utils';
 
 const currentLang = getLangFromUrl(Astro.url);
 const basePath = stripLangFromPath(Astro.url.pathname);
 const t = useTranslations(currentLang);
+// Nur anzeigen, wenn die aktuelle Seite in beiden Sprachen existiert.
+const show = isTranslated(Astro.url.pathname);
 ---
 
-<div class="inline-flex items-center rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" role="group" aria-label={t('a11y.lang')}>
-  {(Object.keys(languages) as Lang[]).map((code) => {
-    const isActive = code === currentLang;
-    return (
-      <a
-        href={localizePath(basePath, code)}
-        hreflang={code}
-        aria-current={isActive ? 'true' : undefined}
-        class={`px-2 py-1 text-xs font-semibold uppercase transition-colors ${
-          isActive
-            ? 'bg-brand-700 text-white'
-            : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-        }`}
-      >
-        {code}
-      </a>
-    );
-  })}
-</div>
+{show && (
+  <div class="inline-flex items-center rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" role="group" aria-label={t('a11y.lang')}>
+    {(Object.keys(languages) as Lang[]).map((code) => {
+      const isActive = code === currentLang;
+      return (
+        <a
+          href={localizePath(basePath, code)}
+          hreflang={code}
+          aria-current={isActive ? 'true' : undefined}
+          class={`px-2 py-1 text-xs font-semibold uppercase transition-colors ${
+            isActive
+              ? 'bg-brand-700 text-white'
+              : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+          }`}
+        >
+          {code}
+        </a>
+      );
+    })}
+  </div>
+)}

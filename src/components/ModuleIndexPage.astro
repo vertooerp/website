@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, localizePath } from '../i18n/utils';
+import { getModule } from '../data/localized';
+
+const lang = getLangFromUrl(Astro.url);
+const p = (path: string) => localizePath(path, lang);
+const module = getModule(lang);
+
+const s = {
+  de: {
+    title: 'Module – VertooERP',
+    description: 'Alle Module von VertooERP im Detail: Warenwirtschaft, Buchhaltung, Lagerverwaltung, Dropshipping, Zeiterfassung, CRM und mehr – einzeln aktivierbar.',
+    eyebrow: 'Module', headline: 'Module im Detail',
+    intro: 'Jedes Modul einzeln erklärt – von der Warenwirtschaft bis zur Buchhaltung. Aktivieren Sie nur, was Sie brauchen.',
+  },
+  en: {
+    title: 'Modules – VertooERP',
+    description: 'Every VertooERP module in detail: inventory management, accounting, warehousing, dropshipping, time tracking, CRM and more – activate them individually.',
+    eyebrow: 'Modules', headline: 'Modules in detail',
+    intro: 'Every module explained on its own – from inventory management to accounting. Activate only what you need.',
+  },
+}[lang];
+---
+
+<Layout title={s.title} description={s.description} hasTranslation>
+  <Header />
+  <main id="main-content">
+    <section class="relative pt-32 pb-12 lg:pt-40 hero-gradient overflow-hidden">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{s.eyebrow}</span>
+        <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">{s.headline}</h1>
+        <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{s.intro}</p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {module.map((m) => (
+            <a href={p(`/module/${m.slug}`)} class="group block p-8 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 card-hover hover:border-brand-200 dark:hover:border-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
+              <div aria-hidden="true" class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-gray-800 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4"><Icon name={`lucide:${m.icon}`} class="w-6 h-6" /></div>
+              <h2 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-400 transition-colors">{m.name}</h2>
+              <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">{m.metaDescription}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -30,6 +30,7 @@ export const ui = {
 
     'footer.tagline': 'Die modulare ERP-Plattform für moderne Unternehmen.',
     'footer.product': 'Produkt',
+    'footer.moduleOverview': 'Modul-Übersicht',
     'footer.company': 'Unternehmen',
     'footer.security': 'Sicherheit & Compliance',
     'footer.glossary': 'Glossar',
@@ -62,6 +63,7 @@ export const ui = {
 
     'footer.tagline': 'The modular ERP platform for modern companies.',
     'footer.product': 'Product',
+    'footer.moduleOverview': 'Module overview',
     'footer.company': 'Company',
     'footer.security': 'Security & Compliance',
     'footer.glossary': 'Glossary',

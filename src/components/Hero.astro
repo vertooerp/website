@@ -1,4 +1,27 @@
 ---
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const c = {
+  de: {
+    badge: 'Modulare Business-Plattform',
+    headlineHtml: 'Schluss mit <span class="gradient-text">Excel-Chaos</span><br />und Tool-Wirrwarr.',
+    subhead:
+      'Statt zehn verschiedene Tools zu jonglieren, vereint VertooERP Zeiterfassung, Warenwirtschaft, Buchhaltung, Aufgaben und Kommunikation in einer einzigen Plattform – entwickelt in Deutschland, gehostet auf Ihren Servern.',
+    cta1: 'Demo anfragen',
+    cta2: 'Module entdecken',
+    trust: 'Persönliche Beratung · Individuelle Konditionen · Self-Hosting / On-Premises',
+  },
+  en: {
+    badge: 'Modular business platform',
+    headlineHtml: 'End the <span class="gradient-text">Excel chaos</span><br />and tool sprawl.',
+    subhead:
+      'Instead of juggling ten different tools, VertooERP unifies time tracking, inventory management, accounting, tasks and communication in a single platform – built in Germany, hosted on your own servers.',
+    cta1: 'Request a demo',
+    cta2: 'Explore modules',
+    trust: 'Personal consulting · Individual terms · Self-hosting / on-premises',
+  },
+}[lang];
 ---
 
 <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 hero-gradient overflow-hidden">
@@ -7,29 +30,26 @@
       <div class="animate-fade-up">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 text-xs font-medium mb-6">
           <span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
-          Modulare Business-Plattform
+          {c.badge}
         </span>
       </div>
 
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight animate-fade-up">
-        Schluss mit <span class="gradient-text">Excel-Chaos</span><br />
-        und Tool-Wirrwarr.
-      </h1>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight animate-fade-up" set:html={c.headlineHtml} />
 
       <p class="mt-6 text-lg sm:text-xl text-gray-500 dark:text-gray-400 leading-relaxed animate-fade-up-delay max-w-2xl mx-auto">
-        Statt zehn verschiedene Tools zu jonglieren, vereint VertooERP Zeiterfassung, Warenwirtschaft, Buchhaltung, Aufgaben und Kommunikation in einer einzigen Plattform – entwickelt in Deutschland, gehostet auf Ihren Servern.
+        {c.subhead}
       </p>
 
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-2">
         <a href="#kontakt" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-700 text-white font-semibold hover:bg-brand-800 transition-all hover:shadow-lg hover:shadow-brand-700/25 text-center">
-          Demo anfragen
+          {c.cta1}
         </a>
         <a href="#module" class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center">
-          Module entdecken
+          {c.cta2}
         </a>
       </div>
 
-      <p class="mt-4 text-xs text-gray-500 dark:text-gray-400">Persönliche Beratung · Individuelle Konditionen · Self-Hosting / On-Premises</p>
+      <p class="mt-4 text-xs text-gray-500 dark:text-gray-400">{c.trust}</p>
     </div>
 
     <!-- Decorative elements -->
