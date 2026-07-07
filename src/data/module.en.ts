@@ -881,5 +881,521 @@ export const moduleEn: Modul[] = [
       "headline": "Keep fixed costs centrally in view",
       "text": "See the Cost Management module in a demo – from the fixed-cost overview through personnel and vehicle fleet to SaaS contracts and notice periods."
     }
+  },
+  {
+    "slug": "webshop",
+    "name": "Web Shop",
+    "icon": "store",
+    "metaTitle": "Web Shop Module – VertooERP",
+    "metaDescription": "VertooERP's web shop: a whitelabel customer store under your own domain, connected directly to your ERP's stock, prices and loyalty points.",
+    "hero": {
+      "eyebrow": "Module: Web Shop",
+      "headline": "Your customer store, straight from your ERP",
+      "subhead": "A whitelabel web shop under your own domain – seamlessly connected to stock, prices and loyalty points in VertooERP."
+    },
+    "intro": "A web shop in an ERP context is an online sales channel wired directly into your central inventory system. Instead of maintaining shop and ERP separately, VertooERP's web shop reads your stock, prices and loyalty points directly. That lets you sell online under your own brand without entering data twice.",
+    "painpoints": {
+      "intro": "Separate shop and ERP systems cost time and cause errors. An integrated web shop solves these problems:",
+      "items": [
+        {
+          "icon": "boxes",
+          "title": "Duplicate data entry",
+          "description": "Stock and prices have to be maintained separately in the shop and the ERP – tedious and error-prone."
+        },
+        {
+          "icon": "package",
+          "title": "Outdated stock levels",
+          "description": "Without a live connection you sell items that are long out of stock, or miss revenue on available ones."
+        },
+        {
+          "icon": "palette",
+          "title": "Someone else's brand",
+          "description": "Off-the-shelf shop systems impose their design and domain on you instead of showing your own brand."
+        },
+        {
+          "icon": "credit-card",
+          "title": "Awkward checkout",
+          "description": "Missing or unsuitable payment methods lead to abandoned carts at checkout."
+        }
+      ]
+    },
+    "features": {
+      "intro": "VertooERP's web shop unites selling and inventory management in one system:",
+      "items": [
+        {
+          "icon": "store",
+          "name": "Whitelabel under your own domain",
+          "description": "Your customer store runs under your own domain and branding – with no third-party name attached."
+        },
+        {
+          "icon": "link",
+          "name": "Seamless ERP connection",
+          "description": "Stock, prices and loyalty points connect directly to the ERP. No interfaces, no double maintenance."
+        },
+        {
+          "icon": "credit-card",
+          "name": "Established payment methods",
+          "description": "Your customers pay conveniently via Stripe, PayPal or Mollie."
+        },
+        {
+          "icon": "languages",
+          "name": "Multilingual shop",
+          "description": "Address customers in several languages and sell across borders."
+        },
+        {
+          "icon": "palette",
+          "name": "Your own branding",
+          "description": "Style the shop in your brand's look so it feels like a natural part of your presence."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Does the web shop run under my own domain?",
+        "a": "Yes. The web shop is a whitelabel customer store that runs under your own domain and branding."
+      },
+      {
+        "q": "Which payment methods are supported?",
+        "a": "Your customers can pay via Stripe, PayPal and Mollie."
+      },
+      {
+        "q": "How are stock and prices connected to the shop?",
+        "a": "The web shop is seamlessly connected to stock, prices and loyalty points from VertooERP, so you don't have to maintain that data twice."
+      }
+    ],
+    "cta": {
+      "headline": "Sell online under your own brand",
+      "text": "See how VertooERP's web shop connects your sales directly to your inventory management."
+    }
+  },
+  {
+    "slug": "preischeck",
+    "name": "Price Check",
+    "icon": "shopping-cart",
+    "metaTitle": "Price Check & Market Comparison – VertooERP",
+    "metaDescription": "Query market prices by EAN across idealo, Amazon, eBay, billiger.de and Google Shopping. Traffic-light rating, bulk import and per-platform max price.",
+    "hero": {
+      "eyebrow": "Module: Price Check",
+      "headline": "Compare market prices before you buy",
+      "subhead": "Query market prices by EAN across five marketplaces, rate them with a traffic-light system and set a maximum purchase price per platform – right inside VertooERP."
+    },
+    "intro": "A price check, or market price comparison, determines the current market price of an item across several selling platforms and compares it against your own terms. In VertooERP the query runs by EAN across idealo, Amazon, eBay, billiger.de and Google Shopping. That lets you see at a glance whether an offer or purchase price is in line with the market – and make decisions on a solid data basis.",
+    "painpoints": {
+      "intro": "Buying and pricing without current market data leaves margin on the table and wastes time on research.",
+      "items": [
+        {
+          "icon": "search",
+          "title": "Manual price research eats time",
+          "description": "Looking up prices on several portals one by one ties up hours that purchasing and sales teams need elsewhere."
+        },
+        {
+          "icon": "trending-down",
+          "title": "Overpaying on purchases",
+          "description": "Without a market comparison, it often shows up too late that a purchase price sits above the usual market level."
+        },
+        {
+          "icon": "layers",
+          "title": "Data scattered across portals",
+          "description": "idealo, Amazon, eBay and others show different prices – without consolidation the picture stays incomplete."
+        },
+        {
+          "icon": "scale",
+          "title": "No clear basis for decisions",
+          "description": "Raw price lists without a rating don't tell you whether an offer is good, borderline or too expensive."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Price Check bundles market data from five sources and makes it instantly assessable.",
+      "items": [
+        {
+          "icon": "search",
+          "name": "EAN-based market price query",
+          "description": "Enter the EAN and get the item's current market price – with no manual searching on each individual portal."
+        },
+        {
+          "icon": "store",
+          "name": "Five marketplaces in one query",
+          "description": "idealo, Amazon, eBay, billiger.de and Google Shopping are evaluated together and compared side by side."
+        },
+        {
+          "icon": "traffic-cone",
+          "name": "Traffic-light rating",
+          "description": "A traffic-light logic in green, yellow and red instantly shows how a price ranks against the market."
+        },
+        {
+          "icon": "upload",
+          "name": "Bulk import for mass queries",
+          "description": "Check entire product ranges at once via bulk import instead of querying items one by one."
+        },
+        {
+          "icon": "badge-euro",
+          "name": "Max purchase price per platform",
+          "description": "Store a maximum purchase price per platform so the rating aligns with your own thresholds."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Which marketplaces does the price check cover?",
+        "a": "The market price query evaluates five sources: idealo, Amazon, eBay, billiger.de and Google Shopping. If one source returns no price, a source fallback relies on the remaining sources."
+      },
+      {
+        "q": "How does the traffic-light rating work?",
+        "a": "Every price is classified by traffic-light logic as green, yellow or red. That lets you see without any calculation whether a price is within range or stands out – also against the stored maximum purchase price."
+      },
+      {
+        "q": "Can I check many items at once?",
+        "a": "Yes. Bulk import lets you check entire item lists in a single mass query instead of entering each EAN individually."
+      }
+    ],
+    "cta": {
+      "headline": "Compare prices, protect your margin",
+      "text": "Try Price Check in VertooERP and rate market prices by EAN and traffic-light logic across five marketplaces."
+    }
+  },
+  {
+    "slug": "bonuspunkte",
+    "name": "Loyalty Points",
+    "icon": "gift",
+    "metaTitle": "Loyalty Points & Retention – VertooERP",
+    "metaDescription": "Loyalty program with tier system, voucher generator and automatic point credits. Built into your ERP – with Shopware integration.",
+    "hero": {
+      "eyebrow": "Module: Loyalty Points",
+      "headline": "Customer loyalty that lives inside your ERP",
+      "subhead": "Reward loyal customers with a points and tier system, generate vouchers, and credit points automatically on every order – no extra software required."
+    },
+    "intro": "A loyalty or bonus-points program rewards customers for their purchases and loyalty with points they can collect and redeem. A tier system (e.g. Bronze, Silver, Gold) grades benefits by activity and creates incentives for repeat purchases. In VertooERP, loyalty is tied directly to orders and customer data, so points are created and managed automatically.",
+    "painpoints": {
+      "intro": "Without an integrated loyalty program, customer retention is left to chance:",
+      "items": [
+        {
+          "icon": "users",
+          "title": "Customers buy just once",
+          "description": "With no reason to return, first-time buyers drift away instead of becoming loyal repeat customers."
+        },
+        {
+          "icon": "repeat",
+          "title": "Manual point tracking eats time",
+          "description": "Booking points by hand is error-prone and doesn't scale as your order volume grows."
+        },
+        {
+          "icon": "ticket",
+          "title": "Vouchers without a system",
+          "description": "Vouchers created one by one are hard to track, control, or deploy in a targeted way."
+        },
+        {
+          "icon": "plug",
+          "title": "Shop and ERP don't talk",
+          "description": "When your loyalty program and inventory run separately, you get duplicate work and data gaps."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Everything you need for a working loyalty program – built into your ERP:",
+      "items": [
+        {
+          "icon": "award",
+          "name": "Tier system (Bronze/Silver/Gold)",
+          "description": "Grade customer benefits across multiple levels and reward activity with a visible status."
+        },
+        {
+          "icon": "coins",
+          "name": "Automatic point credits",
+          "description": "Points are credited automatically on orders (auto-credit) – no manual booking required."
+        },
+        {
+          "icon": "ticket",
+          "name": "Voucher generator",
+          "description": "Create vouchers in a structured way within the system and keep track of issuing and redemption."
+        },
+        {
+          "icon": "hourglass",
+          "name": "Point expiry",
+          "description": "Set points to expire so the program stays active and your liabilities stay clean."
+        },
+        {
+          "icon": "plug",
+          "name": "Shopware plugin",
+          "description": "Connect your Shopware store via the plugin and link online orders directly to the loyalty program."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "How are points credited on orders?",
+        "a": "Points are credited automatically on orders (auto-credit). You don't need to book anything manually – the credit is applied in the system based on the order."
+      },
+      {
+        "q": "Can loyalty points expire?",
+        "a": "Yes. VertooERP supports point expiry, so collected points can expire according to your rules. This keeps customers engaged and your liabilities manageable."
+      },
+      {
+        "q": "Can the program be connected to Shopware?",
+        "a": "Yes. The Shopware plugin connects your store to the loyalty program so online orders feed in directly."
+      }
+    ],
+    "cta": {
+      "headline": "Turn buyers into regulars",
+      "text": "Get started with the Loyalty Points module and build a retention program that runs automatically inside your ERP."
+    }
+  },
+  {
+    "slug": "wissensdatenbank",
+    "name": "Knowledge Base",
+    "icon": "book-open",
+    "metaTitle": "Knowledge Base – VertooERP",
+    "metaDescription": "Internal knowledge base for your team: articles in Markdown, categories, tags and a publishing workflow. Usable as a knowledge source for the AI assistant.",
+    "hero": {
+      "eyebrow": "Module: Knowledge Base",
+      "headline": "Your team's knowledge in one place",
+      "subhead": "An internal knowledge base for processes, guides and answers – structured into categories, written in Markdown and anchored directly in your ERP."
+    },
+    "intro": "A knowledge base is a central collection of articles in which a company captures its internal knowledge – such as process descriptions, how-to guides and answers to recurring questions. In VertooERP it is intended solely for your team and is not public. Instead of searching for knowledge across emails, chats and scattered documents, your team finds it in one fixed, searchable place.",
+    "painpoints": {
+      "intro": "Knowledge that lives only in people's heads and inboxes costs time every day. Many SMEs recognise these problems:",
+      "items": [
+        {
+          "icon": "search",
+          "title": "Knowledge is scattered",
+          "description": "Guides and answers sit in emails, chats and individual files – no one knows where the current version lives."
+        },
+        {
+          "icon": "users",
+          "title": "Knowledge gets lost",
+          "description": "When an experienced colleague leaves, their knowledge often goes with them because it was never written down."
+        },
+        {
+          "icon": "repeat",
+          "title": "The same questions again",
+          "description": "New team members ask recurring questions that others have to answer from scratch every single time."
+        },
+        {
+          "icon": "file-text",
+          "title": "No clear status",
+          "description": "Without an approval step, outdated drafts circulate alongside current versions – and nobody knows which one applies."
+        }
+      ]
+    },
+    "features": {
+      "intro": "The knowledge base in VertooERP is deliberately lean and practical – with the building blocks a team actually needs:",
+      "items": [
+        {
+          "icon": "pencil",
+          "name": "Articles in Markdown",
+          "description": "Write articles in plain Markdown – with headings, lists and links, without a cumbersome editor."
+        },
+        {
+          "icon": "folder-tree",
+          "name": "Categories",
+          "description": "Organise articles into clear categories so your team can quickly find the topics it needs."
+        },
+        {
+          "icon": "tags",
+          "name": "Tags",
+          "description": "Assign tags to label articles across topics and pull up exactly what you're looking for."
+        },
+        {
+          "icon": "workflow",
+          "name": "Publishing workflow",
+          "description": "Work with Draft and Live statuses – so it's always clear which articles are already in force."
+        },
+        {
+          "icon": "bot",
+          "name": "RAG-ready for the AI assistant",
+          "description": "Your articles can serve as a knowledge source for the local AI assistant, delivering answers from your own knowledge."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the knowledge base publicly accessible?",
+        "a": "No. The knowledge base is an internal knowledge base intended solely for your team. It is not public and is not designed as a customer-facing help centre."
+      },
+      {
+        "q": "What format are articles written in?",
+        "a": "Articles are written in Markdown. This lets you structure text with headings, lists and links, without needing a complicated editor."
+      },
+      {
+        "q": "How does the knowledge base relate to the AI assistant?",
+        "a": "The articles are RAG-ready: they can serve as a knowledge source for the local AI assistant, so it can answer questions based on your own documented knowledge."
+      }
+    ],
+    "cta": {
+      "headline": "Bring your team's knowledge together",
+      "text": "Use VertooERP's knowledge base to build a central foundation for internal knowledge – structured, searchable and ready for your AI assistant."
+    }
+  },
+  {
+    "slug": "reporting",
+    "name": "Reporting & Analytics",
+    "icon": "chart-column",
+    "metaTitle": "Reporting & Analytics for Your ERP – VertooERP",
+    "metaDescription": "Reporting & Analytics in VertooERP: live dashboard with KPIs from inventory, revenue trends, stock value, low-stock alerts and top-10 categories.",
+    "hero": {
+      "eyebrow": "Module: Reporting & Analytics",
+      "headline": "Reporting & Analytics – your key figures live from inventory management",
+      "subhead": "A live dashboard consolidates revenue trends, stock value, dropshipping performance and low-stock alerts. From the KPI overview down to the detail via drill-down – without pulling numbers from several systems."
+    },
+    "intro": "Reporting & Analytics refers to the evaluation of operational data into key figures, trends and charts that support decisions in a company. In an ERP, these evaluations are produced directly from the operational data, so figures do not have to be exported and prepared separately. The VertooERP reporting module shows KPIs from inventory management in a live dashboard – such as revenue trend, stock value and dropshipping performance. Using aggregate queries, it condenses large volumes of data into key figures while keeping the path into the individual details open via drill-down.",
+    "painpoints": {
+      "intro": "Sound familiar?",
+      "items": [
+        {
+          "icon": "table",
+          "title": "Piecing key figures together from Excel",
+          "description": "Revenue, stock and performance sit in separate lists. To get an overview, the figures are exported by hand and merged into spreadsheets – time-consuming and quickly out of date."
+        },
+        {
+          "icon": "clock",
+          "title": "Figures are already outdated once they're ready",
+          "description": "By the time a report is prepared, stock has long since changed. Without a live dashboard, you lack a view of the current status at the moment of decision."
+        },
+        {
+          "icon": "bell",
+          "title": "Low stock is noticed too late",
+          "description": "That an item is running low often only becomes apparent once it is missing. Without an alert for low stock, the reorder is triggered too late."
+        },
+        {
+          "icon": "search",
+          "title": "Key figure yes – cause unclear",
+          "description": "A trend points downward, but why? Without moving from the key figure into the underlying data, the analysis stays on the surface."
+        }
+      ]
+    },
+    "features": {
+      "intro": "The reporting module evaluates the data from inventory management in a live dashboard – from the condensed key figure down to the individual detail:",
+      "items": [
+        {
+          "icon": "gauge",
+          "name": "Live dashboard with KPIs",
+          "description": "Key figures from inventory management come together in a live dashboard. The overview reflects the current status instead of waiting for a manually created report."
+        },
+        {
+          "icon": "trending-up",
+          "name": "Revenue trend",
+          "description": "Revenue development is evaluated over time and makes revenue trends visible. This lets you see in which direction revenue is moving."
+        },
+        {
+          "icon": "truck",
+          "name": "Dropshipping performance",
+          "description": "A dedicated key figure shows dropshipping performance. This keeps the contribution of your dropshipping business in view without evaluating the data separately."
+        },
+        {
+          "icon": "boxes",
+          "name": "Stock value and low-stock alerts",
+          "description": "The dashboard reports the current stock value and warns with low-stock alerts as soon as an item's stock is low – in time for reordering."
+        },
+        {
+          "icon": "chart-line",
+          "name": "Trends over 7 months and top-10 categories",
+          "description": "Developments can be tracked over a period of 7 months. An evaluation of the top-10 categories shows which categories contribute the most."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "What is Reporting & Analytics in an ERP?",
+        "a": "Reporting & Analytics refers to evaluating operational data into key figures, trends and charts as a basis for decisions. In an ERP, these evaluations are produced directly from the operational data. In VertooERP, a live dashboard shows KPIs from inventory management, including revenue trend, stock value and dropshipping performance."
+      },
+      {
+        "q": "Which key figures does the live dashboard show?",
+        "a": "The live dashboard consolidates key figures from inventory management: revenue development with revenue trends, dropshipping performance, stock value and low-stock alerts when stock is low. In addition, trends over 7 months and the top-10 categories can be evaluated."
+      },
+      {
+        "q": "Can I move from a key figure into the details?",
+        "a": "Yes. The module condenses large volumes of data into key figures via aggregate queries and at the same time allows a drill-down into the underlying details. This keeps the path from the condensed key figure down to the individual item open."
+      }
+    ],
+    "cta": {
+      "headline": "Keep your key figures in view, live",
+      "text": "See in a demo how the VertooERP live dashboard brings together revenue trend, stock value, dropshipping performance and low-stock alerts from your inventory management – with drill-down into the detail."
+    }
+  },
+  {
+    "slug": "ki-assistent",
+    "name": "AI Assistant",
+    "icon": "bot",
+    "metaTitle": "AI Assistant in ERP – VertooERP",
+    "metaDescription": "VertooERP's AI Assistant runs as a local LLM via Ollama: chat with ERP context, generate product texts, data stays in-house. Privacy-friendly by design.",
+    "hero": {
+      "eyebrow": "Module: AI Assistant",
+      "headline": "AI right inside your ERP – local and in-house",
+      "subhead": "An AI assistant that knows your ERP data and writes product texts. Powered by a local language model via Ollama, without your data ever leaving your company."
+    },
+    "intro": "An AI assistant in the ERP is a language model (LLM) integrated into your business software that answers questions about your own data and helps with writing tasks. In VertooERP this assistant runs locally via Ollama – the language model and all data stay on your own infrastructure. This combines modern AI capabilities with the data protection of a self-hosted system.",
+    "painpoints": {
+      "intro": "Why many SMEs hesitate when it comes to AI in the ERP:",
+      "items": [
+        {
+          "icon": "cloud-off",
+          "title": "Sensitive data in the cloud",
+          "description": "Typical AI services send your business and customer data to external servers. For many SMEs that is not an option, for data-protection and competitive reasons."
+        },
+        {
+          "icon": "database",
+          "title": "AI without context on your data",
+          "description": "General chatbots don't know your company. They can't answer questions about specific orders, items or stock levels."
+        },
+        {
+          "icon": "pen-tool",
+          "title": "Product texts take time",
+          "description": "Writing appealing, SEO-ready descriptions for many items is time-consuming – especially with large product ranges."
+        },
+        {
+          "icon": "server",
+          "title": "Dependence on external providers",
+          "description": "Cloud AI ties you to the pricing, availability and terms of third parties that you have no control over."
+        }
+      ]
+    },
+    "features": {
+      "intro": "What the AI Assistant in VertooERP does:",
+      "items": [
+        {
+          "icon": "message-square",
+          "name": "Chat with ERP context",
+          "description": "Ask questions about your own ERP data and get answers straight from the system – in a dialogue, without detours."
+        },
+        {
+          "icon": "file-text",
+          "name": "Generate product descriptions",
+          "description": "Create SEO-optimized product texts at the click of a button and give every item a convincing description."
+        },
+        {
+          "icon": "wand-2",
+          "name": "Bulk texts for large ranges",
+          "description": "Generate descriptions as bulk texts for many items at once and save yourself manual, repetitive work."
+        },
+        {
+          "icon": "server",
+          "name": "Local LLM via Ollama",
+          "description": "The language model runs via Ollama on your own infrastructure – as an integral part of your self-hosted ERP."
+        },
+        {
+          "icon": "shield",
+          "name": "Data stays in-house",
+          "description": "Your data never leaves the company: no forced cloud, no data leakage, privacy-friendly through the architecture itself."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is my data sent to an external AI cloud?",
+        "a": "No. The AI assistant runs as a local language model via Ollama on your own infrastructure. Your data stays in-house and never leaves your company."
+      },
+      {
+        "q": "Can the assistant answer questions about my specific ERP data?",
+        "a": "Yes. The chat works with ERP context, so you can ask questions about your own data stored in the system and get answers in a dialogue."
+      },
+      {
+        "q": "Can I create product texts for many items at once?",
+        "a": "Yes. Besides individual SEO-optimized product descriptions, you can also generate texts as bulk texts for many items at the same time."
+      }
+    ],
+    "cta": {
+      "headline": "Use AI without giving your data away",
+      "text": "Experience an AI assistant that knows your ERP data and runs locally, in-house. Discover the AI Assistant module in VertooERP."
+    }
   }
 ];

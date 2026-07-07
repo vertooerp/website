@@ -912,6 +912,523 @@ export const module: Modul[] = [
       "text": "Sehen Sie sich das Modul Kostenmanagement in einer Demo an – von der Fixkosten-Übersicht über Personal und Fuhrpark bis zu SaaS-Verträgen und Kündigungsfristen."
     }
   }
+,
+  {
+    "slug": "webshop",
+    "name": "Webshop",
+    "icon": "store",
+    "metaTitle": "Webshop-Modul – VertooERP",
+    "metaDescription": "Der Webshop von VertooERP: Whitelabel-Kundenshop unter eigener Domain, direkt mit Bestand, Preisen und Bonuspunkten Ihres ERP verbunden.",
+    "hero": {
+      "eyebrow": "Modul: Webshop",
+      "headline": "Ihr Kundenshop, direkt aus dem ERP",
+      "subhead": "Ein Whitelabel-Webshop unter Ihrer eigenen Domain – nahtlos verbunden mit Bestand, Preisen und Bonuspunkten aus VertooERP."
+    },
+    "intro": "Ein Webshop im ERP-Kontext ist ein Online-Verkaufskanal, der direkt an Ihre zentrale Warenwirtschaft angebunden ist. Statt Shop und ERP getrennt zu pflegen, greift der Webshop von VertooERP unmittelbar auf Ihre Bestände, Preise und Bonuspunkte zu. So verkaufen Sie online unter Ihrer eigenen Marke, ohne Daten doppelt zu erfassen.",
+    "painpoints": {
+      "intro": "Getrennte Shop- und ERP-Systeme kosten Zeit und führen zu Fehlern. Diese Probleme löst ein integrierter Webshop:",
+      "items": [
+        {
+          "icon": "boxes",
+          "title": "Doppelte Datenpflege",
+          "description": "Bestände und Preise müssen in Shop und ERP separat gepflegt werden – aufwendig und fehleranfällig."
+        },
+        {
+          "icon": "package",
+          "title": "Veraltete Bestände",
+          "description": "Ohne Live-Anbindung verkaufen Sie Artikel, die längst nicht mehr am Lager sind, oder verpassen Umsatz."
+        },
+        {
+          "icon": "palette",
+          "title": "Fremde Marke im Shop",
+          "description": "Standard-Shopsysteme zwingen Ihnen ihr Design und ihre Domain auf, statt Ihre eigene Marke zu zeigen."
+        },
+        {
+          "icon": "credit-card",
+          "title": "Umständliche Zahlung",
+          "description": "Fehlende oder unpassende Zahlungsarten führen zu Kaufabbrüchen an der Kasse."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Der Webshop von VertooERP verbindet Verkauf und Warenwirtschaft in einem System:",
+      "items": [
+        {
+          "icon": "store",
+          "name": "Whitelabel unter eigener Domain",
+          "description": "Ihr Kundenshop läuft unter Ihrer eigenen Domain und in Ihrem eigenen Branding – ganz ohne fremde Marke."
+        },
+        {
+          "icon": "link",
+          "name": "Nahtlose ERP-Anbindung",
+          "description": "Bestände, Preise und Bonuspunkte sind direkt mit dem ERP verbunden. Keine Schnittstellen, keine doppelte Pflege."
+        },
+        {
+          "icon": "credit-card",
+          "name": "Etablierte Zahlungsarten",
+          "description": "Ihre Kunden zahlen bequem per Stripe, PayPal oder Mollie."
+        },
+        {
+          "icon": "languages",
+          "name": "Mehrsprachiger Shop",
+          "description": "Sprechen Sie Kundinnen und Kunden in mehreren Sprachen an und verkaufen Sie über Grenzen hinweg."
+        },
+        {
+          "icon": "palette",
+          "name": "Eigenes Branding",
+          "description": "Gestalten Sie den Shop im Look Ihrer Marke, damit er sich wie ein natürlicher Teil Ihres Auftritts anfühlt."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Läuft der Webshop unter meiner eigenen Domain?",
+        "a": "Ja. Der Webshop ist ein Whitelabel-Kundenshop, der unter Ihrer eigenen Domain und in Ihrem eigenen Branding läuft."
+      },
+      {
+        "q": "Welche Zahlungsarten werden unterstützt?",
+        "a": "Ihre Kunden können über Stripe, PayPal und Mollie bezahlen."
+      },
+      {
+        "q": "Wie sind Bestand und Preise mit dem Shop verbunden?",
+        "a": "Der Webshop ist nahtlos mit Bestand, Preisen und Bonuspunkten aus VertooERP verbunden, sodass Sie diese Daten nicht doppelt pflegen müssen."
+      }
+    ],
+    "cta": {
+      "headline": "Verkaufen Sie online unter Ihrer eigenen Marke",
+      "text": "Sehen Sie, wie der Webshop von VertooERP Ihren Verkauf direkt mit Ihrer Warenwirtschaft verbindet."
+    }
+  },
+  {
+    "slug": "preischeck",
+    "name": "Preischeck",
+    "icon": "shopping-cart",
+    "metaTitle": "Preischeck & Marktpreis-Vergleich – VertooERP",
+    "metaDescription": "Marktpreise per EAN über idealo, Amazon, eBay, billiger.de und Google Shopping abfragen. Ampel-Bewertung, Bulk-Import und Max-EK je Plattform.",
+    "hero": {
+      "eyebrow": "Modul: Preischeck",
+      "headline": "Marktpreise vergleichen, bevor Sie einkaufen",
+      "subhead": "Fragen Sie Marktpreise per EAN über fünf Marktplätze ab, bewerten Sie sie per Ampel und legen Sie je Plattform einen Max-Einkaufspreis fest – direkt in VertooERP."
+    },
+    "intro": "Ein Preischeck bzw. Marktpreis-Vergleich ermittelt zu einem Artikel den aktuellen Marktpreis über mehrere Verkaufsplattformen und stellt ihn Ihren eigenen Konditionen gegenüber. In VertooERP erfolgt die Abfrage EAN-basiert über idealo, Amazon, eBay, billiger.de und Google Shopping. So erkennen Sie auf einen Blick, ob ein Angebot oder Einkaufspreis marktgerecht ist – und treffen Ihre Entscheidungen auf einer belastbaren Datenbasis.",
+    "painpoints": {
+      "intro": "Wer ohne aktuelle Marktdaten einkauft und kalkuliert, verschenkt Marge und verliert Zeit bei der Recherche.",
+      "items": [
+        {
+          "icon": "search",
+          "title": "Manuelle Preisrecherche kostet Zeit",
+          "description": "Preise auf mehreren Portalen einzeln nachzuschlagen bindet Stunden, die im Einkauf und Vertrieb fehlen."
+        },
+        {
+          "icon": "trending-down",
+          "title": "Zu teuer eingekauft",
+          "description": "Ohne Marktpreis-Vergleich fällt erst spät auf, dass ein Einkaufspreis über dem üblichen Marktniveau liegt."
+        },
+        {
+          "icon": "layers",
+          "title": "Daten verteilt über viele Portale",
+          "description": "idealo, Amazon, eBay und Co. liefern unterschiedliche Preise – ohne Bündelung bleibt das Bild lückenhaft."
+        },
+        {
+          "icon": "scale",
+          "title": "Keine klare Entscheidungsgrundlage",
+          "description": "Rohe Preislisten ohne Bewertung sagen nicht, ob ein Angebot gut, grenzwertig oder zu teuer ist."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Der Preischeck bündelt Marktdaten aus fünf Quellen und macht sie sofort bewertbar.",
+      "items": [
+        {
+          "icon": "search",
+          "name": "EAN-basierte Marktpreisabfrage",
+          "description": "Geben Sie die EAN ein und erhalten Sie den aktuellen Marktpreis des Artikels – ohne manuelle Suche auf jedem Portal."
+        },
+        {
+          "icon": "store",
+          "name": "Fünf Marktplätze in einer Abfrage",
+          "description": "idealo, Amazon, eBay, billiger.de und Google Shopping werden gemeinsam ausgewertet und gegenübergestellt."
+        },
+        {
+          "icon": "traffic-cone",
+          "name": "Ampel-Bewertung",
+          "description": "Eine Ampel-Logik in Grün, Gelb und Rot zeigt sofort, wie ein Preis im Marktvergleich einzuordnen ist."
+        },
+        {
+          "icon": "upload",
+          "name": "Bulk-Import für Massenabfragen",
+          "description": "Prüfen Sie ganze Sortimente auf einmal per Bulk-Import, statt Artikel einzeln abzufragen."
+        },
+        {
+          "icon": "badge-euro",
+          "name": "Max-Einkaufspreis je Plattform",
+          "description": "Hinterlegen Sie je Plattform einen Max-EK, damit die Bewertung an Ihren eigenen Grenzwerten ausgerichtet ist."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Welche Marktplätze deckt der Preischeck ab?",
+        "a": "Die Marktpreisabfrage wertet fünf Quellen aus: idealo, Amazon, eBay, billiger.de und Google Shopping. Liefert eine Quelle keinen Preis, greift ein Source-Fallback auf die übrigen Quellen zurück."
+      },
+      {
+        "q": "Wie funktioniert die Ampel-Bewertung?",
+        "a": "Jeder Preis wird per Ampel-Logik in Grün, Gelb oder Rot eingeordnet. So erkennen Sie ohne eigene Rechnung, ob ein Preis im Rahmen liegt oder auffällig ist – auch im Abgleich mit dem hinterlegten Max-Einkaufspreis."
+      },
+      {
+        "q": "Kann ich viele Artikel gleichzeitig prüfen?",
+        "a": "Ja. Über den Bulk-Import lassen sich ganze Artikellisten in einer Massenabfrage prüfen, statt jede EAN einzeln einzugeben."
+      }
+    ],
+    "cta": {
+      "headline": "Preise vergleichen, Marge sichern",
+      "text": "Testen Sie den Preischeck in VertooERP und bewerten Sie Marktpreise per EAN und Ampel-Logik über fünf Marktplätze."
+    }
+  },
+  {
+    "slug": "bonuspunkte",
+    "name": "Bonuspunkte",
+    "icon": "gift",
+    "metaTitle": "Bonuspunkte & Kundenbindung – VertooERP",
+    "metaDescription": "Kundenbindungsprogramm mit Tier-System, Gutschein-Generator und automatischer Punkte-Gutschrift. Direkt in Ihrem ERP – mit Shopware-Anbindung.",
+    "hero": {
+      "eyebrow": "Modul: Bonuspunkte",
+      "headline": "Kundenbindung, die in Ihrem ERP zu Hause ist",
+      "subhead": "Belohnen Sie treue Kunden mit einem Punkte- und Tier-System, generieren Sie Gutscheine und schreiben Sie Punkte bei jeder Bestellung automatisch gut – ohne Zusatzsoftware."
+    },
+    "intro": "Ein Bonuspunkte- oder Kundenbindungsprogramm belohnt Kunden für Einkäufe und Treue mit Punkten, die sie sammeln und einlösen können. Ein Tier-System (z. B. Bronze, Silber, Gold) staffelt die Vorteile nach Aktivität und schafft Anreize für wiederkehrende Käufe. In VertooERP ist die Kundenbindung direkt an Bestellungen und Kundendaten gekoppelt, sodass Punkte automatisch entstehen und verwaltet werden.",
+    "painpoints": {
+      "intro": "Ohne integriertes Kundenbindungsprogramm bleibt Loyalität dem Zufall überlassen:",
+      "items": [
+        {
+          "icon": "users",
+          "title": "Kunden kaufen nur einmal",
+          "description": "Ohne Anreiz zum Wiederkommen wandern Erstkäufer ab, statt zu treuen Stammkunden zu werden."
+        },
+        {
+          "icon": "repeat",
+          "title": "Manuelle Punktevergabe frisst Zeit",
+          "description": "Punkte per Hand zu verbuchen ist fehleranfällig und skaliert nicht mit steigendem Bestellvolumen."
+        },
+        {
+          "icon": "ticket",
+          "title": "Gutscheine ohne System",
+          "description": "Einzeln erstellte Gutscheine lassen sich kaum überblicken, kontrollieren oder gezielt einsetzen."
+        },
+        {
+          "icon": "plug",
+          "title": "Shop und ERP sprechen nicht miteinander",
+          "description": "Wenn Bindungsprogramm und Warenwirtschaft getrennt laufen, entstehen doppelte Pflege und Datenlücken."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Alles, was Sie für ein funktionierendes Kundenbindungsprogramm brauchen – integriert in Ihr ERP:",
+      "items": [
+        {
+          "icon": "award",
+          "name": "Tier-System (Bronze/Silber/Gold)",
+          "description": "Staffeln Sie Kundenvorteile über mehrere Stufen und belohnen Sie Aktivität mit einem sichtbaren Status."
+        },
+        {
+          "icon": "coins",
+          "name": "Automatische Punkte-Gutschrift",
+          "description": "Punkte werden bei Bestellungen automatisch gutgeschrieben (Auto-Credit) – ohne manuelles Nachbuchen."
+        },
+        {
+          "icon": "ticket",
+          "name": "Gutschein-Generator",
+          "description": "Erstellen Sie Gutscheine strukturiert im System und behalten Sie den Überblick über Ausgabe und Einlösung."
+        },
+        {
+          "icon": "hourglass",
+          "name": "Punkte-Verfall",
+          "description": "Legen Sie fest, dass Punkte ablaufen können – das hält das Programm aktiv und Bilanzen sauber."
+        },
+        {
+          "icon": "plug",
+          "name": "Shopware-Plugin",
+          "description": "Binden Sie Ihren Shopware-Shop über das Plugin an und verbinden Sie Online-Bestellungen direkt mit dem Bindungsprogramm."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Wie werden Punkte bei Bestellungen gutgeschrieben?",
+        "a": "Punkte werden bei Bestellungen automatisch gutgeschrieben (Auto-Credit). Sie müssen nichts manuell nachbuchen – die Gutschrift erfolgt im System auf Basis der Bestellung."
+      },
+      {
+        "q": "Können Bonuspunkte ablaufen?",
+        "a": "Ja. VertooERP unterstützt einen Punkte-Verfall, sodass gesammelte Punkte nach Ihren Vorgaben ablaufen können. Das hält Kunden aktiv und Ihre Verbindlichkeiten überschaubar."
+      },
+      {
+        "q": "Lässt sich das Programm an Shopware anbinden?",
+        "a": "Ja. Über das Shopware-Plugin verbinden Sie Ihren Shop mit dem Kundenbindungsprogramm, sodass Online-Bestellungen direkt einfließen."
+      }
+    ],
+    "cta": {
+      "headline": "Machen Sie aus Käufern Stammkunden",
+      "text": "Starten Sie mit dem Bonuspunkte-Modul und bauen Sie ein Kundenbindungsprogramm auf, das automatisch in Ihrem ERP mitläuft."
+    }
+  },
+  {
+    "slug": "wissensdatenbank",
+    "name": "Wissensdatenbank",
+    "icon": "book-open",
+    "metaTitle": "Wissensdatenbank – VertooERP",
+    "metaDescription": "Interne Wissensdatenbank für Ihr Team: Artikel in Markdown, Kategorien, Tags und Veröffentlichungs-Workflow.",
+    "hero": {
+      "eyebrow": "Modul: Wissensdatenbank",
+      "headline": "Das Wissen Ihres Teams an einem Ort",
+      "subhead": "Eine interne Knowledge Base für Prozesse, Anleitungen und Antworten – strukturiert in Kategorien, geschrieben in Markdown und direkt in Ihrem ERP verankert."
+    },
+    "intro": "Eine Wissensdatenbank (Knowledge Base) ist eine zentrale Sammlung von Artikeln, in der ein Unternehmen sein internes Wissen festhält – etwa Prozessbeschreibungen, Anleitungen und Antworten auf wiederkehrende Fragen. In VertooERP ist sie ausschließlich für Ihr Team bestimmt und nicht öffentlich. Statt Wissen in E-Mails, Chats und verstreuten Dokumenten zu suchen, findet Ihr Team es an einem festen, durchsuchbaren Ort.",
+    "painpoints": {
+      "intro": "Wissen, das nur in Köpfen und Postfächern steckt, kostet jeden Tag Zeit. Diese Probleme kennen viele KMU:",
+      "items": [
+        {
+          "icon": "search",
+          "title": "Wissen ist verstreut",
+          "description": "Anleitungen und Antworten liegen in E-Mails, Chats und einzelnen Dateien – niemand weiß, wo die aktuelle Version steht."
+        },
+        {
+          "icon": "users",
+          "title": "Wissen geht verloren",
+          "description": "Verlässt eine erfahrene Kollegin das Unternehmen, verschwindet ihr Wissen oft mit ihr, weil es nie dokumentiert wurde."
+        },
+        {
+          "icon": "repeat",
+          "title": "Immer dieselben Fragen",
+          "description": "Neue Mitarbeitende stellen wiederkehrende Fragen, die andere jedes Mal aufs Neue beantworten müssen."
+        },
+        {
+          "icon": "file-text",
+          "title": "Kein klarer Stand",
+          "description": "Ohne Freigabe-Prozess kursieren veraltete Entwürfe neben aktuellen Fassungen – und keiner weiß, welche gilt."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Die Wissensdatenbank in VertooERP ist bewusst schlank und praxisnah – mit den Bausteinen, die ein Team wirklich braucht:",
+      "items": [
+        {
+          "icon": "pencil",
+          "name": "Artikel in Markdown",
+          "description": "Verfassen Sie Artikel in einfachem Markdown – mit Überschriften, Listen und Links, ohne umständlichen Editor."
+        },
+        {
+          "icon": "folder-tree",
+          "name": "Kategorien",
+          "description": "Ordnen Sie Artikel in klare Kategorien, damit Ihr Team Themen schnell wiederfindet."
+        },
+        {
+          "icon": "tags",
+          "name": "Tags",
+          "description": "Vergeben Sie Tags, um Artikel themenübergreifend zu verschlagworten und gezielt aufzurufen."
+        },
+        {
+          "icon": "workflow",
+          "name": "Veröffentlichungs-Workflow",
+          "description": "Arbeiten Sie mit den Status Entwurf und Live – so ist immer klar, welche Artikel bereits gültig sind."
+        },
+        {
+          "icon": "bot",
+          "name": "RAG-ready für den KI-Assistenten",
+          "description": "Ihre Artikel können dem lokalen KI-Assistenten als Wissensquelle dienen und Antworten aus Ihrem eigenen Wissen liefern."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Ist die Wissensdatenbank öffentlich zugänglich?",
+        "a": "Nein. Die Wissensdatenbank ist eine interne Knowledge Base, die ausschließlich für Ihr Team gedacht ist. Sie ist nicht öffentlich und nicht als Kunden-Hilfebereich konzipiert."
+      },
+      {
+        "q": "In welchem Format werden Artikel geschrieben?",
+        "a": "Artikel werden in Markdown verfasst. Damit strukturieren Sie Texte mit Überschriften, Listen und Links, ohne einen komplizierten Editor zu benötigen."
+      },
+      {
+        "q": "Wie hängt die Wissensdatenbank mit dem KI-Assistenten zusammen?",
+        "a": "Die Artikel sind RAG-ready: Sie können dem lokalen KI-Assistenten als Wissensquelle dienen, sodass dieser Antworten auf Basis Ihres eigenen dokumentierten Wissens geben kann."
+      }
+    ],
+    "cta": {
+      "headline": "Bündeln Sie das Wissen Ihres Teams",
+      "text": "Legen Sie mit der Wissensdatenbank von VertooERP eine zentrale Grundlage für internes Wissen – strukturiert, durchsuchbar und bereit für Ihren KI-Assistenten."
+    }
+  },
+  {
+    "slug": "reporting",
+    "name": "Reporting & Analytics",
+    "icon": "chart-column",
+    "metaTitle": "Reporting & Analytics fürs ERP – VertooERP",
+    "metaDescription": "Reporting & Analytics in VertooERP: Live-Dashboard mit KPIs aus der Warenwirtschaft, Umsatztrends, Bestandswert, Low-Stock-Alerts und Top-10-Kategorien.",
+    "hero": {
+      "eyebrow": "Modul: Reporting & Analytics",
+      "headline": "Reporting & Analytics – Ihre Kennzahlen live aus der Warenwirtschaft",
+      "subhead": "Ein Live-Dashboard bündelt Umsatzentwicklung, Bestandswert, Dropshipping-Performance und Low-Stock-Warnungen. Von der KPI-Übersicht per Drill-Down bis ins Detail – ohne Zahlen aus mehreren Systemen zusammenzutragen."
+    },
+    "intro": "Reporting & Analytics bezeichnet die Auswertung betrieblicher Daten zu Kennzahlen, Trends und Diagrammen, die Entscheidungen im Unternehmen unterstützen. In einem ERP entstehen diese Auswertungen direkt aus den operativen Daten, sodass Zahlen nicht separat exportiert und aufbereitet werden müssen. Das Reporting-Modul von VertooERP zeigt in einem Live-Dashboard KPIs aus der Warenwirtschaft – etwa Umsatzentwicklung, Bestandswert und Dropshipping-Performance. Über Aggregat-Abfragen verdichtet es große Datenmengen zu Kennzahlen und lässt per Drill-Down den Weg in die einzelnen Details offen.",
+    "painpoints": {
+      "intro": "Klingt vertraut?",
+      "items": [
+        {
+          "icon": "table",
+          "title": "Kennzahlen erst aus Excel zusammensuchen",
+          "description": "Umsatz, Bestand und Performance stehen in getrennten Listen. Für einen Überblick werden die Zahlen von Hand exportiert und in Tabellen zusammengeführt – zeitraubend und schnell veraltet."
+        },
+        {
+          "icon": "clock",
+          "title": "Zahlen sind schon überholt, wenn sie fertig sind",
+          "description": "Bis ein Report aufbereitet ist, hat sich der Bestand längst verändert. Ohne Live-Dashboard fehlt der Blick auf den aktuellen Stand im Moment der Entscheidung."
+        },
+        {
+          "icon": "bell",
+          "title": "Niedrige Bestände fallen zu spät auf",
+          "description": "Dass ein Artikel zur Neige geht, zeigt sich oft erst, wenn er fehlt. Ohne Warnung bei niedrigem Bestand wird die Nachbestellung zu spät ausgelöst."
+        },
+        {
+          "icon": "search",
+          "title": "Kennzahl ja – Ursache unklar",
+          "description": "Ein Trend zeigt nach unten, aber woran liegt es? Ohne den Sprung von der Kennzahl in die zugrunde liegenden Daten bleibt die Auswertung an der Oberfläche."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Das Reporting-Modul wertet die Daten aus der Warenwirtschaft in einem Live-Dashboard aus – von der verdichteten Kennzahl bis zum einzelnen Detail:",
+      "items": [
+        {
+          "icon": "gauge",
+          "name": "Live-Dashboard mit KPIs",
+          "description": "Zentrale Kennzahlen aus der Warenwirtschaft laufen in einem Live-Dashboard zusammen. Die Übersicht spiegelt den aktuellen Stand, statt auf einen manuell erstellten Report zu warten."
+        },
+        {
+          "icon": "trending-up",
+          "name": "Umsatzentwicklung",
+          "description": "Die Umsatzentwicklung wird über die Zeit ausgewertet und macht Umsatztrends sichtbar. So erkennen Sie, in welche Richtung sich der Umsatz bewegt."
+        },
+        {
+          "icon": "truck",
+          "name": "Dropshipping-Performance",
+          "description": "Eine eigene Kennzahl zeigt die Dropshipping-Performance. So behalten Sie den Beitrag des Dropshipping-Geschäfts im Blick, ohne die Daten getrennt auszuwerten."
+        },
+        {
+          "icon": "boxes",
+          "name": "Bestandswert und Low-Stock-Alerts",
+          "description": "Das Dashboard weist den aktuellen Bestandswert aus und warnt mit Low-Stock-Alerts, sobald der Bestand eines Artikels niedrig ist – rechtzeitig für die Nachbestellung."
+        },
+        {
+          "icon": "chart-line",
+          "name": "Trends über 7 Monate und Top-10-Kategorien",
+          "description": "Entwicklungen lassen sich über einen Zeitraum von 7 Monaten verfolgen. Eine Auswertung der Top-10-Kategorien zeigt, welche Kategorien am stärksten beitragen."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Was ist Reporting & Analytics in einem ERP?",
+        "a": "Reporting & Analytics bezeichnet die Auswertung betrieblicher Daten zu Kennzahlen, Trends und Diagrammen als Grundlage für Entscheidungen. In einem ERP entstehen diese Auswertungen direkt aus den operativen Daten. Bei VertooERP zeigt ein Live-Dashboard KPIs aus der Warenwirtschaft, darunter Umsatzentwicklung, Bestandswert und Dropshipping-Performance."
+      },
+      {
+        "q": "Welche Kennzahlen zeigt das Live-Dashboard?",
+        "a": "Das Live-Dashboard bündelt Kennzahlen aus der Warenwirtschaft: die Umsatzentwicklung mit Umsatztrends, die Dropshipping-Performance, den Bestandswert sowie Low-Stock-Alerts bei niedrigem Bestand. Ergänzend lassen sich Trends über 7 Monate und die Top-10-Kategorien auswerten."
+      },
+      {
+        "q": "Kann ich von einer Kennzahl in die Details wechseln?",
+        "a": "Ja. Das Modul verdichtet große Datenmengen über Aggregat-Abfragen zu Kennzahlen und erlaubt zugleich einen Drill-Down in die zugrunde liegenden Details. So bleibt der Weg von der verdichteten Kennzahl bis zur einzelnen Position offen."
+      }
+    ],
+    "cta": {
+      "headline": "Kennzahlen live im Blick behalten",
+      "text": "Sehen Sie in einer Demo, wie das Live-Dashboard von VertooERP Umsatzentwicklung, Bestandswert, Dropshipping-Performance und Low-Stock-Alerts aus Ihrer Warenwirtschaft zusammenführt – mit Drill-Down bis ins Detail."
+    }
+  },
+  {
+    "slug": "ki-assistent",
+    "name": "KI-Assistent",
+    "icon": "bot",
+    "metaTitle": "KI-Assistent im ERP – VertooERP",
+    "metaDescription": "Der KI-Assistent von VertooERP läuft als lokales LLM über Ollama: Chat mit ERP-Kontext, Produkttexte generieren, Daten bleiben im Haus.",
+    "hero": {
+      "eyebrow": "Modul: KI-Assistent",
+      "headline": "KI direkt im ERP – lokal, im eigenen Haus",
+      "subhead": "Ein KI-Assistent, der Ihre ERP-Daten kennt und Produkttexte schreibt. Betrieben als lokales Sprachmodell über Ollama, ohne dass Daten Ihr Unternehmen verlassen."
+    },
+    "intro": "Ein KI-Assistent im ERP ist ein in die Unternehmenssoftware integriertes Sprachmodell (LLM), das Fragen zu den eigenen Daten beantwortet und bei Textarbeit unterstützt. In VertooERP läuft dieser Assistent lokal über Ollama – das Sprachmodell und alle Daten bleiben auf Ihrer eigenen Infrastruktur. So verbinden Sie moderne KI-Funktionen mit dem Datenschutz eines selbst gehosteten Systems.",
+    "painpoints": {
+      "intro": "Warum viele KMU beim Thema KI im ERP zögern:",
+      "items": [
+        {
+          "icon": "cloud-off",
+          "title": "Sensible Daten in der Cloud",
+          "description": "Übliche KI-Dienste senden Ihre Geschäfts- und Kundendaten an externe Server. Für viele KMU ist das aus Datenschutz- und Wettbewerbsgründen keine Option."
+        },
+        {
+          "icon": "database",
+          "title": "KI ohne Kontext zu Ihren Daten",
+          "description": "Allgemeine Chatbots kennen Ihr Unternehmen nicht. Fragen zu konkreten Aufträgen, Artikeln oder Beständen können sie nicht beantworten."
+        },
+        {
+          "icon": "pen-tool",
+          "title": "Produkttexte kosten Zeit",
+          "description": "Ansprechende, SEO-taugliche Beschreibungen für viele Artikel zu schreiben ist aufwendig – besonders bei großen Sortimenten."
+        },
+        {
+          "icon": "server",
+          "title": "Abhängigkeit von externen Anbietern",
+          "description": "Cloud-KI bindet Sie an Preise, Verfügbarkeit und Konditionen Dritter, über die Sie keine Kontrolle haben."
+        }
+      ]
+    },
+    "features": {
+      "intro": "Was der KI-Assistent in VertooERP leistet:",
+      "items": [
+        {
+          "icon": "message-square",
+          "name": "Chat mit ERP-Kontext",
+          "description": "Stellen Sie Fragen zu Ihren eigenen ERP-Daten und erhalten Sie Antworten direkt aus dem System – im Dialog, ohne Umwege."
+        },
+        {
+          "icon": "file-text",
+          "name": "Produktbeschreibungen generieren",
+          "description": "Erstellen Sie SEO-optimierte Produkttexte auf Knopfdruck und geben Sie jedem Artikel eine überzeugende Beschreibung."
+        },
+        {
+          "icon": "wand-2",
+          "name": "Bulk-Texte für große Sortimente",
+          "description": "Generieren Sie Beschreibungen als Massen-Texte für viele Artikel gleichzeitig und sparen Sie sich manuelle Fleißarbeit."
+        },
+        {
+          "icon": "server",
+          "name": "Lokales LLM über Ollama",
+          "description": "Das Sprachmodell läuft über Ollama auf Ihrer eigenen Infrastruktur – als fester Bestandteil Ihres selbst gehosteten ERP."
+        },
+        {
+          "icon": "shield",
+          "name": "Daten bleiben im Haus",
+          "description": "Ihre Daten verlassen das Unternehmen nicht: kein Cloud-Zwang, kein Datenabfluss, datenschutzfreundlich durch die Architektur selbst."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Werden meine Daten an eine externe KI-Cloud gesendet?",
+        "a": "Nein. Der KI-Assistent läuft als lokales Sprachmodell über Ollama auf Ihrer eigenen Infrastruktur. Ihre Daten bleiben im Haus und verlassen Ihr Unternehmen nicht."
+      },
+      {
+        "q": "Kann der Assistent Fragen zu meinen konkreten ERP-Daten beantworten?",
+        "a": "Ja. Der Chat arbeitet mit ERP-Kontext, sodass Sie Fragen zu Ihren eigenen im System hinterlegten Daten stellen und im Dialog Antworten erhalten können."
+      },
+      {
+        "q": "Kann ich Produkttexte für viele Artikel auf einmal erstellen?",
+        "a": "Ja. Neben einzelnen SEO-optimierten Produktbeschreibungen können Sie Texte auch als Bulk- bzw. Massen-Texte für viele Artikel gleichzeitig generieren."
+      }
+    ],
+    "cta": {
+      "headline": "KI nutzen, ohne Daten aus der Hand zu geben",
+      "text": "Erleben Sie einen KI-Assistenten, der Ihre ERP-Daten kennt und lokal in Ihrem Haus läuft. Entdecken Sie das Modul KI-Assistent in VertooERP."
+    }
+  }
 ];
 
 export function getModulBySlug(slug: string): Modul | undefined {

@@ -22,6 +22,12 @@
 - [CRM](https://vertoo.de/module/crm): Kunden- und Kontakthistorie modulübergreifend
 - [Aufgaben & Projekte](https://vertoo.de/module/aufgaben-projekte): Kanban, Liste, Kalender, Subtasks, @Mentions
 - [Kostenmanagement](https://vertoo.de/module/kostenmanagement): Fixkosten, Gehälter, Fuhrpark, SaaS-Abos mit Verträgen
+- [Webshop](https://vertoo.de/module/webshop): Whitelabel-Kundenshop unter eigener Domain, mit ERP-Bestand/Preisen verbunden
+- [KI-Assistent](https://vertoo.de/module/ki-assistent): lokales LLM via Ollama, Chat mit ERP-Kontext, Produkttexte – Daten bleiben im Haus
+- [Reporting & Analytics](https://vertoo.de/module/reporting): Live-Dashboard mit KPIs, Umsatztrends, Bestandswert, Low-Stock-Alerts
+- [Preischeck](https://vertoo.de/module/preischeck): EAN-Marktpreisabfrage über idealo, Amazon, eBay, billiger.de, Google Shopping
+- [Bonuspunkte](https://vertoo.de/module/bonuspunkte): Kundenbindung mit Tier-System, Gutscheinen und automatischer Gutschrift
+- [Wissensdatenbank](https://vertoo.de/module/wissensdatenbank): interne Knowledge Base in Markdown, RAG-ready für den KI-Assistenten
 - [Alle Module im Überblick](https://vertoo.de/module)
 
 ## Branchen

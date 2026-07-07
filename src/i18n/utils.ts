@@ -49,6 +49,12 @@ const SLUG_EN: Record<SlugKind, Record<string, string>> = {
     crm: 'crm',
     'aufgaben-projekte': 'tasks-projects',
     kostenmanagement: 'cost-management',
+    'webshop': 'web-shop',
+    'ki-assistent': 'ai-assistant',
+    'reporting': 'reporting-analytics',
+    'preischeck': 'price-check',
+    'bonuspunkte': 'loyalty-points',
+    'wissensdatenbank': 'knowledge-base',
   },
   blog: {
     'self-hosting-vs-cloud-erp': 'self-hosting-vs-cloud-erp',
