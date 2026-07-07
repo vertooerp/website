@@ -57,7 +57,7 @@
 > VertooERP is a modular, self-hosted ERP platform for small and medium-sized enterprises with 20+ modules (inventory management, warehousing, accounting, time tracking, tasks, CRM, AI assistant). Licensed and self-hosted for full data sovereignty; GDPR- and GoBD-compliant. Built by tap & type UG in Germany.
 
 - [Home (EN)](https://vertoo.de/en/): platform, modules, pricing and technology overview
-- [Modules (EN)](https://vertoo.de/en/module): all modules in detail
-- [Industries (EN)](https://vertoo.de/en/branchen): retail, service providers, manufacturing, trades
+- [Modules (EN)](https://vertoo.de/en/modules): all modules in detail
+- [Industries (EN)](https://vertoo.de/en/industries): retail, service providers, manufacturing, trades
 - [Blog (EN)](https://vertoo.de/en/blog): expert articles on ERP, self-hosting, accounting, compliance
-- [Glossary (EN)](https://vertoo.de/en/glossar): key ERP terms explained
+- [Glossary (EN)](https://vertoo.de/en/glossary): key ERP terms explained

@@ -44,7 +44,7 @@ Important: GoBD compliance is not purely a software feature. It also depends on 
 
 ## How VertooERP supports you
 
-The accounting module of [VertooERP](/en/branchen/handel) is designed for these requirements: immutable documents with an audit trail, DATEV export, the SKR03 chart of accounts, XRechnung/ZUGFeRD and a three-stage dunning process. Thanks to the self-hosting model, all tax-relevant data remains within your area of responsibility.
+The accounting module of [VertooERP](/en/industries/retail) is designed for these requirements: immutable documents with an audit trail, DATEV export, the SKR03 chart of accounts, XRechnung/ZUGFeRD and a three-stage dunning process. Thanks to the self-hosting model, all tax-relevant data remains within your area of responsibility.
 
 ## Conclusion
 

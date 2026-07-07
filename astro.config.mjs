@@ -18,11 +18,9 @@ export default defineConfig({
   integrations: [
     icon(),
     sitemap({
-      // hreflang-Alternates im Sitemap für Seiten, die in beiden Sprachen existieren.
-      i18n: {
-        defaultLocale: 'de',
-        locales: { de: 'de-DE', en: 'en-GB' },
-      },
+      // hreflang wird pro Seite im <head> ausgegeben (localizePath, lokalisierte
+      // Slugs). Die Sitemap-i18n-Option kann lokalisierte Slugs nicht paaren
+      // (sie ersetzt nur das Sprach-Präfix), daher bewusst nicht gesetzt.
       filter: (page) =>
         !page.includes('/impressum') &&
         !page.includes('/datenschutz') &&

@@ -49,7 +49,7 @@ An audit trail (who changed what and when) helps not only with GoBD (German prin
 
 ## How VertooERP Implements This
 
-[VertooERP](/) is designed for GDPR compliance: self-hosting (full data sovereignty), a four-tier role system with module-specific permissions, session-based authentication with optional Keycloak SSO, a GDPR data subject access report, and immutable audit trails. Because you host it yourself, you remain the sole controller.
+[VertooERP](/en/) is designed for GDPR compliance: self-hosting (full data sovereignty), a four-tier role system with module-specific permissions, session-based authentication with optional Keycloak SSO, a GDPR data subject access report, and immutable audit trails. Because you host it yourself, you remain the sole controller.
 
 ## Conclusion
 

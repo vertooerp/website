@@ -42,12 +42,18 @@ const canonicalURL = new URL(Astro.url.pathname, siteUrl).toString();
 const imageURL = new URL(image, siteUrl).toString();
 
 // hreflang-Alternates nur, wenn die Seite wirklich in beiden Sprachen existiert.
+// URLs mit Trailing-Slash normalisieren, damit sie exakt zum (directory-)Canonical passen.
 const basePath = stripLangFromPath(Astro.url.pathname);
+const altUrl = (lang: 'de' | 'en') => {
+  const u = new URL(localizePath(basePath, lang), siteUrl);
+  if (!u.pathname.endsWith('/')) u.pathname += '/';
+  return u.toString();
+};
 const alternates = hasTranslation
   ? [
-      { hreflang: 'de', href: new URL(localizePath(basePath, 'de'), siteUrl).toString() },
-      { hreflang: 'en', href: new URL(localizePath(basePath, 'en'), siteUrl).toString() },
-      { hreflang: 'x-default', href: new URL(localizePath(basePath, defaultLang), siteUrl).toString() },
+      { hreflang: 'de', href: altUrl('de') },
+      { hreflang: 'en', href: altUrl('en') },
+      { hreflang: 'x-default', href: altUrl(defaultLang) },
     ]
   : [];
 

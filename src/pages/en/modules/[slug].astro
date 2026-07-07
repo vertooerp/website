@@ -1,9 +1,13 @@
 ---
 import ModulPage from '../../../components/ModulPage.astro';
 import { moduleEn } from '../../../data/module.en';
+import { localizedSlug } from '../../../i18n/utils';
 
 export function getStaticPaths() {
-  return moduleEn.map((m) => ({ params: { slug: m.slug }, props: { modul: m } }));
+  return moduleEn.map((m) => ({
+    params: { slug: localizedSlug('module', m.slug) },
+    props: { modul: m },
+  }));
 }
 
 const { modul } = Astro.props;

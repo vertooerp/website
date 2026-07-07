@@ -32,7 +32,7 @@ In practice, this means:
 
 If part of the assortment is handled via dropshipping, another source of inventory comes into play: the suppliers. Their availability, too, must be reconciled regularly, so that no undeliverable item is sold.
 
-[VertooERP](/en/branchen/handel) maps both in a single system: the inventory management uses a unified product catalog (one product per EAN, with any number of suppliers behind it), and the dropshipping module synchronizes stock from BigBuy, DropXL, and JTL-Wawi every 15 minutes. The Shopware 6 integration keeps your own shop automatically up to date.
+[VertooERP](/en/industries/retail) maps both in a single system: the inventory management uses a unified product catalog (one product per EAN, with any number of suppliers behind it), and the dropshipping module synchronizes stock from BigBuy, DropXL, and JTL-Wawi every 15 minutes. The Shopware 6 integration keeps your own shop automatically up to date.
 
 ## What you should watch out for
 

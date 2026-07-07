@@ -1,9 +1,13 @@
 ---
 import BranchePage from '../../../components/BranchePage.astro';
 import { branchenEn } from '../../../data/branchen.en';
+import { localizedSlug } from '../../../i18n/utils';
 
 export function getStaticPaths() {
-  return branchenEn.map((b) => ({ params: { slug: b.slug }, props: { branche: b } }));
+  return branchenEn.map((b) => ({
+    params: { slug: localizedSlug('branchen', b.slug) },
+    props: { branche: b },
+  }));
 }
 
 const { branche } = Astro.props;

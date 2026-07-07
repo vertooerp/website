@@ -43,7 +43,7 @@ The program should be integrated into your ERP system and your shop — not as a
 
 ## How VertooERP handles this
 
-The loyalty points module from [VertooERP](/en/branchen/handel) is designed for automation: points are credited automatically with orders, a tier system (Bronze/Silver/Gold) rewards frequent buyers, and vouchers can be generated and played out directly in Shopware as a promotion. Because the module is integrated into the ERP's customer management, you see point balances and transactions right on the customer record.
+The loyalty points module from [VertooERP](/en/industries/retail) is designed for automation: points are credited automatically with orders, a tier system (Bronze/Silver/Gold) rewards frequent buyers, and vouchers can be generated and played out directly in Shopware as a promotion. Because the module is integrated into the ERP's customer management, you see point balances and transactions right on the customer record.
 
 ## Conclusion
 

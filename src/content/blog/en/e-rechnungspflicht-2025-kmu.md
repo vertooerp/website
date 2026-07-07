@@ -39,10 +39,10 @@ Until the respective deadline, paper or PDF invoices may still be sent on a tran
 A suitable accounting or ERP solution should:
 
 - be able to both **receive and issue XRechnung and ZUGFeRD**,
-- **archive e-invoices in an audit-proof manner** (see also our article on [GoBD-compliant accounting](/en/blog/gobd-konforme-buchhaltung-kmu)),
+- **archive e-invoices in an audit-proof manner** (see also our article on [GoBD-compliant accounting](/en/blog/gobd-compliant-accounting-smes)),
 - and integrate into your existing invoicing and bookkeeping workflow.
 
-The accounting module in [VertooERP](/) supports XRechnung and ZUGFeRD natively and stores documents in a GoBD-compliant, unalterable manner. Thanks to self-hosting, all invoice data remains within your area of responsibility.
+The accounting module in [VertooERP](/en/) supports XRechnung and ZUGFeRD natively and stores documents in a GoBD-compliant, unalterable manner. Thanks to self-hosting, all invoice data remains within your area of responsibility.
 
 ## Conclusion
 
