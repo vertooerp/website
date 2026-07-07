@@ -55,9 +55,9 @@ const modules = [
     de: { title: 'Bonuspunkte', description: 'Kundenbindungsprogramm mit Tier-System, Gutschein-Generator und automatischer Gutschrift bei Bestellungen.', tags: ['Bronze/Silber/Gold', 'Auto-Credit', 'Shopware-Plugin', 'Punkte-Verfall'] },
     en: { title: 'Loyalty points', description: 'Customer loyalty programme with a tier system, voucher generator and automatic credit on orders.', tags: ['Bronze/Silver/Gold', 'Auto-credit', 'Shopware plugin', 'Point expiry'] },
   } },
-  { category: 'commerce', icon: 'boxes', t: {
-    de: { title: 'Paketizer', description: 'Automatische Paketzusammenstellung aus Beständen nach UVP, Gewicht und Diversifikation mit OCR-Scan.', tags: ['Excel-Import', 'OCR-Scan', 'MHD-Tracking', 'Bereinigung'] },
-    en: { title: 'Packetizer', description: 'Automatic bundle assembly from stock by RRP, weight and diversification with OCR scanning.', tags: ['Excel import', 'OCR scan', 'Best-before tracking', 'Clean-up'] },
+  { category: 'commerce', icon: 'plug', t: {
+    de: { title: 'Shopanbindung', description: 'Externe Shops wie Shopware als zusätzlichen Verkaufskanal anbinden und deren Bestellungen einlesen.', tags: ['Externe Shops', 'Shopware', 'Verkaufskanal', 'Bestellimport'] },
+    en: { title: 'Shop connections', description: 'Connect external shops such as Shopware as an additional sales channel and import their orders.', tags: ['External shops', 'Shopware', 'Sales channel', 'Order import'] },
   } },
 
   // Finanzen
@@ -66,8 +66,12 @@ const modules = [
     en: { title: 'Accounting', description: 'Full-featured accounting: receipts, open items, cash book, P&L/BWA, SKR03 chart of accounts and a 3-stage dunning process.', tags: ['DATEV export', 'XRechnung / ZUGFeRD', 'VAT return', 'Bank reconciliation', 'GoBD'] },
   } },
   { category: 'finance', icon: 'wallet', t: {
-    de: { title: 'Kostenmanagement', description: 'Fixkosten, Gehälter, Fuhrpark und SaaS-Abos mit Verträgen, Kündigungsfristen und Monatsübersicht.', tags: ['Personal', 'Fuhrpark', 'Software-Abos', 'Arbeitsverträge'] },
-    en: { title: 'Cost management', description: 'Fixed costs, salaries, fleet and SaaS subscriptions with contracts, notice periods and a monthly overview.', tags: ['Payroll', 'Fleet', 'Software subscriptions', 'Employment contracts'] },
+    de: { title: 'Kostenmanagement', description: 'Fixkosten, Fuhrpark und SaaS-Abos mit Verträgen, Kündigungsfristen und Monatsübersicht – als Controlling-Modul.', tags: ['Fixkosten', 'Software-Abos', 'Verträge', 'Monatsübersicht'] },
+    en: { title: 'Cost management', description: 'Fixed costs, fleet and SaaS subscriptions with contracts, notice periods and a monthly overview – as a controlling module.', tags: ['Fixed costs', 'Software subscriptions', 'Contracts', 'Monthly overview'] },
+  } },
+  { category: 'finance', icon: 'user-cog', t: {
+    de: { title: 'Personal', description: 'HR-Modul mit Mitarbeiter-Stammdaten, Gehältern und Auswertung der Personalkosten.', tags: ['Stammdaten', 'Gehälter', 'Personalkosten'] },
+    en: { title: 'HR / Personnel', description: 'HR module with employee master data, salaries and analysis of personnel costs.', tags: ['Master data', 'Salaries', 'Personnel costs'] },
   } },
 
   // Team & Zusammenarbeit
@@ -83,9 +87,29 @@ const modules = [
     de: { title: 'Wissensdatenbank', description: 'Interne Knowledge Base mit Markdown-Artikeln, Kategorien, Tags und Veröffentlichungs-Workflow.', tags: ['Markdown', 'Entwurf / Live', 'Tags', 'RAG-ready'] },
     en: { title: 'Knowledge base', description: 'Internal knowledge base with Markdown articles, categories, tags and a publishing workflow.', tags: ['Markdown', 'Draft / live', 'Tags', 'RAG-ready'] },
   } },
-  { category: 'collab', icon: 'megaphone', t: {
-    de: { title: 'Meldungen', description: 'Einweg-Mitteilungen vom Unternehmen ans Team – an Standort, Team oder Einzelpersonen, mit Prioritäten.', tags: ['Prio normal/wichtig/dringend', 'Standort-/Team-Targeting', 'Read-Only-Feed'] },
-    en: { title: 'Announcements', description: 'One-way announcements from the company to the team – to a location, team or individuals, with priorities.', tags: ['Priority normal/important/urgent', 'Location/team targeting', 'Read-only feed'] },
+  { category: 'collab', icon: 'mail', t: {
+    de: { title: 'Kundenkommunikation', description: 'Standard-Mailtexte und Vorlagen für die Kommunikation mit Kunden – konsistent über das ganze Team.', tags: ['Vorlagen', 'Mailtexte', 'Standardtexte'] },
+    en: { title: 'Customer communication', description: 'Standard mail texts and templates for communicating with customers – consistent across the whole team.', tags: ['Templates', 'Mail texts', 'Standard replies'] },
+  } },
+  { category: 'collab', icon: 'inbox', t: {
+    de: { title: 'Postfach', description: 'E-Mail-Postfach direkt im ERP – Nachrichten dort, wo die Vorgänge liegen.', tags: ['E-Mail', 'Postfach', 'Inbox'] },
+    en: { title: 'Inbox', description: 'Email inbox right inside the ERP – messages where the work happens.', tags: ['Email', 'Inbox', 'Mail'] },
+  } },
+  { category: 'collab', icon: 'calendar-days', t: {
+    de: { title: 'Kalender', description: 'Termine und Kalender für Team und Standorte an einem Ort.', tags: ['Termine', 'Kalender', 'Team'] },
+    en: { title: 'Calendar', description: 'Appointments and calendars for teams and locations in one place.', tags: ['Appointments', 'Calendar', 'Team'] },
+  } },
+  { category: 'collab', icon: 'folder-open', t: {
+    de: { title: 'Dateien', description: 'Dateiablage per Nextcloud-Anbindung – Dokumente zentral und geordnet verfügbar.', tags: ['Nextcloud', 'Dokumente', 'Dateiablage'] },
+    en: { title: 'Files', description: 'File storage via Nextcloud integration – documents centrally and neatly available.', tags: ['Nextcloud', 'Documents', 'File storage'] },
+  } },
+  { category: 'collab', icon: 'sticky-note', t: {
+    de: { title: 'Notizen', description: 'Persönliche Notizen und Merkzettel direkt im System – immer griffbereit.', tags: ['Notizen', 'Merkzettel'] },
+    en: { title: 'Notes', description: 'Personal notes and memos right inside the system – always at hand.', tags: ['Notes', 'Memos'] },
+  } },
+  { category: 'collab', icon: 'car', t: {
+    de: { title: 'Fuhrpark', description: 'Fahrzeuge, Tankvorgänge und Fahrzeugkosten zentral verwalten – vom Pkw bis zum Transporter.', tags: ['Fahrzeuge', 'Tanken', 'Fahrzeugkosten'] },
+    en: { title: 'Fleet', description: 'Manage vehicles, refuelling and vehicle costs centrally – from cars to vans.', tags: ['Vehicles', 'Refuelling', 'Vehicle costs'] },
   } },
   { category: 'collab', icon: 'clock', t: {
     de: { title: 'Zeiterfassung & Urlaub', description: 'Stempeluhr, Urlaubsverwaltung, Krankmeldungen mit AU-Nachreichung und Überstundenabbau als Abwesenheit.', tags: ['Überstundenkonto', 'Urlaubsübertrag', 'Team-Übersicht', 'Mobil'] },

@@ -8,7 +8,7 @@ export const faqEn: FaqItem[] = [
   },
   {
     "q": "Which modules does VertooERP offer?",
-    "a": "VertooERP comprises more than 20 modules across five areas: Commerce & Trade (inventory management, warehouse management, dropshipping, e-commerce/price check, web shop, loyalty points, Paketizer), Finance (accounting, cost management), Team & Collaboration (tasks & projects, messages, knowledge base, reports, time tracking, operating resources), CRM & Analytics (CRM, reporting, AI assistant) and Platform (webhooks, compliance/GDPR). Each module can be activated individually."
+    "a": "VertooERP comprises more than 20 modules across five areas: Commerce & Trade (inventory management, warehouse management, dropshipping, e-commerce/price check, web shop, shop connections, loyalty points), Finance (accounting, cost management, HR/personnel), Team & Collaboration (tasks & projects, messages, customer communication, inbox, calendar, files, notes, knowledge base, time tracking, operating resources, fleet), CRM & Analytics (CRM, reporting, AI assistant) and Platform (webhooks, compliance/GDPR). Each module can be activated individually."
   },
   {
     "q": "How much does VertooERP cost?",

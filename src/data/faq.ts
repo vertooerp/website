@@ -26,7 +26,7 @@ export const faq: FaqItem[] = [
   },
   {
     q: 'Welche Module bietet VertooERP?',
-    a: 'VertooERP umfasst über 20 Module in fünf Bereichen: Commerce & Handel (Warenwirtschaft, Lagerverwaltung, Dropshipping, E-Commerce/Preischeck, Webshop, Bonuspunkte, Paketizer), Finanzen (Buchhaltung, Kostenmanagement), Team & Zusammenarbeit (Aufgaben & Projekte, Nachrichten, Wissensdatenbank, Meldungen, Zeiterfassung, Betriebsmittel), CRM & Analytics (CRM, Reporting, KI-Assistent) sowie Plattform (Webhooks, Compliance/DSGVO). Jedes Modul ist einzeln aktivierbar.',
+    a: 'VertooERP umfasst über 20 Module in fünf Bereichen: Commerce & Handel (Warenwirtschaft, Lagerverwaltung, Dropshipping, E-Commerce/Preischeck, Webshop, Shopanbindung, Bonuspunkte), Finanzen (Buchhaltung, Kostenmanagement, Personal), Team & Zusammenarbeit (Aufgaben & Projekte, Nachrichten, Kundenkommunikation, Postfach, Kalender, Dateien, Notizen, Wissensdatenbank, Zeiterfassung, Betriebsmittel, Fuhrpark), CRM & Analytics (CRM, Reporting, KI-Assistent) sowie Plattform (Webhooks, Compliance/DSGVO). Jedes Modul ist einzeln aktivierbar.',
   },
   {
     q: 'Was kostet VertooERP?',
