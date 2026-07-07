@@ -135,5 +135,85 @@ export const glossar: GlossarTerm[] = [
     slug: 'xrechnung-zugferd',
     definition:
       'XRechnung und ZUGFeRD sind Formate für elektronische Rechnungen in Deutschland. XRechnung ist ein rein strukturiertes XML-Format, ZUGFeRD ein Hybrid aus PDF und eingebettetem XML. Seit 2025 müssen inländische B2B-Unternehmen E-Rechnungen empfangen können.',
+  },,
+  {
+    "term": "Wareneingang",
+    "slug": "wareneingang",
+    "definition": "Der Wareneingang ist die Erfassung und Prüfung eingehender Lieferungen im Lager. Bestände werden dabei bucherisch erhöht, idealerweise mit Bezug zur Bestellung und nachvollziehbarem Status."
   },
+  {
+    "term": "Kommissionierung",
+    "slug": "kommissionierung",
+    "definition": "Kommissionierung bezeichnet das Zusammenstellen der Artikel eines Auftrags aus dem Lagerbestand für den anschließenden Versand. Gute ERP-Systeme führen dabei effizient durch Lagerzonen und -plätze."
+  },
+  {
+    "term": "Inventur",
+    "slug": "inventur",
+    "definition": "Die Inventur ist die mengen- und wertmäßige Erfassung des tatsächlichen Bestands zu einem Stichtag. Sie gleicht Buchbestand und Ist-Bestand ab und ist Grundlage für den Jahresabschluss."
+  },
+  {
+    "term": "Fulfillment",
+    "slug": "fulfillment",
+    "definition": "Fulfillment umfasst alle Schritte nach der Bestellung – Kommissionierung, Verpackung, Versand und Retourenabwicklung. Im Handel entscheidet es maßgeblich über Lieferzeit und Kundenzufriedenheit."
+  },
+  {
+    "term": "Multichannel",
+    "slug": "multichannel",
+    "definition": "Multichannel bezeichnet den Verkauf über mehrere Kanäle gleichzeitig, etwa eigenen Shop, Marktplätze und stationären Handel. Zentrale Herausforderung ist, Bestände und Preise über alle Kanäle synchron zu halten."
+  },
+  {
+    "term": "Meldebestand",
+    "slug": "meldebestand",
+    "definition": "Der Meldebestand (Mindestbestand) ist die Bestandsmenge, bei deren Unterschreitung eine Nachbestellung ausgelöst werden sollte. Er verhindert Fehlbestände, ohne unnötig Kapital im Lager zu binden."
+  },
+  {
+    "term": "Skonto",
+    "slug": "skonto",
+    "definition": "Skonto ist ein prozentualer Abzug vom Rechnungsbetrag, den ein Lieferant für schnelle Zahlung innerhalb einer bestimmten Frist gewährt. In der Buchhaltung wird Skonto gesondert erfasst."
+  },
+  {
+    "term": "Offene Posten (OP)",
+    "slug": "offene-posten",
+    "definition": "Offene Posten (OP) sind Rechnungen, die noch nicht ausgeglichen sind – auf der Debitoren- (Kunden) oder Kreditorenseite (Lieferanten). Die OP-Liste zeigt, welche Beträge noch offen sind."
+  },
+  {
+    "term": "BWA",
+    "slug": "bwa",
+    "definition": "Die betriebswirtschaftliche Auswertung (BWA) stellt Erträge und Aufwendungen eines Zeitraums gegenüber und zeigt das vorläufige Ergebnis. Sie dient der laufenden Steuerung, ersetzt aber keinen Jahresabschluss."
+  },
+  {
+    "term": "Mahnwesen",
+    "slug": "mahnwesen",
+    "definition": "Das Mahnwesen umfasst den strukturierten Prozess, überfällige Rechnungen anzumahnen – oft in mehreren Stufen. Ein ERP kann Mahnungen anhand offener Posten automatisiert vorschlagen."
+  },
+  {
+    "term": "Seat",
+    "slug": "seat",
+    "definition": "Ein Seat ist eine Nutzerlizenz, also der Zugang für eine Person zum System. Viele ERP-Tarife enthalten eine bestimmte Zahl an Seats, weitere Nutzer werden separat berechnet."
+  },
+  {
+    "term": "API",
+    "slug": "api",
+    "definition": "Eine API (Programmierschnittstelle) erlaubt es Systemen, strukturiert Daten auszutauschen und Funktionen aufzurufen. Über APIs lässt sich ein ERP mit Shops, Versanddienstleistern oder anderer Software verbinden."
+  },
+  {
+    "term": "Webhook",
+    "slug": "webhook",
+    "definition": "Ein Webhook benachrichtigt ein externes System automatisch, sobald ein bestimmtes Ereignis eintritt – etwa eine neue Bestellung. Anders als beim regelmäßigen Abfragen (Polling) werden Daten ereignisgesteuert übertragen."
+  },
+  {
+    "term": "E-Rechnung",
+    "slug": "e-rechnung",
+    "definition": "Eine E-Rechnung ist eine strukturierte elektronische Rechnung in einem maschinenlesbaren Format – nicht bloß ein PDF-Bild. Verbreitete Formate im deutschen Raum sind XRechnung und ZUGFeRD."
+  },
+  {
+    "term": "Umsatzsteuer-Voranmeldung",
+    "slug": "ust-voranmeldung",
+    "definition": "Mit der Umsatzsteuer-Voranmeldung melden Unternehmen dem Finanzamt regelmäßig die vereinnahmte und gezahlte Umsatzsteuer. Die Zahllast ergibt sich aus der Differenz von Umsatzsteuer und Vorsteuer."
+  },
+  {
+    "term": "Cloud-ERP",
+    "slug": "cloud-erp",
+    "definition": "Ein Cloud-ERP wird von einem Anbieter betrieben und über das Internet als Dienst genutzt (SaaS). Gegenmodell ist das Self-Hosting bzw. On-Premises, bei dem der Kunde die Software selbst betreibt."
+  }
 ];

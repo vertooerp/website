@@ -101,5 +101,85 @@ export const glossarEn: GlossarTerm[] = [
     "slug": "xrechnung-zugferd",
     "term": "XRechnung / ZUGFeRD",
     "definition": "XRechnung and ZUGFeRD are formats for electronic invoices in Germany. XRechnung is a purely structured XML format, while ZUGFeRD is a hybrid of PDF and embedded XML. Since 2025, domestic B2B businesses must be able to receive e-invoices."
+  },
+  {
+    "slug": "wareneingang",
+    "term": "Goods Receipt",
+    "definition": "Goods receipt is the recording and inspection of incoming deliveries in the warehouse. Stock is increased in the books, ideally with a reference to the purchase order and a traceable status."
+  },
+  {
+    "slug": "kommissionierung",
+    "term": "Order Picking",
+    "definition": "Order picking is the process of gathering the items of an order from stock for subsequent dispatch. Good ERP systems guide picking efficiently through warehouse zones and bins."
+  },
+  {
+    "slug": "inventur",
+    "term": "Stocktaking",
+    "definition": "Stocktaking is the counting and valuation of actual stock on a given date. It reconciles book stock with physical stock and is a basis for the annual financial statements."
+  },
+  {
+    "slug": "fulfillment",
+    "term": "Fulfillment",
+    "definition": "Fulfillment covers every step after the order – picking, packing, shipping and returns handling. In commerce it largely determines delivery time and customer satisfaction."
+  },
+  {
+    "slug": "multichannel",
+    "term": "Multichannel",
+    "definition": "Multichannel means selling across several channels at once, such as your own shop, marketplaces and brick-and-mortar retail. The central challenge is keeping stock and prices in sync across all channels."
+  },
+  {
+    "slug": "meldebestand",
+    "term": "Reorder Point",
+    "definition": "The reorder point (minimum stock level) is the quantity below which a reorder should be triggered. It prevents stockouts without tying up unnecessary capital in the warehouse."
+  },
+  {
+    "slug": "skonto",
+    "term": "Cash Discount (Skonto)",
+    "definition": "A cash discount (Skonto) is a percentage deducted from the invoice amount that a supplier grants for fast payment within a set period. In accounting, it is recorded separately."
+  },
+  {
+    "slug": "offene-posten",
+    "term": "Open Items (OP)",
+    "definition": "Open items are invoices that have not yet been settled – on the accounts-receivable (customer) or accounts-payable (supplier) side. The open-items list shows which amounts are still outstanding."
+  },
+  {
+    "slug": "bwa",
+    "term": "BWA (Business Analysis)",
+    "definition": "A BWA (betriebswirtschaftliche Auswertung) contrasts a period’s income and expenses and shows the provisional result. It supports ongoing management but does not replace annual financial statements."
+  },
+  {
+    "slug": "mahnwesen",
+    "term": "Dunning",
+    "definition": "Dunning is the structured process of reminding customers about overdue invoices, often in several stages. An ERP can propose dunning notices automatically based on open items."
+  },
+  {
+    "slug": "seat",
+    "term": "Seat",
+    "definition": "A seat is a user licence, i.e. access to the system for one person. Many ERP plans include a set number of seats; additional users are billed separately."
+  },
+  {
+    "slug": "api",
+    "term": "API",
+    "definition": "An API (application programming interface) lets systems exchange data and call functions in a structured way. Via APIs, an ERP can connect to shops, shipping providers or other software."
+  },
+  {
+    "slug": "webhook",
+    "term": "Webhook",
+    "definition": "A webhook automatically notifies an external system as soon as a specific event occurs – such as a new order. Unlike regular polling, data is transmitted in an event-driven way."
+  },
+  {
+    "slug": "e-rechnung",
+    "term": "E-Invoice",
+    "definition": "An e-invoice is a structured electronic invoice in a machine-readable format – not merely a PDF image. Common formats in Germany are XRechnung and ZUGFeRD."
+  },
+  {
+    "slug": "ust-voranmeldung",
+    "term": "Advance VAT Return",
+    "definition": "With the advance VAT return, businesses regularly report collected and paid VAT to the tax office. The amount due is the difference between output VAT and input VAT."
+  },
+  {
+    "slug": "cloud-erp",
+    "term": "Cloud ERP",
+    "definition": "A cloud ERP is operated by a provider and used over the internet as a service (SaaS). The counter-model is self-hosting or on-premises, where the customer runs the software themselves."
   }
 ];

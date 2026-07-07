@@ -68,6 +68,9 @@ const SLUG_EN: Record<SlugKind, Record<string, string>> = {
     'bonusprogramme-kleine-shops': 'loyalty-programs-small-shops',
     'ki-im-erp-lokaler-assistent': 'ai-in-erp-local-assistant',
     'erp-einfuehrung-projektplan': 'erp-implementation-project-plan',
+    'was-kostet-ein-erp': 'what-does-an-erp-cost',
+    'datev-schnittstelle-erp': 'datev-interface-erp',
+    'xrechnung-zugferd-erstellen': 'xrechnung-zugferd-guide',
   },
 };
 const SLUG_DE: Record<SlugKind, Record<string, string>> = {

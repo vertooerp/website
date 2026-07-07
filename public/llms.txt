@@ -49,6 +49,9 @@
 - [KI im ERP](https://vertoo.de/blog/ki-im-erp-lokaler-assistent): Was ein lokaler Assistent wirklich kann
 - [Bonusprogramme für kleine Shops](https://vertoo.de/blog/bonusprogramme-kleine-shops): Kundenbindung lohnend umsetzen
 - [ERP-Einführung in 4–8 Wochen](https://vertoo.de/blog/erp-einfuehrung-projektplan): realistischer Projektplan
+- [Was kostet ein ERP-System?](https://vertoo.de/blog/was-kostet-ein-erp): Kostenfaktoren, Preismodelle und typische Spannen für KMU
+- [DATEV-Schnittstelle im ERP](https://vertoo.de/blog/datev-schnittstelle-erp): Buchhaltung sauber an den Steuerberater übergeben
+- [XRechnung & ZUGFeRD erstellen](https://vertoo.de/blog/xrechnung-zugferd-erstellen): E-Rechnungsformate und wie ein ERP sie erzeugt
 
 ## Vergleiche / Alternativen
 
