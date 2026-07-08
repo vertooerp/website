@@ -18,14 +18,9 @@ const year = new Date().getFullYear();
               <path d="M9.5 11.5 L15 21.5 L22.5 8.5" stroke="white" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <span class="flex flex-col justify-center">
-            <span class="font-display text-lg font-bold text-white leading-none" data-wordmark>Vertoo<span class="text-gray-500">ERP</span></span>
-            <!-- Namensherkunft, optisch auf Wortmarken-Breite justiert (wie Header; eigener Wert für 18px-Wortmarke) -->
-            <!-- Grün = Icon-Grün-Familie: brand-500 (Dark-Surface-Äquivalent zu brand-700) -->
-            <span class="mt-1 text-[11px] tracking-[0.023em] leading-none whitespace-nowrap" data-descriptor>
-              <span class="font-bold text-brand-500">Ver</span><span class="font-medium text-gray-400">waltungs</span><span class="font-bold text-brand-500">too</span><span class="font-medium text-gray-400">l</span>
-            </span>
-          </span>
+          <!-- Lockup wie im Header-Default: Marke + zweifarbiger Name, clean.
+               Die Namensherkunft lebt im Auto-/Hover-Reveal, Mobile-Menü und OG-Bild. -->
+          <span class="font-display text-lg font-bold text-white leading-none">Vertoo<span class="text-gray-500">ERP</span></span>
         </div>
         <p class="text-sm leading-relaxed">{t('footer.tagline')}</p>
         <a href="mailto:kontakt@tapandtype.de" class="mt-4 inline-block text-sm text-gray-400 hover:text-white transition-colors">kontakt@tapandtype.de</a>
