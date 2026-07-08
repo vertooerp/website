@@ -1,0 +1,246 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, localizePath } from '../i18n/utils';
+
+// Money-Page /digitale-souveraenitaet (+ /en/digital-sovereignty).
+// Alle Produktaussagen stammen aus bereits geprüften Claims (Self-Hosting,
+// lokale KI via Ollama, DATEV/XRechnung/ZUGFeRD/CSV-Exporte, DSGVO/GoBD).
+// Bewusst KEINE NIS2-/Compliance-Versprechen — Souveränität wird als
+// Architektur-Eigenschaft argumentiert, nicht als Zertifikat.
+const lang = getLangFromUrl(Astro.url);
+const p = (path: string) => localizePath(path, lang);
+
+const c = {
+  de: {
+    metaTitle: 'Digitale Souveränität für den Mittelstand – VertooERP',
+    metaDescription: 'Digitale Souveränität statt Cloud-Abhängigkeit: Self-Hosting, lokale KI und offene Exportformate – wie KMU die Kontrolle über ihre Daten behalten.',
+    start: 'Start', crumb: 'Digitale Souveränität',
+    eyebrow: 'Digitale Souveränität',
+    headline: 'Ihre Daten. Ihre Server. Ihre Entscheidung.',
+    subhead: 'Digitale Souveränität heißt: Sie bestimmen, wo Ihre Geschäftsdaten liegen, wer darauf zugreift und wie leicht Sie wechseln können. VertooERP macht das zur Architektur – nicht zum Versprechen.',
+    cta1: 'Demo anfragen', cta2: 'Resilienz-Ratgeber lesen',
+    defHeading: 'Was ist digitale Souveränität?',
+    defText: 'Digitale Souveränität bezeichnet die Fähigkeit eines Unternehmens, über eigene Daten, Systeme und digitale Abhängigkeiten selbst zu bestimmen. Dazu gehören Datenhoheit (wo liegen die Daten, wer kann zugreifen), Wahlfreiheit beim Betriebsmodell (Self-Hosting statt Cloud-Zwang) und Exit-Fähigkeit über offene Standards und Exportformate. Für KMU ist sie die Grundlage digitaler Resilienz: Wer die Kontrolle hat, kann bei Störungen, Preisänderungen oder rechtlichen Verschiebungen handeln, statt abzuwarten.',
+    whyEyebrow: 'Warum jetzt', whyHeading: 'Drei Gründe, warum das Thema auf den Tisch gehört',
+    why: [
+      { icon: 'cloud-off', title: 'Konzentration auf wenige Anbieter', text: 'Große Teile der Unternehmens-IT laufen bei einer Handvoll internationaler Cloud-Plattformen. Das bündelt Risiken, wenn sich Preise, Bedingungen oder Produkte ändern.' },
+      { icon: 'scale', title: 'Rechtsunsicherheit bei Drittlandzugriffen', text: 'Der US CLOUD Act erlaubt US-Behörden, US-Anbieter zur Datenherausgabe zu verpflichten – grundsätzlich auch bei Speicherung außerhalb der USA. Das Verhältnis zum europäischen Datenschutzrecht bleibt juristisch umstritten.' },
+      { icon: 'shield-alert', title: 'Regulatorischer Fokus auf Cybersicherheit', text: 'Mit NIS2 weitet die EU Cybersicherheits- und Meldepflichten auf deutlich mehr Unternehmen aus. Risikomanagement wird zur Leitungsaufgabe – unabhängig davon, wer im Detail betroffen ist.' },
+    ],
+    howEyebrow: 'So setzt VertooERP das um', howHeading: 'Souveränität als Architektur, nicht als Etikett',
+    how: [
+      { icon: 'server', title: 'Self-Hosting / On-Premises', text: 'VertooERP läuft als Lizenz auf Ihrer eigenen oder gemieteten Infrastruktur. Ihre Kernprozesse hängen nicht von einer fremden Cloud ab.' },
+      { icon: 'database', title: 'Daten bleiben im Haus', text: 'Stammdaten, Aufträge, Rechnungen und Kalkulationen liegen dort, wo Sie es entscheiden – mit Backups unter Ihrer Kontrolle.' },
+      { icon: 'bot', title: 'Lokale KI statt KI-Cloud', text: 'Der KI-Assistent arbeitet als lokales Sprachmodell über Ollama. Auch KI-Auswertungen verlassen Ihr Unternehmen nicht.' },
+      { icon: 'file-output', title: 'Offene Exportformate', text: 'DATEV-Export, XRechnung/ZUGFeRD und CSV halten die Tür nach draußen offen – gegen Vendor Lock-in, für echte Exit-Fähigkeit.' },
+      { icon: 'shield-check', title: 'DSGVO- & GoBD-konform', text: 'Datenschutz und revisionssichere Buchführung sind eingebaut – inklusive unveränderbarer Audit-Trails.' },
+      { icon: 'map-pin', title: 'Entwickelt in Deutschland für Europa', text: 'Kurze Wege, deutschsprachiger Support und ein Produkt, das für europäische Anforderungen gebaut wird.' },
+    ],
+    honestHeading: 'Ehrlich gesagt', honestText: 'Souveränität gibt es nicht geschenkt: Beim Self-Hosting liegen Betrieb, Updates und Backups bei Ihnen oder Ihrem IT-Dienstleister. Einrichtung, Hosting und Wartung sind bei VertooERP separat buchbar – Sie entscheiden, wie viel Verantwortung Sie selbst tragen und was ein Partner übernimmt.',
+    faqEyebrow: 'Häufige Fragen', faqHeading: 'Digitale Souveränität in der Praxis',
+    faq: [
+      { q: 'Was bedeutet digitale Souveränität konkret für ein KMU?', a: 'Drei Dinge: Sie wissen und bestimmen, wo Ihre Geschäftsdaten liegen. Sie können Ihre Kernprozesse weiterbetreiben, auch wenn ein externer Anbieter Preise, Bedingungen oder Produkte ändert. Und Sie können mit vertretbarem Aufwand wechseln, weil Ihre Daten in offenen Formaten exportierbar sind.' },
+      { q: 'Macht Self-Hosting uns automatisch DSGVO- oder NIS2-konform?', a: 'Nein. Kein Produkt macht ein Unternehmen automatisch konform – Compliance umfasst immer auch Prozesse und Organisation. Self-Hosting verschafft Ihnen aber die Kontrolle, die viele Anforderungen leichter erfüllbar macht: Sie wissen, wo Daten liegen, wer zugreift und wie gesichert wird. VertooERP unterstützt das mit DSGVO-konformen Funktionen und GoBD-konformen Audit-Trails.' },
+      { q: 'Brauchen wir dafür eine eigene IT-Abteilung?', a: 'Nicht zwingend. Self-Hosting heißt, dass Betrieb und Backups verantwortet werden müssen – von Ihnen oder einem IT-Dienstleister Ihrer Wahl. Einrichtung, Hosting und Wartung sind bei VertooERP separat buchbar, sodass auch Teams ohne eigene IT souverän betreiben können.' },
+      { q: 'Wie vermeiden wir Vendor Lock-in?', a: 'Indem Sie vor Vertragsabschluss die Exit-Frage klären: In welchen Formaten kommen die Daten wieder heraus? VertooERP setzt auf etablierte Standards wie DATEV-Format, XRechnung/ZUGFeRD und CSV-Exporte – Ihre Daten bleiben lesbar und übertragbar.' },
+    ],
+    moreHeading: 'Weiterführend',
+    more: [
+      { href: '/blog/digitale-resilienz-mittelstand', label: 'Ratgeber: Digitale Resilienz im Mittelstand' },
+      { href: '/blog/self-hosting-vs-cloud-erp', label: 'Self-Hosting vs. Cloud-ERP' },
+      { href: '/alternativen/weclapp', label: 'VertooERP vs. Cloud-ERP (weclapp)' },
+      { href: '/glossar', label: 'ERP-Glossar' },
+    ],
+    ctaHeadline: 'Kontrolle zurückgewinnen – ohne auf ein modernes ERP zu verzichten',
+    ctaText: 'Sehen Sie in einer Demo, wie Self-Hosting, lokale KI und offene Exportformate in der Praxis zusammenspielen.',
+  },
+  en: {
+    metaTitle: 'Digital sovereignty for SMEs – VertooERP',
+    metaDescription: 'Digital sovereignty instead of cloud dependency: self-hosting, local AI and open export formats – how SMEs keep control of their data.',
+    start: 'Home', crumb: 'Digital sovereignty',
+    eyebrow: 'Digital sovereignty',
+    headline: 'Your data. Your servers. Your decision.',
+    subhead: 'Digital sovereignty means you decide where your business data lives, who accesses it and how easily you could switch. VertooERP makes that a matter of architecture – not a promise.',
+    cta1: 'Request a demo', cta2: 'Read the resilience guide',
+    defHeading: 'What is digital sovereignty?',
+    defText: 'Digital sovereignty is a company’s ability to decide over its own data, systems and digital dependencies. It covers data sovereignty (where data lives, who can access it), freedom of choice in the operating model (self-hosting instead of forced cloud) and exit capability through open standards and export formats. For SMEs it is the foundation of digital resilience: those in control can act when disruptions, price changes or legal shifts occur – instead of waiting.',
+    whyEyebrow: 'Why now', whyHeading: 'Three reasons this belongs on the agenda',
+    why: [
+      { icon: 'cloud-off', title: 'Concentration on a few providers', text: 'Large parts of company IT run on a handful of international cloud platforms. That concentrates risk when prices, terms or products change.' },
+      { icon: 'scale', title: 'Legal uncertainty around third-country access', text: 'The US CLOUD Act allows US authorities to compel US providers to hand over data – in principle even when it is stored outside the USA. How this squares with European data protection law remains legally contested.' },
+      { icon: 'shield-alert', title: 'Regulatory focus on cybersecurity', text: 'With NIS2, the EU extends cybersecurity and reporting duties to far more companies. Risk management is becoming a leadership responsibility – whoever is in scope in detail.' },
+    ],
+    howEyebrow: 'How VertooERP delivers', howHeading: 'Sovereignty as architecture, not a label',
+    how: [
+      { icon: 'server', title: 'Self-hosting / on-premises', text: 'VertooERP runs as a licence on your own or rented infrastructure. Your core processes do not depend on a third-party cloud.' },
+      { icon: 'database', title: 'Data stays in-house', text: 'Master data, orders, invoices and costings live where you decide – with backups under your control.' },
+      { icon: 'bot', title: 'Local AI instead of an AI cloud', text: 'The AI assistant works as a local language model via Ollama. Even AI analysis never leaves your company.' },
+      { icon: 'file-output', title: 'Open export formats', text: 'DATEV export, XRechnung/ZUGFeRD and CSV keep the door open – against vendor lock-in, for real exit capability.' },
+      { icon: 'shield-check', title: 'GDPR- & GoBD-compliant', text: 'Data protection and audit-proof accounting are built in – including immutable audit trails.' },
+      { icon: 'map-pin', title: 'Built in Germany for Europe', text: 'Short paths, German-language support and a product built for European requirements.' },
+    ],
+    honestHeading: 'To be honest', honestText: 'Sovereignty is not free: with self-hosting, operations, updates and backups sit with you or your IT service provider. Setup, hosting and maintenance are available separately with VertooERP – you decide how much responsibility you carry yourself and what a partner takes over.',
+    faqEyebrow: 'FAQ', faqHeading: 'Digital sovereignty in practice',
+    faq: [
+      { q: 'What does digital sovereignty mean concretely for an SME?', a: 'Three things: you know and decide where your business data lives. You can keep your core processes running even if an external provider changes prices, terms or products. And you can switch with reasonable effort, because your data is exportable in open formats.' },
+      { q: 'Does self-hosting automatically make us GDPR- or NIS2-compliant?', a: 'No. No product makes a company compliant by itself – compliance always includes processes and organisation. Self-hosting does give you the control that makes many requirements easier to meet: you know where data lives, who accesses it and how it is backed up. VertooERP supports this with GDPR-compliant features and GoBD-compliant audit trails.' },
+      { q: 'Do we need our own IT department for this?', a: 'Not necessarily. Self-hosting means operations and backups must be owned – by you or an IT service provider of your choice. Setup, hosting and maintenance are available separately with VertooERP, so teams without in-house IT can run sovereignly too.' },
+      { q: 'How do we avoid vendor lock-in?', a: 'By settling the exit question before signing: in which formats does your data come back out? VertooERP builds on established standards such as the DATEV format, XRechnung/ZUGFeRD and CSV exports – your data stays readable and portable.' },
+    ],
+    moreHeading: 'Further reading',
+    more: [
+      { href: '/blog/digitale-resilienz-mittelstand', label: 'Guide: digital resilience for SMEs' },
+      { href: '/blog/self-hosting-vs-cloud-erp', label: 'Self-hosting vs. cloud ERP' },
+      { href: '/alternativen/weclapp', label: 'VertooERP vs. cloud ERP (weclapp)' },
+      { href: '/glossar', label: 'ERP glossary' },
+    ],
+    ctaHeadline: 'Regain control – without giving up a modern ERP',
+    ctaText: 'See in a demo how self-hosting, local AI and open export formats work together in practice.',
+  },
+}[lang];
+
+const siteUrl = 'https://vertoo.de';
+const url = `${siteUrl}${p('/digitale-souveraenitaet')}`;
+
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: c.faq.map((i) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })),
+};
+const breadcrumbLd = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: c.start, item: `${siteUrl}${p('/')}` },
+    { '@type': 'ListItem', position: 2, name: c.crumb, item: url },
+  ],
+};
+---
+
+<Layout title={c.metaTitle} description={c.metaDescription} jsonLd={[faqLd, breadcrumbLd]} hasTranslation>
+  <Header />
+  <main id="main-content">
+    <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 hero-gradient overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+          <a href={p('/')} class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">{c.start}</a>
+          <span class="mx-2" aria-hidden="true">/</span>
+          <span class="text-gray-700 dark:text-gray-300">{c.crumb}</span>
+        </nav>
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 text-xs font-medium mb-6">
+          <span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+          {c.eyebrow}
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">{c.headline}</h1>
+        <p class="mt-6 text-lg sm:text-xl text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">{c.subhead}</p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href={p('/#kontakt')} class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-700 text-white font-semibold hover:bg-brand-800 transition-all hover:shadow-lg hover:shadow-brand-700/25 text-center">{c.cta1}</a>
+          <a href={p('/blog/digitale-resilienz-mittelstand')} class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center">{c.cta2}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Definition (GEO) -->
+    <section class="py-16 lg:py-20">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4">{c.defHeading}</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">{c.defText}</p>
+      </div>
+    </section>
+
+    <!-- Warum jetzt -->
+    <section class="py-16 lg:py-24 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{c.whyEyebrow}</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{c.whyHeading}</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          {c.why.map((w) => (
+            <div class="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
+              <div aria-hidden="true" class="w-11 h-11 rounded-xl bg-brand-50 dark:bg-gray-900 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-3"><Icon name={`lucide:${w.icon}`} class="w-6 h-6" /></div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{w.title}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{w.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Wie VertooERP das umsetzt -->
+    <section class="py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{c.howEyebrow}</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{c.howHeading}</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {c.how.map((h) => (
+            <article class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 card-hover">
+              <div aria-hidden="true" class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-gray-800 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4"><Icon name={`lucide:${h.icon}`} class="w-6 h-6" /></div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{h.title}</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{h.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Ehrliche Abwägung -->
+    <section class="py-8 lg:py-12">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="rounded-2xl border border-brand-100 dark:border-brand-900/50 bg-brand-50/40 dark:bg-brand-950/30 p-6 sm:p-8 flex items-start gap-4">
+          <span aria-hidden="true" class="w-10 h-10 shrink-0 rounded-xl bg-white dark:bg-gray-800 border border-brand-100 dark:border-gray-700 flex items-center justify-center text-brand-600 dark:text-brand-400"><Icon name="lucide:scale" class="w-5 h-5" /></span>
+          <div>
+            <h2 class="text-sm font-semibold text-brand-700 dark:text-brand-400 uppercase tracking-wider mb-1">{c.honestHeading}</h2>
+            <p class="text-gray-700 dark:text-gray-200 leading-relaxed">{c.honestText}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 lg:py-24 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{c.faqEyebrow}</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{c.faqHeading}</h2>
+        </div>
+        <div class="space-y-3">
+          {c.faq.map((item, i) => (
+            <details class="group rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-5 sm:p-6 [&_summary::-webkit-details-marker]:hidden" open={i === 0}>
+              <summary class="flex items-center justify-between cursor-pointer text-base sm:text-lg font-semibold text-gray-900 dark:text-white list-none gap-4">
+                <span>{item.q}</span>
+                <svg aria-hidden="true" class="w-5 h-5 shrink-0 text-brand-700 dark:text-brand-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Weiterführend -->
+    <section class="py-12 lg:py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white mb-5">{c.moreHeading}</h2>
+        <div class="flex flex-wrap justify-center gap-2.5">
+          {c.more.map((m) => (
+            <a href={p(m.href)} class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 hover:border-brand-300 hover:text-brand-700 dark:hover:text-brand-400 transition-colors">{m.label}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 lg:py-28 bg-brand-700">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white">{c.ctaHeadline}</h2>
+        <p class="mt-4 text-lg text-white/90 max-w-2xl mx-auto">{c.ctaText}</p>
+        <a href={p('/#kontakt')} class="mt-8 inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-white text-brand-700 font-semibold hover:bg-brand-50 transition-colors">{c.cta1}</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

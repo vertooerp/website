@@ -28,6 +28,7 @@ const SEG_EN: Record<string, string> = {
   module: 'modules',
   glossar: 'glossary',
   alternativen: 'alternatives',
+  'digitale-souveraenitaet': 'digital-sovereignty',
 };
 const SEG_DE: Record<string, string> = Object.fromEntries(Object.entries(SEG_EN).map(([d, e]) => [e, d]));
 
@@ -157,6 +158,7 @@ export function isTranslated(pathname: string): boolean {
     /^\/module(\/[^/]+)?$/,
     /^\/alternativen(\/[^/]+)?$/,
     /^\/glossar$/,
+    /^\/digitale-souveraenitaet$/,
     /^\/blog(\/.+)?$/,
     /^\/(impressum|datenschutz|barrierefreiheit)$/,
   ].some((re) => re.test(canonical));

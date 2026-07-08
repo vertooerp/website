@@ -65,6 +65,7 @@
 
 ## Weitere Seiten
 
+- [Digitale Souveränität](https://vertoo.de/digitale-souveraenitaet): Warum Self-Hosting, lokale KI und offene Exportformate KMU unabhängiger machen
 - [ERP-Glossar](https://vertoo.de/glossar): Definitionen zu ERP, GoBD, DSGVO, Self-Hosting, XRechnung u.a.
 - [Preise](https://vertoo.de/#preise): Tarife Starter / Business / Enterprise
 - [Impressum](https://vertoo.de/impressum)
