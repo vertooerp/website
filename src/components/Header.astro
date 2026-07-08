@@ -18,25 +18,21 @@ const navLinks = [
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-lg border-b border-gray-100 dark:border-gray-800">
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href={home} class="group relative flex items-center gap-2.5">
-      <div aria-hidden="true" class="w-8 h-8 rounded-lg bg-brand-700 flex items-center justify-center">
-        <span class="text-white font-bold text-sm">V</span>
+    <a href={home} class="flex items-center gap-2.5">
+      <div aria-hidden="true" class="w-9 h-9 rounded-[10px] bg-brand-700 flex items-center justify-center">
+        <span class="text-white font-display font-bold text-base">V</span>
       </div>
-      <span class="flex flex-col justify-center">
-        <span class="text-xl font-bold text-gray-900 dark:text-white leading-none">VertooERP</span>
-        <!-- Namensherkunft als Micro-Zeile: "Ver"+"too" buchstabieren "Vertoo" in Wortmarken-Schreibweise -->
-        <span class="mt-0.5 text-[11px] tracking-[0.04em] leading-none">
+      <!--
+        Logo-Lockup: Wortmarke in der Display-Schrift (Space Grotesk), darunter die
+        Namensherkunft. Das Letterspacing des Descriptors ist so getunt, dass die
+        Zeile exakt auf Wortmarken-Breite ausläuft (optisch justierter Block);
+        "Ver" steht dabei bündig unter "Ver" — das trägt das Wortspiel Ver+too.
+      -->
+      <span class="flex flex-col justify-center" data-logo-lockup>
+        <span class="font-display text-xl font-bold text-gray-900 dark:text-white leading-none" data-wordmark>VertooERP</span>
+        <span class="mt-1 text-[11px] tracking-[0.088em] leading-none whitespace-nowrap" data-descriptor>
           <span class="font-bold text-brand-600 dark:text-brand-400">Ver</span><span class="font-medium text-gray-500 dark:text-gray-400">waltungs</span><span class="font-bold text-brand-600 dark:text-brand-400">too</span><span class="font-medium text-gray-500 dark:text-gray-400">l</span>
         </span>
-      </span>
-      <!-- Gestylter Tooltip statt nativem title-Attribut -->
-      <span
-        role="tooltip"
-        class="pointer-events-none absolute left-0 top-full z-50 mt-2 whitespace-nowrap rounded-lg border border-gray-700 bg-gray-900 px-3 py-1.5 text-xs font-medium text-gray-100 shadow-lg opacity-0 translate-y-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0"
-      >
-        {lang === 'en'
-          ? <>Vertoo = <span class="font-bold text-brand-400">Ver</span>waltungs<span class="font-bold text-brand-400">too</span>l — German for “management tool”</>
-          : <>Vertoo steht für <span class="font-bold text-brand-400">Ver</span>waltungs<span class="font-bold text-brand-400">too</span>l</>}
       </span>
     </a>
 
