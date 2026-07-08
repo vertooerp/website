@@ -1,0 +1,36 @@
+---
+import { Icon } from 'astro-icon/components';
+import { getLangFromUrl } from '../i18n/utils';
+
+// Schlanke USP-Zeile direkt unter dem Hero: macht die Kern-Positionierung
+// (DE→Europa, DSGVO, GoBD, All-in-One) scanbar, bevor jemand liest.
+const lang = getLangFromUrl(Astro.url);
+
+const items = {
+  de: [
+    { icon: 'map-pin', label: 'Entwickelt in Deutschland für Europa' },
+    { icon: 'shield-check', label: 'DSGVO-konform' },
+    { icon: 'file-check', label: 'GoBD-konform' },
+    { icon: 'layers', label: 'Ein System statt zehn Tools' },
+  ],
+  en: [
+    { icon: 'map-pin', label: 'Built in Germany for Europe' },
+    { icon: 'shield-check', label: 'GDPR-compliant' },
+    { icon: 'file-check', label: 'GoBD-compliant' },
+    { icon: 'layers', label: 'One system instead of ten tools' },
+  ],
+}[lang];
+---
+
+<section aria-label={lang === 'en' ? 'Key facts' : 'Kernpunkte'} class="border-y border-gray-100 dark:border-gray-800 bg-gray-50/60 dark:bg-gray-900/60">
+  <div class="max-w-7xl mx-auto px-6 py-5">
+    <ul class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+      {items.map((it) => (
+        <li class="flex items-center gap-2.5 text-sm font-medium text-gray-700 dark:text-gray-200">
+          <span aria-hidden="true" class="inline-flex text-brand-600 dark:text-brand-400"><Icon name={`lucide:${it.icon}`} class="w-4.5 h-4.5" /></span>
+          {it.label}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

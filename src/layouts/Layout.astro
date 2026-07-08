@@ -2,6 +2,10 @@
 import '../styles/global.css';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/space-grotesk';
+// Preload der Latin-Subsets (LCP): ?url liefert dieselbe gehashte Asset-URL,
+// die auch das Fontsource-CSS referenziert (Vite content-hashing).
+import interLatinUrl from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import spaceGroteskLatinUrl from '@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2?url';
 import { getLangFromUrl, stripLangFromPath, localizePath, useTranslations } from '../i18n/utils';
 import { defaultLang } from '../i18n/ui';
 
@@ -121,6 +125,8 @@ const ldScripts = [organizationLd, websiteLd, ...(Array.isArray(jsonLd) ? jsonLd
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" as="font" type="font/woff2" href={interLatinUrl} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={spaceGroteskLatinUrl} crossorigin />
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="canonical" href={canonicalURL} />
