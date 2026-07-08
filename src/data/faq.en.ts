@@ -59,5 +59,9 @@ export const faqEn: FaqItem[] = [
   {
     "q": "Is VertooERP an all-in-one solution?",
     "a": "Yes – with one difference to classic all-inclusive suites: with more than 20 modules from inventory management and accounting to time tracking and CRM, VertooERP covers an SME's core processes in a single platform instead of wiring up ten separate tools. But you only activate and pay for what you actually use. The platform is built in Germany for the European market – GDPR- and GoBD-compliant, operated via self-hosting on your own infrastructure."
+  },
+  {
+    "q": "How does VertooERP contribute to digital sovereignty and resilience?",
+    "a": "Through its architecture: VertooERP runs self-hosted on your own or rented infrastructure – your business data and core processes do not depend on a third-party cloud. The AI assistant works as a local language model via Ollama, so even AI features send no data outside. Established export formats such as DATEV, XRechnung/ZUGFeRD and CSV reduce dependencies. Responsibility for operations and backups sits with you or your service provider – the deliberate price of full control."
   }
 ];

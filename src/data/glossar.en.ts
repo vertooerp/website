@@ -181,5 +181,25 @@ export const glossarEn: GlossarTerm[] = [
     "slug": "cloud-erp",
     "term": "Cloud ERP",
     "definition": "A cloud ERP is operated by a provider and used over the internet as a service (SaaS). The counter-model is self-hosting or on-premises, where the customer runs the software themselves."
+  },
+  {
+    "slug": "digitale-souveraenitaet",
+    "term": "Digital Sovereignty",
+    "definition": "Digital sovereignty is the ability of a company (or state) to decide over its own data, systems and digital dependencies. Building blocks include data sovereignty, open standards and export formats, and freedom of choice in the operating model – such as self-hosting instead of forced cloud."
+  },
+  {
+    "slug": "digitale-resilienz",
+    "term": "Digital Resilience",
+    "definition": "Digital resilience is a company’s ability to keep operating through digital disruptions – such as outages, provider changes or altered contract terms. It involves managed dependencies, backups under your own control and tested exit strategies."
+  },
+  {
+    "slug": "vendor-lock-in",
+    "term": "Vendor Lock-in",
+    "definition": "Vendor lock-in describes dependency on a provider that makes switching expensive or practically impossible – for example through proprietary formats or missing exports. Open standards and export formats (e.g. CSV, DATEV format, XRechnung) reduce this risk."
+  },
+  {
+    "slug": "nis2",
+    "term": "NIS2",
+    "definition": "NIS2 is an EU directive on network and information security that extends cybersecurity and reporting obligations to considerably more companies and sectors than its predecessor. Whether and how a company is affected depends on sector and size – the respective national implementation is decisive."
   }
 ];

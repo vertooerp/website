@@ -215,5 +215,25 @@ export const glossar: GlossarTerm[] = [
     "term": "Cloud-ERP",
     "slug": "cloud-erp",
     "definition": "Ein Cloud-ERP wird von einem Anbieter betrieben und über das Internet als Dienst genutzt (SaaS). Gegenmodell ist das Self-Hosting bzw. On-Premises, bei dem der Kunde die Software selbst betreibt."
+  },
+  {
+    "term": "Digitale Souveränität",
+    "slug": "digitale-souveraenitaet",
+    "definition": "Digitale Souveränität bezeichnet die Fähigkeit eines Unternehmens (oder Staates), über eigene Daten, Systeme und digitale Abhängigkeiten selbst zu bestimmen. Bausteine sind unter anderem Datenhoheit, offene Standards und Exportformate sowie Wahlfreiheit beim Betriebsmodell – etwa Self-Hosting statt Cloud-Zwang."
+  },
+  {
+    "term": "Digitale Resilienz",
+    "slug": "digitale-resilienz",
+    "definition": "Digitale Resilienz ist die Fähigkeit eines Unternehmens, den Betrieb auch bei digitalen Störungen aufrechtzuerhalten – etwa bei Ausfällen, Anbieterwechseln oder veränderten Vertragsbedingungen. Dazu gehören beherrschte Abhängigkeiten, Backups unter eigener Kontrolle und erprobte Exit-Strategien."
+  },
+  {
+    "term": "Vendor Lock-in",
+    "slug": "vendor-lock-in",
+    "definition": "Vendor Lock-in beschreibt die Abhängigkeit von einem Anbieter, die einen Wechsel teuer oder praktisch unmöglich macht – etwa durch proprietäre Formate oder fehlende Exporte. Offene Standards und Exportformate (z. B. CSV, DATEV-Format, XRechnung) reduzieren dieses Risiko."
+  },
+  {
+    "term": "NIS2",
+    "slug": "nis2",
+    "definition": "NIS2 ist eine EU-Richtlinie zur Netzwerk- und Informationssicherheit, die Cybersicherheits- und Meldepflichten auf deutlich mehr Unternehmen und Sektoren ausweitet als ihr Vorgänger. Ob und wie ein Unternehmen betroffen ist, hängt von Sektor und Größe ab – maßgeblich ist die jeweilige nationale Umsetzung."
   }
 ];

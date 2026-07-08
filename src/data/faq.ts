@@ -72,4 +72,8 @@ export const faq: FaqItem[] = [
     q: 'Ist VertooERP eine All-in-One-Lösung?',
     a: 'Ja – mit einem Unterschied zu klassischen Komplettpaketen: VertooERP deckt mit über 20 Modulen von Warenwirtschaft über Buchhaltung bis Zeiterfassung und CRM die Kernprozesse eines KMU in einer Plattform ab, statt zehn Einzeltools mit Schnittstellen zu verbinden. Aktiviert und bezahlt wird aber nur, was Sie wirklich nutzen. Entwickelt wird die Plattform in Deutschland für den europäischen Markt – DSGVO- und GoBD-konform, betrieben per Self-Hosting auf Ihrer eigenen Infrastruktur.',
   },
+  {
+    q: 'Wie zahlt VertooERP auf digitale Souveränität und Resilienz ein?',
+    a: 'Durch die Architektur: VertooERP läuft per Self-Hosting auf Ihrer eigenen oder gemieteten Infrastruktur – Ihre Geschäftsdaten und Kernprozesse hängen nicht von einer fremden Cloud ab. Der KI-Assistent arbeitet als lokales Sprachmodell über Ollama, sodass auch KI-Funktionen keine Daten nach außen geben. Etablierte Exportformate wie DATEV, XRechnung/ZUGFeRD und CSV reduzieren Abhängigkeiten. Die Verantwortung für Betrieb und Backups liegt dabei bei Ihnen bzw. Ihrem Dienstleister – das ist der bewusste Preis für volle Kontrolle.',
+  },
 ];

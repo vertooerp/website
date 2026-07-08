@@ -71,6 +71,7 @@ const SLUG_EN: Record<SlugKind, Record<string, string>> = {
     'was-kostet-ein-erp': 'what-does-an-erp-cost',
     'datev-schnittstelle-erp': 'datev-interface-erp',
     'xrechnung-zugferd-erstellen': 'xrechnung-zugferd-guide',
+    'digitale-resilienz-mittelstand': 'digital-resilience-smes',
   },
 };
 const SLUG_DE: Record<SlugKind, Record<string, string>> = {
