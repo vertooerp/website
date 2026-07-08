@@ -110,12 +110,37 @@ const navLinks = [
           {t('nav.login')}
         </a>
         <div class="pt-3 flex justify-center"><LanguageSwitcher /></div>
+        <!-- Signatur: Namensherkunft für Mobile (kein Hover auf Touch) -->
+        <p aria-hidden="true" class="pt-2 text-center text-[10px] tracking-[0.04em] leading-none">
+          <span class="font-bold text-brand-700">Ver</span><span class="font-medium text-gray-400">waltungs</span><span class="font-bold text-brand-700">too</span><span class="font-medium text-gray-400">l</span>
+        </p>
       </div>
     </div>
   </nav>
 </header>
 
 <script>
+  // Namensherkunft einmal pro Session sanft einblenden — löst die fehlende
+  // Hover-Geste auf Touch (und Desktop-Discovery gleich mit). Dekorativ,
+  // daher bei reduced-motion komplett übersprungen.
+  // Inline-Styles statt Klasse: gewinnen sicher gegen die Utility-Layer;
+  // transition-all am Element animiert Ein- und Ausblendung trotzdem.
+  const descriptor = document.querySelector<HTMLElement>('header [data-descriptor]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try {
+    if (descriptor && !reducedMotion && !sessionStorage.getItem('vertoo-lockup-seen')) {
+      sessionStorage.setItem('vertoo-lockup-seen', '1');
+      setTimeout(() => {
+        descriptor.style.opacity = '1';
+        descriptor.style.translate = '0 0';
+      }, 900);
+      setTimeout(() => {
+        descriptor.style.removeProperty('opacity');
+        descriptor.style.removeProperty('translate');
+      }, 3800);
+    }
+  } catch (e) {}
+
   // Mobile-Menü
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
