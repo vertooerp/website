@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import { getLangFromUrl } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -11,6 +12,24 @@ const c = {
     cta1: 'Demo anfragen',
     cta2: 'Module entdecken',
     trust: 'DSGVO- & GoBD-konform · Self-Hosting / On-Premises · Persönliche Beratung',
+    mock: {
+      nav: ['Dashboard', 'Warenwirtschaft', 'Buchhaltung', 'Zeiterfassung', 'CRM'],
+      modules: 'Module',
+      range: 'Letzte 30 Tage',
+      kpi: [
+        { label: 'Umsatz (30 T.)', value: '128.400 €', delta: '+12,4 %', tone: 'good' },
+        { label: 'Offene Aufträge', value: '37', delta: '−5', tone: 'good' },
+        { label: 'Bestandswert', value: '342.700 €', delta: '+2,1 %', tone: 'neutral' },
+        { label: 'Low-Stock-Artikel', value: '6', delta: 'prüfen', tone: 'warn' },
+      ],
+      chart: 'Umsatzentwicklung',
+      recent: 'Letzte Aufträge',
+      orders: [
+        { id: '#A-2417 · Müller GmbH', status: 'Versendet', tone: 'good' },
+        { id: '#A-2416 · Weber KG', status: 'Offen', tone: 'warn' },
+        { id: '#A-2415 · Krause e.K.', status: 'Entwurf', tone: 'neutral' },
+      ],
+    },
   },
   en: {
     badge: 'Modular business platform',
@@ -20,8 +39,29 @@ const c = {
     cta1: 'Request a demo',
     cta2: 'Explore modules',
     trust: 'GDPR- & GoBD-compliant · Self-hosting / on-premises · Personal consulting',
+    mock: {
+      nav: ['Dashboard', 'Inventory', 'Accounting', 'Time tracking', 'CRM'],
+      modules: 'Modules',
+      range: 'Last 30 days',
+      kpi: [
+        { label: 'Revenue (30 d)', value: '€128,400', delta: '+12.4 %', tone: 'good' },
+        { label: 'Open orders', value: '37', delta: '−5', tone: 'good' },
+        { label: 'Stock value', value: '€342,700', delta: '+2.1 %', tone: 'neutral' },
+        { label: 'Low-stock items', value: '6', delta: 'review', tone: 'warn' },
+      ],
+      chart: 'Revenue trend',
+      recent: 'Recent orders',
+      orders: [
+        { id: '#A-2417 · Müller GmbH', status: 'Shipped', tone: 'good' },
+        { id: '#A-2416 · Weber KG', status: 'Open', tone: 'warn' },
+        { id: '#A-2415 · Krause e.K.', status: 'Draft', tone: 'neutral' },
+      ],
+    },
   },
 }[lang];
+
+// Balkenhöhen der Mockup-Umsatzkurve (dekorativ, leichter Aufwärtstrend)
+const bars = [38, 46, 42, 55, 50, 62, 58, 66, 72, 68, 80, 92];
 ---
 
 <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 hero-gradient overflow-hidden">
@@ -52,7 +92,8 @@ const c = {
       <p class="mt-4 text-xs text-gray-500 ">{c.trust}</p>
     </div>
 
-    <!-- Decorative elements -->
+    <!-- Decorative elements: Blobs + dezentes Punktraster (Tiefe im Light-Design) -->
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-dots [mask-image:radial-gradient(ellipse_75%_65%_at_50%_0%,black_25%,transparent_75%)]"></div>
     <div aria-hidden="true" class="absolute top-20 left-10 w-72 h-72 bg-brand-200/20  rounded-full blur-3xl -z-10 animate-float"></div>
     <div aria-hidden="true" class="absolute bottom-10 right-10 w-96 h-96 bg-brand-300/10  rounded-full blur-3xl -z-10" style="animation: float 8s ease-in-out infinite 2s;"></div>
   </div>
@@ -71,37 +112,67 @@ const c = {
           <div class="px-4 py-1 rounded-md bg-gray-100  text-xs text-gray-600 ">app.vertoo.de</div>
         </div>
       </div>
-      <!-- App content placeholder -->
-      <div class="aspect-[16/9] bg-gradient-to-br from-gray-50 to-gray-100   flex items-center justify-center">
-        <div class="flex items-start gap-0 w-full h-full">
-          <!-- Sidebar mockup -->
-          <div class="w-56 h-full bg-white  border-r border-gray-100  p-4 hidden sm:block">
-            <div class="flex items-center gap-2 mb-6">
-              <div class="w-6 h-6 rounded-md bg-brand-700"></div>
-              <div class="h-4 w-24 bg-gray-200  rounded"></div>
+      <!-- App-Vorschau: lebendiges Dashboard (dekorativ, fiktive Beispieldaten) -->
+      <div class="aspect-[16/9] bg-gray-50 overflow-hidden">
+        <div class="flex items-stretch w-full h-full text-left">
+          <!-- Sidebar -->
+          <div class="w-52 shrink-0 bg-white border-r border-gray-100 p-4 hidden sm:block">
+            <div class="flex items-center gap-2 mb-5">
+              <div class="w-6 h-6 rounded-md bg-brand-700 flex items-center justify-center">
+                <svg viewBox="0 0 32 32" class="w-3.5 h-3.5" fill="none"><path d="M9.5 11.5 L15 21.5 L22.5 8.5" stroke="white" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </div>
+              <span class="text-sm font-display font-bold text-gray-900">Vertoo<span class="text-gray-400">ERP</span></span>
             </div>
-            <div class="space-y-2">
-              <div class="h-8 bg-brand-50  rounded-lg"></div>
-              <div class="h-8 bg-gray-50  rounded-lg"></div>
-              <div class="h-8 bg-gray-50  rounded-lg"></div>
-              <div class="mt-4 h-3 w-16 bg-gray-100  rounded"></div>
-              <div class="h-8 bg-gray-50  rounded-lg"></div>
-              <div class="h-8 bg-gray-50  rounded-lg"></div>
-              <div class="mt-4 h-3 w-20 bg-gray-100  rounded"></div>
-              <div class="h-8 bg-gray-50  rounded-lg"></div>
-              <div class="h-8 bg-gray-50  rounded-lg"></div>
+            <div class="space-y-1">
+              {c.mock.nav.map((item, i) => (
+                <div class={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium ${i === 0 ? 'bg-brand-50 text-brand-700' : 'text-gray-500'}`}>
+                  <Icon name={`lucide:${['layout-dashboard', 'package', 'receipt-text', 'clock', 'users'][i]}`} class="w-3.5 h-3.5" />
+                  {item}
+                </div>
+              ))}
+              <p class="pt-3 pb-1 px-2.5 text-[9px] font-semibold uppercase tracking-wider text-gray-400">{c.mock.modules}</p>
+              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs font-medium text-gray-500"><Icon name="lucide:truck" class="w-3.5 h-3.5" /> Dropshipping</div>
+              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs font-medium text-gray-500"><Icon name="lucide:bot" class="w-3.5 h-3.5" /> KI</div>
             </div>
           </div>
-          <!-- Main content mockup -->
-          <div class="flex-1 p-6 sm:p-8">
-            <div class="h-6 w-40 bg-gray-200  rounded mb-6"></div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-              <div class="h-20 bg-white  rounded-xl border border-gray-100  shadow-sm"></div>
-              <div class="h-20 bg-white  rounded-xl border border-gray-100  shadow-sm"></div>
-              <div class="h-20 bg-white  rounded-xl border border-gray-100  shadow-sm hidden sm:block"></div>
-              <div class="h-20 bg-white  rounded-xl border border-gray-100  shadow-sm hidden sm:block"></div>
+          <!-- Main -->
+          <div class="flex-1 min-w-0 p-4 sm:p-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-sm font-semibold text-gray-900">{c.mock.nav[0]}</span>
+              <span class="text-[10px] font-medium text-gray-500 border border-gray-200 rounded-md px-2 py-1 bg-white">{c.mock.range}</span>
             </div>
-            <div class="h-48 bg-white  rounded-xl border border-gray-100  shadow-sm"></div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+              {c.mock.kpi.map((k, i) => (
+                <div class={`bg-white rounded-xl border border-gray-100 shadow-sm p-3 ${i > 1 ? 'hidden sm:block' : ''}`}>
+                  <p class="text-[10px] text-gray-500 mb-1 truncate">{k.label}</p>
+                  <p class="text-base font-bold text-gray-900 leading-none">{k.value}</p>
+                  <span class={`inline-block mt-1.5 text-[9px] font-semibold px-1.5 py-0.5 rounded ${k.tone === 'good' ? 'bg-brand-50 text-brand-700' : k.tone === 'warn' ? 'bg-amber-50 text-amber-700' : 'bg-gray-100 text-gray-600'}`}>{k.delta}</span>
+                </div>
+              ))}
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <!-- Umsatz-Balken -->
+              <div class="sm:col-span-2 bg-white rounded-xl border border-gray-100 shadow-sm p-3">
+                <p class="text-[10px] font-medium text-gray-500 mb-2">{c.mock.chart}</p>
+                <div class="flex items-end gap-1.5 h-20 sm:h-24">
+                  {bars.map((h, i) => (
+                    <div class={`flex-1 rounded-t ${i >= bars.length - 3 ? 'bg-brand-600' : 'bg-brand-200'}`} style={`height:${h}%`}></div>
+                  ))}
+                </div>
+              </div>
+              <!-- Letzte Aufträge -->
+              <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-3">
+                <p class="text-[10px] font-medium text-gray-500 mb-2">{c.mock.recent}</p>
+                <div class="space-y-2">
+                  {c.mock.orders.map((o) => (
+                    <div class="flex items-center justify-between gap-2">
+                      <span class="text-[10px] text-gray-700 truncate">{o.id}</span>
+                      <span class={`shrink-0 text-[9px] font-semibold px-1.5 py-0.5 rounded ${o.tone === 'good' ? 'bg-brand-50 text-brand-700' : o.tone === 'warn' ? 'bg-amber-50 text-amber-700' : 'bg-gray-100 text-gray-600'}`}>{o.status}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

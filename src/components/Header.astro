@@ -20,7 +20,10 @@ const navLinks = [
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href={home} class="flex items-center gap-2.5">
       <div aria-hidden="true" class="w-9 h-9 rounded-[10px] bg-brand-700 flex items-center justify-center">
-        <span class="text-white font-display font-bold text-base">V</span>
+        <!-- Bildmarke: Strich-V mit Häkchen-Anklang (identisch zu favicon.svg) -->
+        <svg viewBox="0 0 32 32" class="w-[22px] h-[22px]" fill="none" aria-hidden="true">
+          <path d="M9.5 11.5 L15 21.5 L22.5 8.5" stroke="white" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
       </div>
       <!--
         Logo-Lockup: Wortmarke in der Display-Schrift (Space Grotesk), darunter die
@@ -29,7 +32,8 @@ const navLinks = [
         "Ver" steht dabei bündig unter "Ver" — das trägt das Wortspiel Ver+too.
       -->
       <span class="flex flex-col justify-center" data-logo-lockup>
-        <span class="font-display text-xl font-bold text-gray-900  leading-none" data-wordmark>VertooERP</span>
+        <!-- Zweifarbige Wortmarke: Marke kräftig, Kategorie-Suffix zurückgenommen (nur Farbe → Breite/Justierung unverändert) -->
+        <span class="font-display text-xl font-bold text-gray-900 leading-none" data-wordmark>Vertoo<span class="text-gray-400">ERP</span></span>
         <!-- Grün = Icon-Grün: hell exakt brand-700; dunkel brand-500 (700 wäre als Text unlesbar) -->
         <span class="mt-1 text-[11px] tracking-[0.088em] leading-none whitespace-nowrap" data-descriptor>
           <span class="font-bold text-brand-700 ">Ver</span><span class="font-medium text-gray-500 ">waltungs</span><span class="font-bold text-brand-700 ">too</span><span class="font-medium text-gray-500 ">l</span>

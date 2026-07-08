@@ -166,3 +166,10 @@ body {
     transition: none;
   }
 }
+
+/* Dezentes Punktraster für helle Flächen (Tiefe statt Leere im Light-only-Design).
+   Einsatz als absolut positioniertes Overlay, meist mit mask-image ausgeblendet. */
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(4, 120, 87, 0.13) 1px, transparent 1.5px);
+  background-size: 22px 22px;
+}
