@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import '@fontsource-variable/inter';
 import '@fontsource-variable/space-grotesk';
-import { getLangFromUrl, stripLangFromPath, localizePath } from '../i18n/utils';
+import { getLangFromUrl, stripLangFromPath, localizePath, useTranslations } from '../i18n/utils';
 import { defaultLang } from '../i18n/ui';
 
 interface Props {
@@ -16,15 +16,16 @@ interface Props {
 }
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const defaultMeta = {
   de: {
-    title: 'VertooERP – Das modulare ERP für den Mittelstand',
-    description: 'Modulares ERP für KMU mit 20+ Modulen: Buchhaltung, Warenwirtschaft, Lager, Aufgaben, KI und mehr – alles in einer Plattform aus Deutschland.',
+    title: 'VertooERP – Das modulare All-in-One-ERP für den Mittelstand',
+    description: 'All-in-One-ERP für KMU: 20+ Module von Buchhaltung bis Warenwirtschaft, DSGVO- und GoBD-konform, Self-Hosting – entwickelt in Deutschland für Europa.',
   },
   en: {
-    title: 'VertooERP – The modular ERP for mid-sized companies',
-    description: 'Modular ERP for SMEs with 20+ modules: accounting, inventory management, warehousing, tasks, AI and more – all in one self-hosted platform from Germany.',
+    title: 'VertooERP – The modular all-in-one ERP for SMEs',
+    description: 'All-in-one ERP for SMEs: 20+ modules from accounting to inventory, GDPR- and GoBD-compliant, self-hosted – built in Germany for Europe.',
   },
 } as const;
 
@@ -130,7 +131,8 @@ const ldScripts = [organizationLd, websiteLd, ...(Array.isArray(jsonLd) ? jsonLd
     <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="theme-color" content="#047857" />
+    <meta name="theme-color" content="#047857" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#030712" media="(prefers-color-scheme: dark)" />
     <link rel="alternate" type="application/rss+xml" title="VertooERP Blog" href="/rss.xml" />
 
     <!-- OpenGraph -->
@@ -172,7 +174,7 @@ const ldScripts = [organizationLd, websiteLd, ...(Array.isArray(jsonLd) ? jsonLd
       href="#main-content"
       class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-700 focus:text-white focus:font-medium focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-300"
     >
-      Zum Hauptinhalt springen
+      {t('a11y.skip')}
     </a>
     <slot />
 

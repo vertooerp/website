@@ -55,5 +55,9 @@ export const faqEn: FaqItem[] = [
   {
     "q": "Can we see VertooERP before deciding?",
     "a": "Yes. In a personal demo we show the platform based on your specific use case — from inventory management through to accounting. For a deeper impression, a pilot operation covering a particular area or location can be arranged."
+  },
+  {
+    "q": "Is VertooERP an all-in-one solution?",
+    "a": "Yes – with one difference to classic all-inclusive suites: with more than 20 modules from inventory management and accounting to time tracking and CRM, VertooERP covers an SME's core processes in a single platform instead of wiring up ten separate tools. But you only activate and pay for what you actually use. The platform is built in Germany for the European market – GDPR- and GoBD-compliant, operated via self-hosting on your own infrastructure."
   }
 ];

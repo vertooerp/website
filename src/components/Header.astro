@@ -25,7 +25,7 @@ const navLinks = [
       <span class="text-xl font-bold text-gray-900 dark:text-white">VertooERP</span>
     </a>
 
-    <nav class="hidden md:flex items-center gap-8" aria-label="Hauptnavigation">
+    <nav class="hidden md:flex items-center gap-8" aria-label={t('a11y.nav.main')}>
       {navLinks.slice(0, 5).map((l) => (
         <a href={l.href} class="text-sm text-gray-600 dark:text-gray-300 hover:text-brand-700 dark:hover:text-brand-400 transition-colors">{l.label}</a>
       ))}
@@ -80,7 +80,7 @@ const navLinks = [
   <!-- Mobile-Menü (Vollbild-Overlay unter dem Header) -->
   <nav
     id="mobile-menu"
-    aria-label="Mobile Navigation"
+    aria-label={t('a11y.nav.mobile')}
     class="hidden md:hidden fixed inset-x-0 top-16 z-40 h-[calc(100dvh-4rem)] bg-white dark:bg-gray-950 overflow-y-auto overscroll-contain"
   >
     <div class="flex flex-col min-h-full px-6 py-4">

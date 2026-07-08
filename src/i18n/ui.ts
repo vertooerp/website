@@ -50,6 +50,8 @@ export const ui = {
     'a11y.menu.close': 'Menü schließen',
     'a11y.lang': 'Sprache wechseln',
     'a11y.skip': 'Zum Hauptinhalt springen',
+    'a11y.nav.main': 'Hauptnavigation',
+    'a11y.nav.mobile': 'Mobile Navigation',
   },
   en: {
     'nav.module': 'Modules',
@@ -84,5 +86,7 @@ export const ui = {
     'a11y.menu.close': 'Close menu',
     'a11y.lang': 'Switch language',
     'a11y.skip': 'Skip to main content',
+    'a11y.nav.main': 'Main navigation',
+    'a11y.nav.mobile': 'Mobile navigation',
   },
 } as const;

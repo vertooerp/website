@@ -68,4 +68,8 @@ export const faq: FaqItem[] = [
     q: 'Können wir VertooERP vor der Entscheidung ansehen?',
     a: 'Ja. In einer persönlichen Demo zeigen wir die Plattform an Ihrem konkreten Anwendungsfall – von der Warenwirtschaft bis zur Buchhaltung. Für einen tieferen Eindruck lässt sich ein Pilotbetrieb mit einem Teilbereich oder Standort vereinbaren.',
   },
+  {
+    q: 'Ist VertooERP eine All-in-One-Lösung?',
+    a: 'Ja – mit einem Unterschied zu klassischen Komplettpaketen: VertooERP deckt mit über 20 Modulen von Warenwirtschaft über Buchhaltung bis Zeiterfassung und CRM die Kernprozesse eines KMU in einer Plattform ab, statt zehn Einzeltools mit Schnittstellen zu verbinden. Aktiviert und bezahlt wird aber nur, was Sie wirklich nutzen. Entwickelt wird die Plattform in Deutschland für den europäischen Markt – DSGVO- und GoBD-konform, betrieben per Self-Hosting auf Ihrer eigenen Infrastruktur.',
+  },
 ];

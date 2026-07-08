@@ -4,6 +4,7 @@
 
 ## Eckdaten
 
+- Positionierung: All-in-One-Plattform für die Kernprozesse eines KMU (statt vieler Einzeltools) – entwickelt in Deutschland für den europäischen Markt
 - Betriebsmodell: Self-Hosting / On-Premises (keine Cloud-Pflicht; Daten bleiben beim Kunden)
 - Preise (pro Monat, zzgl. MwSt.): Starter ab 350 € (bis 3 Module, 3 Seats), Business ab 800 € (bis 12 Module, 10 Seats), Enterprise ab 1.400 € (alle 20+ Module, 20 Seats)
 - Mindestlaufzeit: 12 Monate; Hosting, Einrichtung, Wartung und Support separat buchbar
