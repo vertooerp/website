@@ -46,7 +46,6 @@ export const ui = {
     'footer.developed.in': 'in Brandenburg',
     'footer.rights': 'Alle Rechte vorbehalten.',
 
-    'a11y.theme': 'Farbschema wechseln',
     'a11y.menu.open': 'Menü öffnen',
     'a11y.menu.close': 'Menü schließen',
     'a11y.lang': 'Sprache wechseln',
@@ -83,7 +82,6 @@ export const ui = {
     'footer.developed.in': 'in Brandenburg, Germany',
     'footer.rights': 'All rights reserved.',
 
-    'a11y.theme': 'Switch colour scheme',
     'a11y.menu.open': 'Open menu',
     'a11y.menu.close': 'Close menu',
     'a11y.lang': 'Switch language',

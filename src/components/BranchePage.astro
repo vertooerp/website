@@ -72,36 +72,36 @@ const breadcrumbLd = {
   <main id="main-content">
     <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-24 hero-gradient overflow-hidden">
       <div class="max-w-5xl mx-auto px-6 text-center">
-        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500 dark:text-gray-400">
-          <a href={p('/')} class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">{s.start}</a>
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-gray-500 ">
+          <a href={p('/')} class="hover:text-brand-700  transition-colors">{s.start}</a>
           <span class="mx-2" aria-hidden="true">/</span>
-          <a href={p('/branchen')} class="hover:text-brand-700 dark:hover:text-brand-400 transition-colors">{s.industries}</a>
+          <a href={p('/branchen')} class="hover:text-brand-700  transition-colors">{s.industries}</a>
         </nav>
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-brand-300 text-xs font-medium mb-6">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50  text-brand-700  text-xs font-medium mb-6">
           <span aria-hidden="true" class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
           {branche.hero.eyebrow}
         </span>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">{branche.hero.headline}</h1>
-        <p class="mt-6 text-lg sm:text-xl text-gray-500 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">{branche.hero.subhead}</p>
+        <p class="mt-6 text-lg sm:text-xl text-gray-500  leading-relaxed max-w-3xl mx-auto">{branche.hero.subhead}</p>
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href={p(branche.hero.primaryCta.href)} class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-700 text-white font-semibold hover:bg-brand-800 transition-all hover:shadow-lg hover:shadow-brand-700/25 text-center">{branche.hero.primaryCta.label}</a>
-          <a href={p(branche.hero.secondaryCta.href)} class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center">{branche.hero.secondaryCta.label}</a>
+          <a href={p(branche.hero.secondaryCta.href)} class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-gray-200  text-gray-700  font-semibold hover:bg-gray-50  transition-colors text-center">{branche.hero.secondaryCta.label}</a>
         </div>
       </div>
     </section>
 
-    <section class="py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
+    <section class="py-20 lg:py-28 bg-gray-50 ">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{s.problems}</span>
+          <span class="text-sm font-medium text-brand-700  uppercase tracking-wider">{s.problems}</span>
           <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{branche.painpoints.intro}</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {branche.painpoints.items.map((pp) => (
-            <div class="p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700">
-              <div aria-hidden="true" class="w-11 h-11 rounded-xl bg-brand-50 dark:bg-gray-900 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-3"><Icon name={`lucide:${pp.icon}`} class="w-6 h-6" /></div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{pp.title}</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{pp.description}</p>
+            <div class="p-6 rounded-2xl bg-white  border border-gray-100 ">
+              <div aria-hidden="true" class="w-11 h-11 rounded-xl bg-brand-50  text-brand-600  flex items-center justify-center mb-3"><Icon name={`lucide:${pp.icon}`} class="w-6 h-6" /></div>
+              <h3 class="text-lg font-semibold text-gray-900  mb-2">{pp.title}</h3>
+              <p class="text-sm text-gray-600  leading-relaxed">{pp.description}</p>
             </div>
           ))}
         </div>
@@ -111,25 +111,25 @@ const breadcrumbLd = {
     <section class="py-20 lg:py-28">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{s.modules}</span>
+          <span class="text-sm font-medium text-brand-700  uppercase tracking-wider">{s.modules}</span>
           <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{s.modulesFor(branche.name)}</h2>
-          <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{branche.modules.intro}</p>
+          <p class="mt-4 text-lg text-gray-500 ">{branche.modules.intro}</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {branche.modules.items.map((m) => (
-            <article class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 card-hover">
-              <div aria-hidden="true" class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-gray-800 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4"><Icon name={`lucide:${m.icon}`} class="w-6 h-6" /></div>
-              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{m.name}</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{m.description}</p>
+            <article class="p-6 rounded-2xl border border-gray-100  bg-white  card-hover">
+              <div aria-hidden="true" class="w-12 h-12 rounded-xl bg-brand-50  text-brand-600  flex items-center justify-center mb-4"><Icon name={`lucide:${m.icon}`} class="w-6 h-6" /></div>
+              <h3 class="text-lg font-semibold text-gray-900  mb-2">{m.name}</h3>
+              <p class="text-sm text-gray-500  leading-relaxed">{m.description}</p>
             </article>
           ))}
         </div>
 
         <!-- Interne Verlinkung: echte Modul-Detailseiten -->
-        <h3 class="mt-12 text-center text-lg font-semibold text-gray-900 dark:text-white">{s.detailHeading}</h3>
+        <h3 class="mt-12 text-center text-lg font-semibold text-gray-900 ">{s.detailHeading}</h3>
         <div class="mt-5 flex flex-wrap justify-center gap-2.5">
           {moduleLinks.map((m) => (
-            <a href={p(`/module/${m.slug}`)} class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 hover:border-brand-300 hover:text-brand-700 dark:hover:text-brand-400 transition-colors">
+            <a href={p(`/module/${m.slug}`)} class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border border-gray-200  bg-white  text-gray-700  hover:border-brand-300 hover:text-brand-700  transition-colors">
               <Icon name={`lucide:${m.icon}`} class="w-4 h-4" />
               {m.name}
             </a>
@@ -138,23 +138,23 @@ const breadcrumbLd = {
       </div>
     </section>
 
-    <section class="py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
+    <section class="py-20 lg:py-28 bg-gray-50 ">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-14">
-          <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{s.workflow}</span>
+          <span class="text-sm font-medium text-brand-700  uppercase tracking-wider">{s.workflow}</span>
           <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{s.workflowHeading}</h2>
-          <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{branche.workflow.intro}</p>
+          <p class="mt-4 text-lg text-gray-500 ">{branche.workflow.intro}</p>
         </div>
         <ol class="space-y-4">
           {branche.workflow.steps.map((step) => (
             <li class="relative pl-16 sm:pl-20">
               <span aria-hidden="true" class="absolute left-0 top-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-brand-700 text-white font-extrabold flex items-center justify-center text-lg shadow-md shadow-brand-700/20">{step.number}</span>
-              <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-6 sm:p-7">
+              <div class="bg-white  rounded-2xl border border-gray-100  p-6 sm:p-7">
                 <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{step.title}</h3>
-                  <span class="text-xs font-medium text-brand-700 dark:text-brand-300 bg-brand-50 dark:bg-brand-950/50 px-2.5 py-1 rounded-md">{step.module}</span>
+                  <h3 class="text-lg font-semibold text-gray-900 ">{step.title}</h3>
+                  <span class="text-xs font-medium text-brand-700  bg-brand-50  px-2.5 py-1 rounded-md">{step.module}</span>
                 </div>
-                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{step.description}</p>
+                <p class="text-sm text-gray-600  leading-relaxed">{step.description}</p>
               </div>
             </li>
           ))}
@@ -164,12 +164,12 @@ const breadcrumbLd = {
 
     <section class="py-16 lg:py-20">
       <div class="max-w-4xl mx-auto px-6">
-        <div class="rounded-3xl bg-brand-50 dark:bg-brand-950/30 border border-brand-100 dark:border-brand-900/50 p-8 sm:p-10 text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-            {s.pricingHeadA} <span class="text-brand-700 dark:text-brand-400">{s.pricingHeadPrice}</span> {s.pricingHeadB}
+        <div class="rounded-3xl bg-brand-50  border border-brand-100  p-8 sm:p-10 text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 ">
+            {s.pricingHeadA} <span class="text-brand-700 ">{s.pricingHeadPrice}</span> {s.pricingHeadB}
           </h2>
-          <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">{s.pricingText}</p>
-          <a href={p('/#preise')} class="mt-6 inline-flex items-center gap-2 text-brand-700 dark:text-brand-400 font-semibold hover:text-brand-800 dark:hover:text-brand-300 transition-colors">
+          <p class="mt-4 text-gray-600  max-w-2xl mx-auto">{s.pricingText}</p>
+          <a href={p('/#preise')} class="mt-6 inline-flex items-center gap-2 text-brand-700  font-semibold hover:text-brand-800  transition-colors">
             {s.pricingLink}
             <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
           </a>
@@ -177,20 +177,20 @@ const breadcrumbLd = {
       </div>
     </section>
 
-    <section class="py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
+    <section class="py-20 lg:py-28 bg-gray-50 ">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-center mb-12">
-          <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{s.faqEyebrow}</span>
+          <span class="text-sm font-medium text-brand-700  uppercase tracking-wider">{s.faqEyebrow}</span>
           <h2 class="mt-3 text-3xl sm:text-4xl font-bold">{s.faqHeading(branche.name)}</h2>
         </div>
         <div class="space-y-3">
           {branche.faq.map((item, i) => (
-            <details class="group rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-5 sm:p-6 [&_summary::-webkit-details-marker]:hidden" open={i === 0}>
-              <summary class="flex items-center justify-between cursor-pointer text-base sm:text-lg font-semibold text-gray-900 dark:text-white list-none gap-4">
+            <details class="group rounded-2xl bg-white  border border-gray-100  p-5 sm:p-6 [&_summary::-webkit-details-marker]:hidden" open={i === 0}>
+              <summary class="flex items-center justify-between cursor-pointer text-base sm:text-lg font-semibold text-gray-900  list-none gap-4">
                 <span>{item.q}</span>
-                <svg aria-hidden="true" class="w-5 h-5 shrink-0 text-brand-700 dark:text-brand-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                <svg aria-hidden="true" class="w-5 h-5 shrink-0 text-brand-700  transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
               </summary>
-              <p class="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{item.a}</p>
+              <p class="mt-3 text-sm sm:text-base text-gray-600  leading-relaxed">{item.a}</p>
             </details>
           ))}
         </div>

@@ -31,9 +31,9 @@ const s = {
   <main id="main-content">
     <section class="relative pt-32 pb-12 lg:pt-40 hero-gradient overflow-hidden">
       <div class="max-w-3xl mx-auto px-6 text-center">
-        <span class="text-sm font-medium text-brand-700 dark:text-brand-400 uppercase tracking-wider">{s.eyebrow}</span>
+        <span class="text-sm font-medium text-brand-700  uppercase tracking-wider">{s.eyebrow}</span>
         <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight">{s.headline}</h1>
-        <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">{s.intro}</p>
+        <p class="mt-4 text-lg text-gray-500 ">{s.intro}</p>
       </div>
     </section>
 
@@ -41,10 +41,10 @@ const s = {
       <div class="max-w-5xl mx-auto px-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {module.map((m) => (
-            <a href={p(`/module/${m.slug}`)} class="group block p-8 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 card-hover hover:border-brand-200 dark:hover:border-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500">
-              <div aria-hidden="true" class="w-12 h-12 rounded-xl bg-brand-50 dark:bg-gray-800 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4"><Icon name={`lucide:${m.icon}`} class="w-6 h-6" /></div>
-              <h2 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-brand-400 transition-colors">{m.name}</h2>
-              <p class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">{m.metaDescription}</p>
+            <a href={p(`/module/${m.slug}`)} class="group block p-8 rounded-2xl border border-gray-100  bg-white  card-hover hover:border-brand-200  focus:outline-none focus:ring-2 focus:ring-brand-500">
+              <div aria-hidden="true" class="w-12 h-12 rounded-xl bg-brand-50  text-brand-600  flex items-center justify-center mb-4"><Icon name={`lucide:${m.icon}`} class="w-6 h-6" /></div>
+              <h2 class="text-xl font-semibold text-gray-900  group-hover:text-brand-700  transition-colors">{m.name}</h2>
+              <p class="mt-2 text-gray-600  leading-relaxed">{m.metaDescription}</p>
             </a>
           ))}
         </div>
