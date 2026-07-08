@@ -16,7 +16,13 @@ const year = new Date().getFullYear();
           <div aria-hidden="true" class="w-8 h-8 rounded-lg bg-brand-700 flex items-center justify-center">
             <span class="text-white font-bold text-sm">V</span>
           </div>
-          <span class="text-lg font-bold text-white">VertooERP</span>
+          <span class="flex flex-col justify-center">
+            <span class="text-lg font-bold text-white leading-none">VertooERP</span>
+            <!-- Namensherkunft: VER + TOO hervorgehoben (wie im Header) -->
+            <span class="mt-1 text-[9px] font-semibold uppercase tracking-[0.22em] leading-none text-gray-500">
+              <span class="text-brand-400">Ver</span>waltungs<span class="text-brand-400">too</span>l
+            </span>
+          </span>
         </div>
         <p class="text-sm leading-relaxed">{t('footer.tagline')}</p>
         <a href="mailto:kontakt@tapandtype.de" class="mt-4 inline-block text-sm text-gray-400 hover:text-white transition-colors">kontakt@tapandtype.de</a>

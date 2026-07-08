@@ -18,11 +18,21 @@ const navLinks = [
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-lg border-b border-gray-100 dark:border-gray-800">
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href={home} class="flex items-center gap-2.5">
+    <a
+      href={home}
+      class="flex items-center gap-2.5"
+      title={lang === 'en' ? 'Vertoo — short for “Verwaltungstool”, German for management tool' : 'Vertoo steht für Verwaltungstool'}
+    >
       <div aria-hidden="true" class="w-8 h-8 rounded-lg bg-brand-700 flex items-center justify-center">
         <span class="text-white font-bold text-sm">V</span>
       </div>
-      <span class="text-xl font-bold text-gray-900 dark:text-white">VertooERP</span>
+      <span class="flex flex-col justify-center">
+        <span class="text-xl font-bold text-gray-900 dark:text-white leading-none">VertooERP</span>
+        <!-- Namensherkunft als Micro-Zeile: VER + TOO farblich hervorgehoben -->
+        <span class="mt-1 text-[9px] font-semibold uppercase tracking-[0.22em] leading-none text-gray-400 dark:text-gray-500">
+          <span class="text-brand-600 dark:text-brand-400">Ver</span>waltungs<span class="text-brand-600 dark:text-brand-400">too</span>l
+        </span>
+      </span>
     </a>
 
     <nav class="hidden md:flex items-center gap-8" aria-label={t('a11y.nav.main')}>

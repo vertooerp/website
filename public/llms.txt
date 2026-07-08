@@ -4,6 +4,7 @@
 
 ## Eckdaten
 
+- Name: „Vertoo" steht für **Ver**waltungs**too**l – das Werkzeug, mit dem KMU ihr Unternehmen verwalten
 - Positionierung: All-in-One-Plattform für die Kernprozesse eines KMU (statt vieler Einzeltools) – entwickelt in Deutschland für den europäischen Markt
 - Digitale Souveränität & Resilienz: Self-Hosting statt Cloud-Abhängigkeit, lokale KI (Ollama, kein Datenabfluss), etablierte Exportformate (DATEV, XRechnung/ZUGFeRD, CSV) gegen Vendor Lock-in
 - Betriebsmodell: Self-Hosting / On-Premises (keine Cloud-Pflicht; Daten bleiben beim Kunden)
