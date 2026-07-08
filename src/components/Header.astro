@@ -18,7 +18,7 @@ const navLinks = [
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80  backdrop-blur-lg border-b border-gray-100 ">
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href={home} class="flex items-center gap-2.5">
+    <a href={home} class="group flex items-center gap-2.5">
       <div aria-hidden="true" class="w-9 h-9 rounded-[10px] bg-brand-700 flex items-center justify-center">
         <!-- Bildmarke: Strich-V mit Häkchen-Anklang (identisch zu favicon.svg) -->
         <svg viewBox="0 0 32 32" class="w-[22px] h-[22px]" fill="none" aria-hidden="true">
@@ -26,17 +26,20 @@ const navLinks = [
         </svg>
       </div>
       <!--
-        Logo-Lockup: Wortmarke in der Display-Schrift (Space Grotesk), darunter die
-        Namensherkunft. Das Letterspacing des Descriptors ist so getunt, dass die
-        Zeile exakt auf Wortmarken-Breite ausläuft (optisch justierter Block);
-        "Ver" steht dabei bündig unter "Ver" — das trägt das Wortspiel Ver+too.
+        Header-Lockup bewusst clean (Marke + Name — Wegweiser-Ebene). Die
+        Namensherkunft "VERwaltungsTOOl" erscheint als Micro-Interaction erst
+        bei Hover/Fokus unter der Wortmarke (absolut positioniert, kein Layout-
+        Shift); permanent erzählt wird sie im Footer. Justierung: tracking so
+        getunt, dass die Zeile exakt auf Wortmarken-Breite ausläuft.
       -->
-      <span class="flex flex-col justify-center" data-logo-lockup>
-        <!-- Zweifarbige Wortmarke: Marke kräftig, Kategorie-Suffix zurückgenommen (nur Farbe → Breite/Justierung unverändert) -->
+      <span class="relative flex flex-col justify-center" data-logo-lockup>
         <span class="font-display text-xl font-bold text-gray-900 leading-none" data-wordmark>Vertoo<span class="text-gray-400">ERP</span></span>
-        <!-- Grün = Icon-Grün: hell exakt brand-700; dunkel brand-500 (700 wäre als Text unlesbar) -->
-        <span class="mt-1 text-[11px] tracking-[0.088em] leading-none whitespace-nowrap" data-descriptor>
-          <span class="font-bold text-brand-700 ">Ver</span><span class="font-medium text-gray-500 ">waltungs</span><span class="font-bold text-brand-700 ">too</span><span class="font-medium text-gray-500 ">l</span>
+        <span
+          aria-hidden="true"
+          class="absolute left-0 top-full mt-1 text-[11px] tracking-[0.088em] leading-none whitespace-nowrap opacity-0 -translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-focus-visible:opacity-100 group-focus-visible:translate-y-0 motion-reduce:transition-none"
+          data-descriptor
+        >
+          <span class="font-bold text-brand-700">Ver</span><span class="font-medium text-gray-500">waltungs</span><span class="font-bold text-brand-700">too</span><span class="font-medium text-gray-500">l</span>
         </span>
       </span>
     </a>
