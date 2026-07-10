@@ -6,6 +6,11 @@ import icon from 'astro-icon';
 
 export default defineConfig({
   site: 'https://vertoo.de',
+  // Kundenlogin läuft über das echte Portal (kunden.vertoo.de). Die alte
+  // Demo-Login-Seite /konto leitet dorthin um (alte Bookmarks/Links).
+  redirects: {
+    '/konto': 'https://kunden.vertoo.de',
+  },
   // Mehrsprachigkeit: Deutsch (default, ohne Präfix) + Englisch unter /en/.
   // Weitere Sprachen (fr, it …) später einfach hier ergänzen.
   i18n: {
